@@ -33,28 +33,37 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        isScrolled 
+          ? "bg-white/90 backdrop-blur-xl shadow-xl border-b border-purple-100" 
+          : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">M</span>
+          <div className="flex items-center space-x-3 group cursor-pointer">
+            <div className="relative">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-purple-500/30 transition-all duration-300 group-hover:scale-110">
+                <span className="text-white font-bold text-xl">M</span>
+              </div>
+              <div className="absolute -inset-1 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
-            <span className="text-2xl font-bold gradient-text">Metaweb</span>
+            <span className="text-3xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent font-georgian">
+              Metaweb
+            </span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-primary transition-colors font-medium"
+                className="relative text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium text-lg font-georgian group py-2"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
           </div>
@@ -62,38 +71,45 @@ export default function Navigation() {
           {/* Phone Button */}
           <a
             href="tel:+995568694879"
-            className="hidden md:flex bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+            className="hidden md:flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/30 hover:scale-105 font-georgian"
           >
-            <i className="fas fa-phone mr-2"></i>568 69 48 79
+            <i className="fas fa-phone mr-2 animate-pulse"></i>568 69 48 79
           </a>
 
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden"
+            className="md:hidden relative group"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <div className="w-8 h-8 flex items-center justify-center">
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6 transform rotate-180 transition-transform duration-300" />
+              ) : (
+                <Menu className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+              )}
+            </div>
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4">
+          <div className="md:hidden mt-6 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-6 border border-purple-100 animate-slide-down">
             <div className="space-y-4">
-              {navItems.map((item) => (
+              {navItems.map((item, index) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-gray-700 hover:text-primary transition-colors font-medium py-2"
+                  className="block w-full text-left text-gray-700 hover:text-purple-600 transition-colors font-medium py-3 text-lg font-georgian hover:bg-purple-50 rounded-lg px-4"
+                  style={{ animationDelay: `${index * 50}ms` }}
                 >
                   {item.label}
                 </button>
               ))}
               <a
                 href="tel:+995568694879"
-                className="block w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors text-center"
+                className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center font-georgian shadow-lg"
               >
                 <i className="fas fa-phone mr-2"></i>568 69 48 79
               </a>

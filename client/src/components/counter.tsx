@@ -49,7 +49,7 @@ export default function Counter({ target, duration = 2000, suffix = "+" }: Count
 
   return (
     <div ref={counterRef} className="text-center">
-      <div className="text-4xl font-bold mb-2 counter-animation">
+      <div className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-pulse font-georgian">
         {count}{suffix}
       </div>
     </div>
