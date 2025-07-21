@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Team() {
+export default function Pricing() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function Team() {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("გუნდი");
+    const element = document.getElementById("ფასები");
     if (element) {
       observer.observe(element);
     }
@@ -21,43 +21,77 @@ export default function Team() {
     return () => observer.disconnect();
   }, []);
 
-  const teamMembers = [
+  const pricingPlans = [
     {
-      name: "ნიკა მამარდაშვილი",
-      position: "დამფუძნებელი",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
-      alt: "ნიკა მამარდაშვილი - დამფუძნებელი",
-      color: "from-purple-500 to-purple-700",
-      skills: ["Leadership", "Strategy", "Business Development"]
-    },
-    {
-      name: "ანა გოგნაძე",
-      position: "ვებ დეველოპერი",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b77c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
-      alt: "ანა გოგნაძე - ვებ დეველოპერი",
+      name: "ერთგვერდიანი საიტი",
+      price: "699₾",
+      priceNote: "-დან",
+      description: "სწრაფი და ეფექტური ვებსაიტი",
+      icon: "📄",
       color: "from-blue-500 to-blue-700",
-      skills: ["React", "Node.js", "TypeScript"]
+      features: [
+        "1 გვერდი",
+        "მობაილზე ადაპტირება",
+        "SEO ოპტიმიზაცია",
+        "კონტაქტის ფორმა",
+        "სოციალური მედიის ინტეგრაცია",
+        "1 თვის უფასო საარსებო"
+      ]
     },
     {
-      name: "გიორგი კაცაძე",
-      position: "ვებ დეველოპერი",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
-      alt: "გიორგი კაცაძე - ვებ დეველოპერი",
+      name: "მრავალგვერდიანი საიტი",
+      price: "999₾",
+      priceNote: "-დან",
+      description: "კომპლექსური ვებსაიტი ბიზნესისთვის",
+      icon: "📚",
+      color: "from-purple-500 to-purple-700",
+      features: [
+        "რამდენიმე გვერდი",
+        "ადმინ პანელი",
+        "კონტენტის მართვა",
+        "ფოტო გალერეა",
+        "ბლოგი/სიახლეები",
+        "3 თვის უფასო საარსებო"
+      ],
+      popular: true
+    },
+    {
+      name: "ონლაინ მაღაზია",
+      price: "1799₾",
+      priceNote: "-დან",
+      description: "სრულფასოვანი ელექტრონული კომერცია",
+      icon: "🛒",
       color: "from-green-500 to-green-700",
-      skills: ["Vue.js", "Laravel", "MySQL"]
+      features: [
+        "პროდუქტების კატალოგი",
+        "საყიდლის კალათა",
+        "ონლაინ გადახდა",
+        "მომხმარებლის ანგარიში",
+        "შეკვეთების მართვა",
+        "6 თვის უფასო საარსებო"
+      ]
     },
     {
-      name: "ნინო ბერიძე",
-      position: "SEO სპეციალისტი",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
-      alt: "ნინო ბერიძე - SEO სპეციალისტი",
-      color: "from-pink-500 to-pink-700",
-      skills: ["SEO", "Analytics", "Content Strategy"]
-    },
+      name: "უნიკალური საიტი",
+      price: "5000₾",
+      priceNote: "-დან",
+      description: "ინდივიდუალური დიზაინი და ფუნქციონალი",
+      icon: "✨",
+      color: "from-orange-500 to-red-600",
+      features: [
+        "100% უნიკალური დიზაინი",
+        "განსაკუთრებული ფუნქციონალი",
+        "API ინტეგრაციები",
+        "ადვანსირებული ანალიტიკა",
+        "24/7 ტექნიკური მხარდაჭერა",
+        "1 წლის უფასო საარსებო"
+      ],
+      premium: true
+    }
   ];
 
   return (
-    <section id="გუნდი" className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section id="ფასები" className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-white/30 to-gray-100/50"></div>
@@ -67,21 +101,21 @@ export default function Team() {
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <h2 className="text-5xl lg:text-7xl font-bold mb-6 font-georgian">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              გუნდი
+              ფასები
             </span>
           </h2>
-          <h3 className="text-2xl lg:text-3xl text-gray-600 mb-8 font-georgian">გაეცანით ჩვენი გუნდი</h3>
+          <h3 className="text-2xl lg:text-3xl text-gray-600 mb-8 font-georgian">აირჩიეთ თქვენთვის შესაფერისი პაკეტი</h3>
           <div className="w-32 h-1 bg-gradient-to-r from-purple-600 to-cyan-500 mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto font-georgian">
-            ჩვენი მრავალფეროვანი და გამოცდილი გუნდი მუშაობს ერთად, რათა თქვენი ციფრული ოცნებები გავცქოთ რეალობად
+            ყველა ფასი მოიცავს პროფესიონალურ დიზაინს, ტექნიკურ მხარდაჭერას და გარანტიას
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
+          {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 transform hover:scale-105 ${
+              className={`group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 ${plan.popular ? 'border-purple-500 scale-105' : plan.premium ? 'border-gradient-to-r from-orange-500 to-red-600' : 'border-gray-100'} ${
                 isVisible 
                   ? 'translate-y-0 opacity-100' 
                   : 'translate-y-8 opacity-0'
@@ -91,86 +125,97 @@ export default function Team() {
                 transitionDelay: `${index * 150}ms`
               }}
             >
-              {/* Image Container */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.alt}
-                  className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${member.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
-                
-                {/* Social Links (appearing on hover) */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 scale-0 group-hover:scale-100">
-                  <div className="flex space-x-3">
-                    <button className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200">
-                      <i className="fab fa-linkedin-in text-blue-600"></i>
-                    </button>
-                    <button className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200">
-                      <i className="fab fa-github text-gray-800"></i>
-                    </button>
+              {/* Popular/Premium Badge */}
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg font-georgian">
+                    ყველაზე პოპულარული
                   </div>
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 text-center">
-                <h4 className="text-2xl font-bold mb-2 text-gray-800 font-georgian group-hover:text-purple-600 transition-colors duration-300">
-                  {member.name}
-                </h4>
-                
-                <div className={`w-16 h-1 bg-gradient-to-r ${member.color} mx-auto mb-4 rounded-full`}></div>
-                
-                <p className="text-lg text-gray-600 mb-4 font-georgian font-medium">
-                  {member.position}
-                </p>
-
-                {/* Skills */}
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {member.skills.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className={`px-3 py-1 bg-gradient-to-r ${member.color} text-white text-sm rounded-full font-medium shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-300`}
-                      style={{ transitionDelay: `${skillIndex * 100}ms` }}
-                    >
-                      {skill}
-                    </span>
-                  ))}
+              )}
+              {plan.premium && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg font-georgian">
+                    პრემიუმი
+                  </div>
                 </div>
+              )}
 
-                {/* Hover Effect Border */}
-                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${member.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
+              {/* Enhanced Border Effect */}
+              <div className={`absolute inset-0 border-2 border-transparent bg-gradient-to-r ${plan.color} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                   style={{
+                     background: `linear-gradient(rgba(255,255,255,1), rgba(255,255,255,1)) padding-box, linear-gradient(45deg, var(--tw-gradient-stops)) border-box`,
+                     backgroundClip: 'padding-box, border-box'
+                   }}>
               </div>
 
-              {/* Floating Elements */}
-              <div className="absolute top-4 right-4 w-3 h-3 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-300"></div>
-              <div className="absolute bottom-20 left-4 w-2 h-2 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div>
+              {/* Icon Header */}
+              <div className="text-center pt-8 pb-4">
+                <div className={`w-20 h-20 bg-gradient-to-br ${plan.color} rounded-full flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 mb-4`}>
+                  <span className="text-4xl">{plan.icon}</span>
+                </div>
+                <h4 className="text-2xl font-bold mb-2 text-gray-800 font-georgian group-hover:scale-105 transition-all duration-300">
+                  {plan.name}
+                </h4>
+                <p className="text-gray-600 mb-6 font-georgian leading-relaxed">
+                  {plan.description}
+                </p>
+              </div>
+
+              {/* Pricing */}
+              <div className="text-center mb-8">
+                <div className="flex items-center justify-center mb-4">
+                  <span className={`text-5xl font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent font-georgian`}>
+                    {plan.price}
+                  </span>
+                  <span className="text-xl text-gray-600 ml-2 font-georgian">{plan.priceNote}</span>
+                </div>
+                <div className={`w-24 h-1 bg-gradient-to-r ${plan.color} mx-auto rounded-full`}></div>
+              </div>
+
+              {/* Features */}
+              <div className="px-8 pb-8">
+                <ul className="space-y-4">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start font-georgian">
+                      <div className={`w-6 h-6 bg-gradient-to-r ${plan.color} rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0`}>
+                        <span className="text-white text-sm">✓</span>
+                      </div>
+                      <span className="text-gray-700 leading-relaxed">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA Button */}
+                <div className="mt-8">
+                  <button className={`w-full bg-gradient-to-r ${plan.color} text-white py-4 rounded-2xl font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-georgian group-hover:animate-pulse`}>
+                    შეკვეთა
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom Section */}
+        {/* Bottom CTA Section */}
         <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4 font-georgian">გსურთ ჩვენს გუნდთან მუშაობა?</h3>
-            <p className="text-lg mb-6 font-georgian">ჩვენ ყოველთვის ვიღებთ ღია ვაკანსიებს ნიჭიერი პროფესიონალებისთვის</p>
+            <h3 className="text-3xl font-bold mb-4 font-georgian">არ იპოვეთ შესაფერისი პაკეტი?</h3>
+            <p className="text-lg mb-6 font-georgian">დაგვიკავშირდით ინდივიდუალური შეთავაზებისთვის თქვენი სპეციფიკური საჭიროებების მიხედვით</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:careers@metaweb.ge"
+                href="tel:+995568694879"
                 className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
               >
-                <span className="group-hover:animate-bounce mr-3">💼</span>
-                კარიერა
+                <span className="group-hover:animate-bounce mr-3">💬</span>
+                ინდივიდუალური კონსულტაცია
               </a>
               <a
-                href="tel:+995568694879"
+                href="mailto:info@metaweb.ge"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
               >
-                <span className="group-hover:animate-pulse mr-3">📞</span>
-                დაგვიკავშირდით
+                <span className="group-hover:animate-pulse mr-3">✉️</span>
+                მოგვწერეთ
               </a>
             </div>
           </div>

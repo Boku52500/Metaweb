@@ -135,7 +135,7 @@ export default function Portfolio() {
                 {/* View Project Button */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 scale-0 group-hover:scale-100">
                   <button className={`bg-gradient-to-r ${project.color} text-white px-6 py-3 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 font-georgian`}>
-                    🌐 ვებსაიტზე გადასვლა
+                    🔎 ნახვა
                   </button>
                 </div>
               </div>

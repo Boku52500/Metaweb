@@ -3,7 +3,7 @@ import Hero from "@/components/hero";
 import Advantages from "@/components/advantages";
 import Services from "@/components/services";
 import Portfolio from "@/components/portfolio";
-import Team from "@/components/team";
+import Pricing from "@/components/team";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <Advantages />
       <Services />
       <Portfolio />
-      <Team />
+      <Pricing />
       <Contact />
       <Footer />
     </main>
