@@ -137,28 +137,61 @@ export default function Hero() {
           </div>
 
           <div className={`relative transition-all duration-1000 delay-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Metaweb - საიტის დამზადება და ვებსაიტის დიზაინი"
-                className="relative rounded-3xl shadow-2xl w-full group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-3xl"></div>
+            <div className="relative group h-[500px] flex items-center justify-center">
+              {/* Background Glow Effect */}
+              <div className="absolute -inset-8 bg-gradient-to-r from-purple-600/30 via-blue-600/30 to-cyan-500/30 rounded-3xl blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
               
-              {/* Floating UI Elements */}
-              <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl animate-float">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium text-gray-800">ონლაინ რეჟიმი</span>
+              {/* Main Illustration Container */}
+              <div className="relative w-full max-w-lg">
+                {/* Custom Web Development Illustration */}
+                <img
+                  src="/Website-Development-alt-1-3_1753098998334.jpg"
+                  alt="Metaweb - საიტის დამზადება და ვებსაიტის დიზაინი"
+                  className="relative w-full h-auto opacity-95 group-hover:scale-105 transition-all duration-700 hero-illustration"
+                />
+                
+                {/* Animated Floating Elements */}
+                <div className="absolute top-12 left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl animate-float border border-purple-200/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-semibold text-gray-800 font-georgian">რეალურ დროში</span>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl animate-float-delayed">
-                <div className="flex items-center space-x-2">
-                  <span className="text-2xl">⚡</span>
-                  <span className="text-sm font-medium text-gray-800">სწრაფი მომსახურება</span>
+                
+                <div className="absolute top-20 right-12 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-delayed">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-lg">⚡</span>
+                    <span className="text-sm font-medium font-georgian">სწრაფი</span>
+                  </div>
                 </div>
+                
+                <div className="absolute bottom-16 left-12 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-slow">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-lg">🎨</span>
+                    <span className="text-sm font-medium font-georgian">თანამედროვე</span>
+                  </div>
+                </div>
+                
+                <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl animate-float-reverse border border-cyan-200/50">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-xl">🚀</span>
+                    <span className="text-sm font-semibold text-gray-800 font-georgian">მაღალი ხარისხი</span>
+                  </div>
+                </div>
+                
+                {/* Code Snippets Floating Around */}
+                <div className="absolute top-8 right-4 bg-gray-900/90 backdrop-blur-sm text-green-400 rounded-lg p-2 text-xs font-mono animate-float shadow-xl">
+                  &lt;div className="hero"&gt;
+                </div>
+                
+                <div className="absolute bottom-12 left-4 bg-gray-900/90 backdrop-blur-sm text-blue-400 rounded-lg p-2 text-xs font-mono animate-float-delayed shadow-xl">
+                  function build() {'{'}
+                </div>
+                
+                {/* Pulse Dots for Tech Feel */}
+                <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-60"></div>
+                <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-60" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60" style={{ animationDelay: '2s' }}></div>
               </div>
             </div>
           </div>
