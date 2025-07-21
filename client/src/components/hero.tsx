@@ -51,7 +51,7 @@ export default function Hero() {
               
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 font-georgian leading-tight tracking-tight">
-                <span className="inline-flex items-center gap-4 animate-slide-up text-white font-black tracking-wider relative whitespace-nowrap" style={{ animationDelay: '0.3s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'BPG Nino Mtavruli Bold, serif' }}>
+                <span className="inline-flex items-center gap-4 animate-slide-up text-white font-black tracking-wider relative whitespace-nowrap" style={{ animationDelay: '0.3s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'ALK Sanet, serif' }}>
                   <span>საიტის</span>
                   <span>დამზადება</span>
                 </span>
