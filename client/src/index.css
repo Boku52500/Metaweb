@@ -69,6 +69,21 @@
   .font-georgian {
     font-family: 'BPG Nino Mtavruli Bold', 'Noto Sans Georgian', 'Inter', sans-serif;
   }
+
+  /* Apply BPG font to all content */
+  * {
+    font-family: 'BPG Nino Mtavruli Bold', 'Noto Sans Georgian', 'Inter', sans-serif;
+  }
+  
+  /* Ensure headings use the font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'BPG Nino Mtavruli Bold', 'Noto Sans Georgian', 'Inter', sans-serif;
+  }
+  
+  /* Ensure buttons and interactive elements use the font */
+  button, .btn, input, textarea, select {
+    font-family: 'BPG Nino Mtavruli Bold', 'Noto Sans Georgian', 'Inter', sans-serif;
+  }
 }
 
 .gradient-text {
