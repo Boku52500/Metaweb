@@ -81,7 +81,7 @@ export default function Navigation() {
             className={`hidden md:flex items-center px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:scale-105 font-georgian ${
               isScrolled 
                 ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
-                : 'bg-gradient-to-r from-purple-600/80 to-blue-600/80 text-white border border-white/20 hover:from-purple-700/90 hover:to-blue-700/90 hover:shadow-purple-500/30'
+                : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
             }`}
           >
             <i className="fas fa-phone mr-2 animate-pulse"></i>568 69 48 79
