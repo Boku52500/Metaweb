@@ -151,7 +151,7 @@ export default function Contact() {
                       placeholder="თქვენი სახელი *"
                       value={formData.name}
                       onChange={handleChange}
-                      className="bg-white/20 border-white/30 text-white placeholder-gray-300 h-14 rounded-2xl font-georgian text-lg focus:border-yellow-400 focus:ring-yellow-400/20 transition-all duration-300"
+                      className="bg-white/20 border-white/30 text-white placeholder-white/70 h-14 rounded-2xl font-georgian text-lg focus:border-yellow-400 focus:ring-yellow-400/20 transition-all duration-300"
                       required
                     />
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -164,7 +164,7 @@ export default function Contact() {
                       placeholder="ტელეფონის ნომერი *"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="bg-white/20 border-white/30 text-white placeholder-gray-300 h-14 rounded-2xl font-georgian text-lg focus:border-yellow-400 focus:ring-yellow-400/20 transition-all duration-300"
+                      className="bg-white/20 border-white/30 text-white placeholder-white/70 h-14 rounded-2xl font-georgian text-lg focus:border-yellow-400 focus:ring-yellow-400/20 transition-all duration-300"
                       required
                     />
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -177,7 +177,7 @@ export default function Contact() {
                       placeholder="ელ-ფოსტა *"
                       value={formData.email}
                       onChange={handleChange}
-                      className="bg-white/20 border-white/30 text-white placeholder-gray-300 h-14 rounded-2xl font-georgian text-lg focus:border-yellow-400 focus:ring-yellow-400/20 transition-all duration-300"
+                      className="bg-white/20 border-white/30 text-white placeholder-white/70 h-14 rounded-2xl font-georgian text-lg focus:border-yellow-400 focus:ring-yellow-400/20 transition-all duration-300"
                       required
                     />
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -190,7 +190,7 @@ export default function Contact() {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="bg-white/20 border-white/30 text-white placeholder-gray-300 resize-none rounded-2xl font-georgian text-lg focus:border-yellow-400 focus:ring-yellow-400/20 transition-all duration-300"
+                      className="bg-white/20 border-white/30 text-white placeholder-white/70 resize-none rounded-2xl font-georgian text-lg focus:border-yellow-400 focus:ring-yellow-400/20 transition-all duration-300"
                       required
                     />
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
