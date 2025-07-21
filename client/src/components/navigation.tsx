@@ -47,9 +47,14 @@ export default function Navigation() {
               alt="MetaWeb Logo"
               className={`h-16 w-auto object-contain group-hover:scale-110 transition-all duration-500 ${
                 isScrolled 
-                  ? 'filter invert brightness-0 drop-shadow-lg' 
+                  ? 'filter brightness-0 saturate-100 contrast-200 drop-shadow-lg' 
                   : 'filter drop-shadow-lg'
               }`}
+              style={{
+                filter: isScrolled 
+                  ? 'brightness(0) saturate(100%) invert(13%) sepia(10%) saturate(2023%) hue-rotate(207deg) brightness(95%) contrast(86%)'
+                  : 'none'
+              }}
             />
           </div>
 
