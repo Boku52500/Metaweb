@@ -84,6 +84,31 @@
   button, .btn, input, textarea, select {
     font-family: 'ALK Sanet', 'Noto Sans Georgian', 'Inter', sans-serif;
   }
+
+  /* Contact form placeholder styling */
+  #კონტაქტი input::placeholder,
+  #კონტაქტი textarea::placeholder {
+    color: rgba(255, 255, 255, 0.9) !important;
+    opacity: 1 !important;
+  }
+  
+  #კონტაქტი input::-webkit-input-placeholder,
+  #კონტაქტი textarea::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.9) !important;
+    opacity: 1 !important;
+  }
+  
+  #კონტაქტი input::-moz-placeholder,
+  #კონტაქტი textarea::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.9) !important;
+    opacity: 1 !important;
+  }
+  
+  #კონტაქტი input:-ms-input-placeholder,
+  #კონტაქტი textarea:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.9) !important;
+    opacity: 1 !important;
+  }
 }
 
 .gradient-text {
