@@ -118,45 +118,31 @@ export default function Advantages() {
               }}
             >
               {/* Glass Card */}
-              <div className="relative p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-700 group-hover:-translate-y-2 overflow-hidden">
+              <div className="relative p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden h-full flex flex-col">
                 
-                {/* Gradient Border Effect */}
-                <div className={`absolute inset-0 rounded-3xl p-[1px] bg-gradient-to-r ${advantage.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
-                  <div className="w-full h-full bg-white/70 backdrop-blur-xl rounded-3xl"></div>
-                </div>
-
                 {/* Premium Icon Container */}
-                <div className="relative z-10 mb-8">
+                <div className="relative z-10 mb-8 flex-shrink-0">
                   <div className="relative">
                     {/* Main Icon */}
-                    <div className={`w-20 h-20 bg-gradient-to-br ${advantage.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-lg ${advantage.shadow} group-hover:shadow-xl group-hover:scale-110 transition-all duration-500`}>
+                    <div className={`w-20 h-20 bg-gradient-to-br ${advantage.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-lg transition-all duration-500`}>
                       <span className="text-3xl filter drop-shadow-sm">{advantage.emoji}</span>
                     </div>
                     
-                    {/* Animated Glow */}
-                    <div className={`absolute -inset-3 bg-gradient-to-br ${advantage.gradient} rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500 animate-pulse`}></div>
-                    
-                    {/* Rotating Ring */}
-                    <div className="absolute -inset-4 border-2 border-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-spin-slow transition-opacity duration-500"></div>
+                    {/* Fixed Glow on Hover */}
+                    <div className={`absolute -inset-3 bg-gradient-to-br ${advantage.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
                   </div>
                 </div>
                 
                 {/* Content */}
-                <div className="relative z-10 text-center">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900 font-georgian group-hover:text-gray-800 transition-colors duration-300">
+                <div className="relative z-10 text-center flex-grow flex flex-col">
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900 font-georgian transition-colors duration-300">
                     {advantage.title}
                   </h3>
                   
-                  <p className="text-gray-600 leading-relaxed font-georgian group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-gray-600 leading-relaxed font-georgian transition-colors duration-300 flex-grow">
                     {advantage.description}
                   </p>
                 </div>
-
-                {/* Premium Hover Effects */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${advantage.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl`}></div>
-                
-                {/* Animated Bottom Bar */}
-                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${advantage.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center rounded-b-3xl`}></div>
               </div>
 
               {/* Card Number */}
