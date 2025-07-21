@@ -45,7 +45,11 @@ export default function Navigation() {
             <img 
               src="/metaweb-logo-new.png"
               alt="MetaWeb Logo"
-              className="h-16 w-auto object-contain group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg"
+              className={`h-16 w-auto object-contain group-hover:scale-110 transition-all duration-500 ${
+                isScrolled 
+                  ? 'filter invert brightness-0 drop-shadow-lg' 
+                  : 'filter drop-shadow-lg'
+              }`}
             />
           </div>
 
