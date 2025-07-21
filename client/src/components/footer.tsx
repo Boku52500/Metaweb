@@ -106,10 +106,10 @@ export default function Footer() {
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection("სერვისები")}
-                    className="text-gray-300 hover:text-white transition-all duration-300 text-left font-georgian text-lg hover:translate-x-2 group flex items-center"
+                    className="text-gray-300 hover:text-white transition-all duration-300 text-left font-georgian text-lg hover:translate-x-2 group flex items-center w-full"
                   >
-                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    {service}
+                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"></span>
+                    <span className="flex-1 text-left">{service}</span>
                   </button>
                 </li>
               ))}
@@ -126,10 +126,10 @@ export default function Footer() {
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="text-gray-300 hover:text-white transition-all duration-300 text-left font-georgian text-lg hover:translate-x-2 group flex items-center"
+                    className="text-gray-300 hover:text-white transition-all duration-300 text-left font-georgian text-lg hover:translate-x-2 group flex items-center w-full"
                   >
-                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    {item.label}
+                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"></span>
+                    <span className="flex-1 text-left">{item.label}</span>
                   </button>
                 </li>
               ))}
