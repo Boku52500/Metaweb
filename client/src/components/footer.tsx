@@ -33,16 +33,12 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-8 group">
-              <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-purple-500/30 transition-all duration-300 group-hover:scale-110">
-                  <span className="text-white font-bold text-2xl">M</span>
-                </div>
-                <div className="absolute -inset-1 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              </div>
-              <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent font-georgian">
-                Metaweb
-              </span>
+            <div className="flex items-center mb-8 group">
+              <img 
+                src="/metaweb-logo.png"
+                alt="MetaWeb Logo"
+                className="h-16 w-auto object-contain group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg"
+              />
             </div>
             
             <p className="text-gray-300 mb-8 text-lg leading-relaxed font-georgian">

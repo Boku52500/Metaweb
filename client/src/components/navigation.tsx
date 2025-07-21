@@ -41,16 +41,12 @@ export default function Navigation() {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-3 group cursor-pointer">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-purple-500/30 transition-all duration-300 group-hover:scale-110">
-                <span className="text-white font-bold text-xl">M</span>
-              </div>
-              <div className="absolute -inset-1 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-            </div>
-            <span className="text-3xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent font-georgian">
-              Metaweb
-            </span>
+          <div className="flex items-center group cursor-pointer">
+            <img 
+              src="/metaweb-logo.png"
+              alt="MetaWeb Logo"
+              className="h-12 w-auto object-contain group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg"
+            />
           </div>
 
           {/* Desktop Navigation */}
