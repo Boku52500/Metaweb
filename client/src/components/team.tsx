@@ -137,22 +137,30 @@ export default function Pricing() {
 
               {/* Content Container - positioned relatively */}
               <div className="relative z-10 p-8 h-full flex flex-col">
-                {/* Icon Header */}
-                <div className="text-center mb-6">
+                {/* Icon Header - Fixed Height */}
+                <div className="text-center mb-6 h-32 flex flex-col justify-center">
                   <div className={`w-20 h-20 bg-gradient-to-br ${plan.color} rounded-full flex items-center justify-center mx-auto shadow-xl transition-all duration-300 mb-4`}>
                     <span className="text-4xl">{plan.icon}</span>
                   </div>
-                  <h4 className="text-2xl font-bold mb-2 text-gray-800 font-georgian">
+                </div>
+
+                {/* Title - Fixed Height */}
+                <div className="text-center mb-4 h-16 flex items-center justify-center">
+                  <h4 className="text-2xl font-bold text-gray-800 font-georgian">
                     {plan.name}
                   </h4>
-                  <p className="text-gray-600 mb-4 font-georgian leading-relaxed">
+                </div>
+
+                {/* Description - Fixed Height */}
+                <div className="text-center mb-6 h-12 flex items-center justify-center">
+                  <p className="text-gray-600 font-georgian leading-relaxed text-sm">
                     {plan.description}
                   </p>
                 </div>
 
-                {/* Pricing */}
-                <div className="text-center mb-6">
-                  <div className="flex items-center justify-center mb-4">
+                {/* Pricing - Fixed Height and Position */}
+                <div className="text-center mb-6 h-20 flex flex-col justify-center">
+                  <div className="flex items-center justify-center mb-2">
                     <span className={`text-4xl font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent font-georgian`}>
                       {plan.price}
                     </span>
@@ -161,7 +169,7 @@ export default function Pricing() {
                   <div className={`w-24 h-1 bg-gradient-to-r ${plan.color} mx-auto rounded-full`}></div>
                 </div>
 
-                {/* Features */}
+                {/* Features - Flexible Height */}
                 <div className="flex-grow">
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, featureIndex) => (
@@ -175,7 +183,7 @@ export default function Pricing() {
                   </ul>
                 </div>
 
-                {/* CTA Button */}
+                {/* CTA Button - Fixed at Bottom */}
                 <div className="mt-auto">
                   <button 
                     onClick={scrollToContact}
