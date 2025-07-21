@@ -51,7 +51,7 @@ export default function Hero() {
               
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 font-georgian leading-tight tracking-tight">
-                <span className="inline-flex items-center gap-4 animate-slide-up transform hover:scale-105 transition-all duration-300 text-white font-black tracking-wider relative whitespace-nowrap cursor-pointer" style={{ animationDelay: '0.3s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)' }}>
+                <span className="inline-flex items-center gap-4 animate-slide-up text-white font-black tracking-wider relative whitespace-nowrap" style={{ animationDelay: '0.3s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'BPG Nino Mtavruli Bold, serif' }}>
                   <span>საიტის</span>
                   <span>დამზადება</span>
                 </span>
@@ -104,31 +104,33 @@ export default function Hero() {
               </Button>
 
               {/* Phone Button */}
-              <Button
-                variant="outline"
-                asChild
-                className="relative group px-10 py-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl text-white font-bold text-lg rounded-3xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-700 transform hover:scale-[1.02] font-georgian border-2 border-cyan-400/40 hover:border-cyan-300/60"
-              >
-                <a href="tel:+995568694879" className="relative flex items-center justify-center space-x-4">
-                  {/* Animated background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Pulse rings around phone icon */}
-                  <div className="relative">
-                    <div className="absolute inset-0 rounded-full bg-cyan-400/30 animate-ping opacity-0 group-hover:opacity-75"></div>
-                    <div className="absolute inset-0 rounded-full bg-cyan-400/20 animate-ping opacity-0 group-hover:opacity-50" style={{ animationDelay: '0.2s' }}></div>
-                    <i className="fas fa-phone relative text-cyan-400 text-xl group-hover:text-cyan-300 transition-colors duration-300 group-hover:rotate-12 transform transition-transform"></i>
-                  </div>
-                  
-                  <span className="relative text-cyan-100 group-hover:text-white transition-colors duration-300">
-                    568 69 48 79
-                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-500"></div>
-                  </span>
-                  
-                  {/* Side glow */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 -z-10"></div>
-                </a>
-              </Button>
+              <div className="flex justify-center sm:justify-start">
+                <Button
+                  variant="outline"
+                  asChild
+                  className="relative group px-10 py-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl text-white font-bold text-lg rounded-3xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-700 transform hover:scale-[1.02] font-georgian border-2 border-cyan-400/40 hover:border-cyan-300/60"
+                >
+                  <a href="tel:+995568694879" className="relative flex items-center justify-center space-x-4">
+                    {/* Animated background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Pulse rings around phone icon */}
+                    <div className="relative">
+                      <div className="absolute inset-0 rounded-full bg-cyan-400/30 animate-ping opacity-0 group-hover:opacity-75"></div>
+                      <div className="absolute inset-0 rounded-full bg-cyan-400/20 animate-ping opacity-0 group-hover:opacity-50" style={{ animationDelay: '0.2s' }}></div>
+                      <i className="fas fa-phone relative text-cyan-400 text-xl group-hover:text-cyan-300 transition-colors duration-300 group-hover:rotate-12 transform transition-transform"></i>
+                    </div>
+                    
+                    <span className="relative text-cyan-100 group-hover:text-white transition-colors duration-300">
+                      568 69 48 79
+                      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-500"></div>
+                    </span>
+                    
+                    {/* Side glow */}
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 -z-10"></div>
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Enhanced Statistics */}
