@@ -143,7 +143,7 @@ export default function Hero() {
 
               {/* Phone Button */}
               <Button
-                onClick={() => window.location.href = 'tel:+99555791514615'}
+                onClick={() => window.location.href = 'tel:+995557915146'}
                 className="relative group px-8 py-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-700 transform hover:scale-[1.02] font-georgian border border-cyan-400/40 hover:border-cyan-300/60 w-full sm:w-64"
               >
                 {/* Animated background */}
@@ -170,9 +170,9 @@ export default function Hero() {
             {/* Enhanced Statistics - Mobile Only */}
             <div className={`lg:hidden w-full max-w-6xl mx-auto mt-12 sm:mt-16 transition-all duration-1200 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-                <div className="text-center group relative">
+                <div className="text-center group relative h-full">
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-xl sm:rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[100px] sm:min-h-[120px] flex flex-col justify-center">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden h-[120px] sm:h-[130px] flex flex-col justify-center">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
                     <div className="mb-1 sm:mb-2">
                       <Counter target={10} />
@@ -180,9 +180,9 @@ export default function Hero() {
                     <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">წლიანი გამოცდილება</div>
                   </div>
                 </div>
-                <div className="text-center group relative">
+                <div className="text-center group relative h-full">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-xl sm:rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[100px] sm:min-h-[120px] flex flex-col justify-center">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden h-[120px] sm:h-[130px] flex flex-col justify-center">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-pink-500"></div>
                     <div className="mb-1 sm:mb-2">
                       <Counter target={500} />
@@ -190,9 +190,9 @@ export default function Hero() {
                     <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">კმაყოფილი კლიენტი</div>
                   </div>
                 </div>
-                <div className="text-center group relative">
+                <div className="text-center group relative h-full">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-xl sm:rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[100px] sm:min-h-[120px] flex flex-col justify-center">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden h-[120px] sm:h-[130px] flex flex-col justify-center">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
                     <div className="mb-1 sm:mb-2">
                       <Counter target={850} />
@@ -200,9 +200,9 @@ export default function Hero() {
                     <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">წარმატებული პროექტი</div>
                   </div>
                 </div>
-                <div className="text-center group relative">
+                <div className="text-center group relative h-full">
                   <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-xl sm:rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[100px] sm:min-h-[120px] flex flex-col justify-center">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden h-[120px] sm:h-[130px] flex flex-col justify-center">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-emerald-500"></div>
                     <div className="mb-1 sm:mb-2">
                       <Counter target={15} />
@@ -281,9 +281,9 @@ export default function Hero() {
         {/* Enhanced Statistics - Desktop Below Grid */}
         <div className={`hidden lg:block w-full max-w-6xl mx-auto mt-6 lg:mt-4 xl:mt-6 transition-all duration-1200 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
           <div className="grid grid-cols-4 gap-6">
-            <div className="text-center group relative">
+            <div className="text-center group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden h-[130px] flex flex-col justify-center">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
                 <div className="mb-2">
                   <Counter target={10} />
@@ -291,9 +291,9 @@ export default function Hero() {
                 <div className="text-white/80 font-georgian text-sm font-medium leading-tight">წლიანი გამოცდილება</div>
               </div>
             </div>
-            <div className="text-center group relative">
+            <div className="text-center group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden h-[130px] flex flex-col justify-center">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-pink-500"></div>
                 <div className="mb-2">
                   <Counter target={500} />
@@ -301,9 +301,9 @@ export default function Hero() {
                 <div className="text-white/80 font-georgian text-sm font-medium leading-tight">კმაყოფილი კლიენტი</div>
               </div>
             </div>
-            <div className="text-center group relative">
+            <div className="text-center group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden h-[130px] flex flex-col justify-center">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
                 <div className="mb-2">
                   <Counter target={850} />
@@ -311,9 +311,9 @@ export default function Hero() {
                 <div className="text-white/80 font-georgian text-sm font-medium leading-tight">წარმატებული პროექტი</div>
               </div>
             </div>
-            <div className="text-center group relative">
+            <div className="text-center group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden h-[130px] flex flex-col justify-center">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-emerald-500"></div>
                 <div className="mb-2">
                   <Counter target={15} />
