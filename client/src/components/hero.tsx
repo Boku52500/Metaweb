@@ -75,10 +75,7 @@ export default function Hero() {
           <div className="absolute w-3 h-3 bg-red-300/30 rounded-full top-5/6 left-1/6 animate-ping" style={{ animationDelay: '0.8s' }}></div>
         </div>
         
-        {/* Floating Lines */}
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent animate-float opacity-60"></div>
-        <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/25 to-transparent animate-float-delayed opacity-50"></div>
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-400/20 to-transparent animate-float-slow opacity-45"></div>
+
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 md:pt-40 pb-16 sm:pb-20 relative z-10">
