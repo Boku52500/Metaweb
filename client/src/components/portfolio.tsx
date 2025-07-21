@@ -1,4 +1,10 @@
 import { useEffect, useState } from "react";
+import techProject from "@assets/475191028_1120932972825777_1989653129482698248_n_1753105789654.jpg";
+import sportsProject from "@assets/475319508_1121775632741511_937116748092196865_n_1753105789655.jpg";
+import fashionProject from "@assets/475408865_1121775396074868_2137528778553133634_n_1753105789656.jpg";
+import corporateProject from "@assets/475262811_1121775619408179_2003956021201656278_n_1753105789657.jpg";
+import constructionProject from "@assets/475110030_1120933002825774_3300031079556110607_n_1753105789657.jpg";
+import ecommerceProject from "@assets/475147006_1120932616159146_8440514715472393051_n_1753105789658.jpg";
 
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,52 +29,52 @@ export default function Portfolio() {
 
   const projects = [
     {
-      name: "METASHOP.GE",
-      description: "ელექტრონული კომერციის ვებსაიტი",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      alt: "METASHOP.GE - ელექტრონული კომერციის ვებსაიტი",
-      color: "from-purple-500 to-purple-700",
+      name: "GREEN IT SOLUTION",
+      description: "ტექნოლოგიური კომპანიის ვებსაიტი",
+      image: techProject,
+      alt: "Green IT Solution - ტექნოლოგიური კომპანიის ვებსაიტი",
+      color: "from-green-500 to-green-700",
       tech: ["React", "Node.js", "PostgreSQL"]
     },
     {
-      name: "BIZNESGROUP.GE",
-      description: "კორპორაციული ვებსაიტი",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      alt: "BIZNESGROUP.GE - კორპორაციული ვებსაიტი",
-      color: "from-blue-500 to-blue-700",
-      tech: ["WordPress", "PHP", "MySQL"]
-    },
-    {
-      name: "RESTAURANT.GE",
-      description: "რესტორნის ვებსაიტი",
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      alt: "RESTAURANT.GE - რესტორნის ვებსაიტი",
-      color: "from-green-500 to-green-700",
+      name: "GYMSHARK GEORGIA",
+      description: "სპორტული ბრენდის ვებსაიტი",
+      image: sportsProject,
+      alt: "Gymshark Georgia - სპორტული ბრენდის ვებსაიტი",
+      color: "from-orange-500 to-red-600",
       tech: ["Vue.js", "Laravel", "Stripe"]
     },
     {
-      name: "TRAVELGEORGIA.GE",
-      description: "ტურისტული სააგენტო",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      alt: "TRAVELGEORGIA.GE - ტურისტული სააგენტოს ვებსაიტი",
-      color: "from-cyan-500 to-cyan-700",
-      tech: ["Next.js", "Prisma", "Tailwind"]
+      name: "CLARE FASHION",
+      description: "მოდის ბრენდის ვებსაიტი",
+      image: fashionProject,
+      alt: "Clare Fashion - მოდის ბრენდის ვებსაიტი",
+      color: "from-gray-600 to-gray-800",
+      tech: ["Next.js", "Shopify", "TypeScript"]
     },
     {
-      name: "REALESTATE.GE",
-      description: "უძრავი ქონების ვებსაიტი",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      alt: "REALESTATE.GE - უძრავი ქონების ვებსაიტი",
-      color: "from-orange-500 to-orange-700",
+      name: "MANNING ELLIOTT",
+      description: "კორპორაციული საკონსულტაციო ვებსაიტი",
+      image: corporateProject,
+      alt: "Manning Elliott - კორპორაციული საკონსულტაციო ვებსაიტი",
+      color: "from-blue-600 to-blue-800",
+      tech: ["WordPress", "PHP", "MySQL"]
+    },
+    {
+      name: "PABCO GYPSUM",
+      description: "მშენებლობითი კომპანიის ვებსაიტი",
+      image: constructionProject,
+      alt: "Pabco Gypsum - მშენებლობითი კომპანიის ვებსაიტი",
+      color: "from-red-600 to-red-800",
       tech: ["Angular", "Express", "MongoDB"]
     },
     {
-      name: "EDUCATION.GE",
-      description: "საგანმანათლებლო პლატფორმა",
-      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      alt: "EDUCATION.GE - საგანმანათლებლო პლატფორმა",
-      color: "from-pink-500 to-pink-700",
-      tech: ["React", "Firebase", "TypeScript"]
+      name: "JACKY'S ELECTRONICS",
+      description: "ელექტრონული კომერციის ვებსაიტი",
+      image: ecommerceProject,
+      alt: "Jacky's Electronics - ელექტრონული კომერციის ვებსაიტი",
+      color: "from-cyan-500 to-blue-600",
+      tech: ["React", "WooCommerce", "Tailwind"]
     },
   ];
 
@@ -153,9 +159,7 @@ export default function Portfolio() {
                 <div className={`w-full h-1 bg-gradient-to-r ${project.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full`}></div>
               </div>
 
-              {/* Floating Elements */}
-              <div className="absolute top-4 right-4 w-3 h-3 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-300"></div>
-              <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div>
+
             </div>
           ))}
         </div>
