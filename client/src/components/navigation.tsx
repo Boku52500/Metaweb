@@ -43,7 +43,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center">
           <div className="flex items-center group cursor-pointer">
             <img 
-              src="/metaweb-logo.png"
+              src="/metaweb-logo-new.png"
               alt="MetaWeb Logo"
               className="h-16 w-auto object-contain group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg"
             />

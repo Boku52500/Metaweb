@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-8 group">
               <img 
-                src="/metaweb-logo.png"
+                src="/metaweb-logo-new.png"
                 alt="MetaWeb Logo"
                 className="h-24 w-auto object-contain group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg"
               />
