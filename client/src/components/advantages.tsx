@@ -23,117 +23,104 @@ export default function Advantages() {
 
   const advantages = [
     {
-      icon: "fas fa-award",
       title: "პროფესიონალიზმი",
       description: "7 წლიანი გამოცდილება ვებსაიტების დამზადებაში",
-      color: "from-purple-500 to-purple-700",
-      bgColor: "bg-purple-50",
-      emoji: "🏆"
+      number: "01"
     },
     {
-      icon: "fas fa-clock",
-      title: "პუნქტუალურობა",
+      title: "პუნქტუალურობა", 
       description: "ყველა პროექტი ეწყობა დადგენილ ვადებში",
-      color: "from-blue-500 to-blue-700",
-      bgColor: "bg-blue-50",
-      emoji: "⏰"
+      number: "02"
     },
     {
-      icon: "fas fa-lightbulb",
       title: "კრეატიულობა",
       description: "უნიკალური და ინოვაციური დიზაინის გადაწყვეტილებები",
-      color: "from-cyan-500 to-cyan-700",
-      bgColor: "bg-cyan-50",
-      emoji: "💡"
+      number: "03"
     },
     {
-      icon: "fas fa-rocket",
       title: "ინოვაციურობა",
       description: "უახლესი ტექნოლოგიები და ტრენდები",
-      color: "from-green-500 to-green-700",
-      bgColor: "bg-green-50",
-      emoji: "🚀"
+      number: "04"
     },
     {
-      icon: "fas fa-shield-alt",
       title: "სანდოობა",
       description: "150+ კმაყოფილი კლიენტი და გაგრძელებული თანამშრომლობა",
-      color: "from-orange-500 to-orange-700",
-      bgColor: "bg-orange-50",
-      emoji: "🛡️"
+      number: "05"
     },
     {
-      icon: "fas fa-star",
       title: "ხარისხი",
       description: "მაღალი ხარისხის სტანდარტები ყველა პროექტში",
-      color: "from-pink-500 to-pink-700",
-      bgColor: "bg-pink-50",
-      emoji: "⭐"
+      number: "06"
     },
   ];
 
   return (
-    <section id="უპირატესობები" className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-white/30 to-gray-100/50"></div>
-      </div>
+    <section id="უპირატესობები" className="py-24 bg-white relative overflow-hidden">
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" 
+           style={{
+             backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0,0,0,0.1) 1px, transparent 0)',
+             backgroundSize: '24px 24px'
+           }}
+      ></div>
       
       <div className="container mx-auto px-6 relative z-10">
+        {/* Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <h2 className="text-5xl lg:text-7xl font-bold mb-6 font-georgian">
-            <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              რატომ ჩვენ?
-            </span>
+          <h2 className="text-5xl lg:text-6xl font-bold mb-6 font-georgian text-gray-900">
+            რატომ ჩვენ?
           </h2>
-          <h3 className="text-2xl lg:text-3xl text-gray-600 font-georgian mb-8">ჩვენი უპირატესობები</h3>
-          <div className="w-32 h-1 bg-gradient-to-r from-purple-600 to-cyan-500 mx-auto rounded-full"></div>
+          <p className="text-lg text-gray-600 font-georgian max-w-2xl mx-auto">
+            ჩვენი უპირატესობები, რაც გვაყოფს კონკურენტებისგან
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {advantages.map((advantage, index) => (
             <div
               key={index}
-              className={`group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden ${advantage.bgColor} border border-gray-100 transform hover:scale-105 ${
+              className={`group relative bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-700 hover:border-gray-200 hover:shadow-xl hover:shadow-gray-100/50 ${
                 isVisible 
                   ? 'translate-y-0 opacity-100' 
-                  : 'translate-y-8 opacity-0'
+                  : 'translate-y-12 opacity-0'
               }`}
               style={{ 
-                animationDelay: `${index * 100}ms`,
-                transitionDelay: `${index * 100}ms`
+                transitionDelay: `${index * 150}ms`,
+                transform: isVisible ? 'translateY(0)' : 'translateY(48px)'
               }}
             >
-              {/* Gradient Background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${advantage.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+              {/* Subtle hover background */}
+              <div className="absolute inset-0 bg-gray-50 rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
               
-              <div className="relative p-8 text-center">
-                {/* Icon */}
-                <div className="relative mb-6">
-                  <div className={`w-20 h-20 bg-gradient-to-br ${advantage.color} rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
-                    <span className="text-3xl">{advantage.emoji}</span>
-                  </div>
-                  <div className={`absolute -inset-2 bg-gradient-to-br ${advantage.color} rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300`}></div>
-                </div>
-                
-                <h4 className="text-2xl font-bold mb-4 text-gray-800 font-georgian group-hover:text-gray-900 transition-colors duration-300">
+              {/* Number */}
+              <div className="relative mb-6">
+                <span className="text-6xl font-light text-gray-200 group-hover:text-gray-300 transition-colors duration-500">
+                  {advantage.number}
+                </span>
+                <div className="absolute top-0 left-0 w-12 h-1 bg-black transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 delay-200"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="relative">
+                <h3 className="text-xl font-bold mb-4 text-gray-900 font-georgian group-hover:text-black transition-colors duration-300">
                   {advantage.title}
-                </h4>
+                </h3>
                 
                 <p className="text-gray-600 leading-relaxed font-georgian group-hover:text-gray-700 transition-colors duration-300">
                   {advantage.description}
                 </p>
-
-                {/* Hover Effect */}
-                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${advantage.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
               </div>
+
+              {/* Subtle accent line */}
+              <div className="absolute bottom-0 left-8 right-8 h-px bg-gray-100 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left delay-100"></div>
             </div>
           ))}
         </div>
 
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-300/20 rounded-full blur-xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-300/20 rounded-full blur-xl animate-float-delayed"></div>
+        {/* Minimal decorative elements */}
+        <div className="absolute top-32 right-16 w-2 h-2 bg-gray-300 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-32 left-16 w-1 h-1 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
     </section>
   );
