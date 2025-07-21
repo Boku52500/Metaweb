@@ -35,7 +35,7 @@ export default function Navigation() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
-          ? "bg-white/90 backdrop-blur-xl shadow-xl border-b border-purple-100" 
+          ? "bg-black/90 backdrop-blur-xl shadow-xl border-b border-green-500/20" 
           : "bg-transparent"
       }`}
     >
@@ -64,13 +64,13 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative hover:text-purple-600 transition-all duration-300 font-medium text-lg font-georgian group py-2 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
+                className={`relative hover:text-green-500 transition-all duration-300 font-medium text-lg font-georgian group py-2 ${
+                  isScrolled ? 'text-white' : 'text-white'
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
           </div>
@@ -78,7 +78,7 @@ export default function Navigation() {
           {/* Phone Button */}
           <a
             href="tel:+995568694879"
-            className="hidden md:flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/30 hover:scale-105 font-georgian"
+            className="hidden md:flex items-center bg-green-500 text-black px-6 py-3 rounded-xl hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-green-500/30 hover:scale-105 font-georgian font-bold"
           >
             <i className="fas fa-phone mr-2 animate-pulse"></i>568 69 48 79
           </a>
