@@ -52,7 +52,10 @@ export default function Hero() {
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 font-georgian leading-tight tracking-tight">
                 <span className="inline-block animate-slide-up transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.3s' }}>
-                  საიტის დამზადება
+                  <span className="text-white/90 mr-6">საიტის</span>
+                  <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent font-extrabold text-shadow-lg animate-pulse">
+                    დამზადება
+                  </span>
                 </span>
               </h1>
               
@@ -87,9 +90,10 @@ export default function Hero() {
                 
                 {/* Content */}
                 <div className="relative flex items-center justify-center space-x-3">
-                  <div className="relative overflow-hidden">
-                    <span className="block group-hover:-translate-y-full transition-transform duration-300 text-xl">✨</span>
-                    <span className="absolute top-full left-0 group-hover:translate-y-0 transition-transform duration-300 text-xl">🚀</span>
+                  <div className="relative flex items-center justify-center w-8 h-8">
+                    <span className="absolute text-2xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 group-hover:drop-shadow-lg">🚀</span>
+                    <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-yellow-400/30 rounded-full scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-50 transition-all duration-700 animate-ping"></div>
                   </div>
                   <span className="relative">
                     სწრაფი შეკვეთა
