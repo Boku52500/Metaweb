@@ -44,7 +44,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+      <div className="container mx-auto px-6 pt-40 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-20 items-center min-h-[80vh]">
           <div className={`text-white transition-all duration-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             <div className="mb-12">
@@ -137,35 +137,36 @@ export default function Hero() {
           </div>
 
           <div className={`relative transition-all duration-1000 delay-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
-            <div className="relative group h-[500px] flex items-center justify-center">
+            <div className="relative group h-[600px] flex items-center justify-center">
               {/* Background Glow Effect */}
-              <div className="absolute -inset-8 bg-gradient-to-r from-purple-600/30 via-blue-600/30 to-cyan-500/30 rounded-3xl blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+              <div className="absolute -inset-8 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-500/20 rounded-3xl blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
               
-              {/* Main Illustration Container */}
-              <div className="relative w-full max-w-lg">
-                {/* Custom Web Development Illustration */}
+              {/* Main Image Container */}
+              <div className="relative w-full max-w-2xl">
+                {/* Digital Agency Team Photo */}
                 <img
-                  src="/Website-Development-alt-1-3_1753098998334.jpg"
+                  src="/digital-agency-farnham_1753099696324.jpg"
                   alt="Metaweb - საიტის დამზადება და ვებსაიტის დიზაინი"
-                  className="relative w-full h-auto opacity-95 group-hover:scale-105 transition-all duration-700 hero-illustration"
+                  className="relative w-full h-auto rounded-3xl shadow-2xl group-hover:scale-105 transition-all duration-700"
+                  style={{ filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.3))' }}
                 />
                 
                 {/* Animated Floating Elements */}
-                <div className="absolute top-12 left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl animate-float border border-purple-200/50">
+                <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl animate-float border border-purple-200/50">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                     <span className="text-sm font-semibold text-gray-800 font-georgian">რეალურ დროში</span>
                   </div>
                 </div>
                 
-                <div className="absolute top-20 right-12 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-delayed">
+                <div className="absolute top-16 right-8 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-delayed">
                   <div className="flex items-center space-x-2">
                     <span className="text-lg">⚡</span>
                     <span className="text-sm font-medium font-georgian">სწრაფი</span>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-16 left-12 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-slow">
+                <div className="absolute bottom-20 left-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-slow">
                   <div className="flex items-center space-x-2">
                     <span className="text-lg">🎨</span>
                     <span className="text-sm font-medium font-georgian">თანამედროვე</span>
@@ -180,18 +181,18 @@ export default function Hero() {
                 </div>
                 
                 {/* Code Snippets Floating Around */}
-                <div className="absolute top-8 right-4 bg-gray-900/90 backdrop-blur-sm text-green-400 rounded-lg p-2 text-xs font-mono animate-float shadow-xl">
-                  &lt;div className="hero"&gt;
+                <div className="absolute top-4 right-20 bg-gray-900/90 backdrop-blur-sm text-green-400 rounded-lg p-2 text-xs font-mono animate-float shadow-xl">
+                  &lt;div className="team"&gt;
                 </div>
                 
-                <div className="absolute bottom-12 left-4 bg-gray-900/90 backdrop-blur-sm text-blue-400 rounded-lg p-2 text-xs font-mono animate-float-delayed shadow-xl">
-                  function build() {'{'}
+                <div className="absolute bottom-4 left-20 bg-gray-900/90 backdrop-blur-sm text-blue-400 rounded-lg p-2 text-xs font-mono animate-float-delayed shadow-xl">
+                  function collaborate() {'{'}
                 </div>
                 
                 {/* Pulse Dots for Tech Feel */}
-                <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-60"></div>
-                <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-60" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-1/4 left-1/6 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-60"></div>
+                <div className="absolute top-2/3 right-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-60" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-1/4 left-2/3 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60" style={{ animationDelay: '2s' }}></div>
               </div>
             </div>
           </div>
