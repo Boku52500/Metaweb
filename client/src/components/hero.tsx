@@ -141,12 +141,12 @@ export default function Hero() {
 
           {/* Team Picture Section */}
           <div className={`relative transition-all duration-1000 delay-500 mt-12 sm:mt-16 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
-            <div className="relative group h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">
+            <div className="relative group h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] xl:h-[800px] flex items-center justify-center">
               {/* Background Glow Effect */}
               <div className="absolute -inset-4 sm:-inset-6 lg:-inset-8 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-500/20 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
               
               {/* Main Image Container */}
-              <div className="relative w-full max-w-lg sm:max-w-xl md:max-w-2xl">
+              <div className="relative w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
                 {/* Digital Agency Team Photo */}
                 <img
                   src="/digital-agency-farnham_1753099696324.jpg"
@@ -156,35 +156,47 @@ export default function Hero() {
                 />
                 
                 {/* Animated Floating Elements */}
-                <div className="absolute top-4 sm:top-6 lg:top-8 left-4 sm:left-6 lg:left-8 bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl animate-float border border-purple-200/50">
-                  <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-xs sm:text-sm font-semibold text-gray-800 font-georgian">რეალურ დროში</span>
+                <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl animate-float border border-purple-200/50">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-semibold text-gray-800 font-georgian">რეალურ დროში</span>
                   </div>
                 </div>
                 
-                <div className="absolute top-8 sm:top-12 lg:top-16 right-4 sm:right-6 lg:right-8 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg sm:rounded-xl p-2 sm:p-3 shadow-xl animate-float-delayed">
-                  <div className="flex items-center space-x-1 sm:space-x-2">
-                    <span className="text-base sm:text-xl">✨</span>
-                    <span className="font-bold text-xs sm:text-sm font-georgian">ხარისხი</span>
+                <div className="absolute top-16 right-8 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-delayed">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-lg">⚡</span>
+                    <span className="text-sm font-medium font-georgian">სწრაფი</span>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 bg-cyan-500/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-xl animate-float border border-cyan-300/30">
-                  <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-cyan-400 rounded-full flex items-center justify-center">
-                      <span className="text-cyan-900 font-bold text-xs sm:text-sm">99%</span>
-                    </div>
-                    <span className="text-white font-semibold text-xs sm:text-sm font-georgian">კმაყოფილება</span>
+                <div className="absolute bottom-20 left-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-slow">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-lg">🎨</span>
+                    <span className="text-sm font-medium font-georgian">თანამედროვე</span>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-8 sm:bottom-12 lg:bottom-16 right-4 sm:right-6 lg:right-8 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg sm:rounded-xl p-2 sm:p-3 shadow-xl animate-float-reverse">
-                  <div className="flex items-center space-x-1 sm:space-x-2">
-                    <span className="text-base sm:text-xl">🚀</span>
-                    <span className="font-bold text-xs sm:text-sm font-georgian">სრული სერვისი</span>
+                <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl animate-float-reverse border border-cyan-200/50">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-xl">🚀</span>
+                    <span className="text-sm font-semibold text-gray-800 font-georgian">მაღალი ხარისხი</span>
                   </div>
                 </div>
+                
+                {/* Code Snippets Floating Around */}
+                <div className="absolute top-4 right-20 bg-gray-900/90 backdrop-blur-sm text-green-400 rounded-lg p-2 text-xs font-mono animate-float shadow-xl">
+                  &lt;div className="team"&gt;
+                </div>
+                
+                <div className="absolute bottom-4 left-20 bg-gray-900/90 backdrop-blur-sm text-blue-400 rounded-lg p-2 text-xs font-mono animate-float-delayed shadow-xl">
+                  function collaborate() {'{'}
+                </div>
+                
+                {/* Pulse Dots for Tech Feel */}
+                <div className="absolute top-1/4 left-1/6 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-60"></div>
+                <div className="absolute top-2/3 right-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-60" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-1/4 left-2/3 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60" style={{ animationDelay: '2s' }}></div>
               </div>
             </div>
           </div>
