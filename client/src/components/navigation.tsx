@@ -78,7 +78,11 @@ export default function Navigation() {
           {/* Phone Button */}
           <a
             href="tel:+995568694879"
-            className="hidden md:flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/30 hover:scale-105 font-georgian"
+            className={`hidden md:flex items-center px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:scale-105 font-georgian ${
+              isScrolled 
+                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
+                : 'bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30 hover:shadow-white/20'
+            }`}
           >
             <i className="fas fa-phone mr-2 animate-pulse"></i>568 69 48 79
           </a>
