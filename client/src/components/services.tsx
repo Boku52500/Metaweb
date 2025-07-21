@@ -86,16 +86,12 @@ export default function Services() {
                 transitionDelay: `${index * 150}ms`
               }}
             >
-              {/* Subtle Border Lines */}
-              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {/* Top border line */}
-                <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
-                {/* Right border line */}
-                <div className={`absolute top-0 right-0 w-[2px] h-full bg-gradient-to-b ${service.color} transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top delay-100`}></div>
-                {/* Bottom border line */}
-                <div className={`absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-l ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right delay-200`}></div>
-                {/* Left border line */}
-                <div className={`absolute bottom-0 left-0 w-[2px] h-full bg-gradient-to-t ${service.color} transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom delay-300`}></div>
+              {/* Complete Border Highlight */}
+              <div className={`absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                   style={{
+                     background: `linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)) padding-box, linear-gradient(45deg, var(--tw-gradient-stops)) border-box`,
+                     backgroundClip: 'padding-box, border-box'
+                   }}>
               </div>
               
               <div className="relative p-8 text-center">
