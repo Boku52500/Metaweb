@@ -37,7 +37,7 @@ export default function Footer() {
               <img 
                 src="/metaweb-logo.png"
                 alt="MetaWeb Logo"
-                className="h-16 w-auto object-contain group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg"
+                className="h-24 w-auto object-contain group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg"
               />
             </div>
             
