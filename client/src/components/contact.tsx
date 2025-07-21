@@ -218,8 +218,8 @@ export default function Contact() {
                 <div className="mt-6 p-4 bg-white/5 rounded-2xl border border-white/10">
                   <p className="text-gray-300 text-sm font-georgian text-center">
                     📞 სწრაფი პასუხისთვის დარეკეთ: 
-                    <a href="tel:+995568694879" className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors ml-1">
-                      568 69 48 79
+                    <a href="tel:+99555791514615" className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors ml-1">
+                      557 91 51 46
                     </a>
                   </p>
                 </div>
@@ -228,13 +228,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl p-8 text-white max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-4 font-georgian">24/7 ხელმისაწვდომობა</h3>
-            <p className="text-lg font-georgian">ჩვენ ყოველთვის მზად ვართ დაგეხმაროთ თქვენი ციფრული მარკეტინგის საჭიროებებში</p>
-          </div>
-        </div>
+
       </div>
     </section>
   );
