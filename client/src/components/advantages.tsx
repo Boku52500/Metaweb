@@ -99,7 +99,7 @@ export default function Advantages() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 font-georgian max-w-3xl mx-auto leading-relaxed">
-            ისინი არიან ის ფაქტორები, რომლებიც განგვასხვავებენ და ქმნიან ჩვენს უნიკალურობას
+            ფაქტორები, რომლებიც განგვასხვავებენ და ქმნიან ჩვენს უნიკალურობას
           </p>
         </div>
 
@@ -188,9 +188,9 @@ export default function Advantages() {
         </div>
 
         {/* Premium Decorative Elements */}
-        <div className="absolute top-40 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute bottom-40 left-20 w-3 h-3 bg-purple-400 rounded-full animate-pulse opacity-40" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-pink-400 rounded-full animate-pulse opacity-50" style={{ animationDelay: '2s' }}></div>
+       
+        
+        
       </div>
     </section>
   );
