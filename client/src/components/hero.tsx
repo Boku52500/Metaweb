@@ -17,105 +17,153 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A0A0A]">
-      {/* Grid Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `
-            linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px'
-        }}></div>
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Advanced Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 via-blue-900 to-cyan-900">
+        {/* Mesh Gradient Overlay */}
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-600/30 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-cyan-600/30 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent"></div>
+        </div>
+        
+        {/* Enhanced Floating Shapes */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl animate-float opacity-60"></div>
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-blue-500/25 rounded-full blur-3xl animate-float-delayed opacity-70"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500/30 rounded-full blur-3xl animate-pulse opacity-50"></div>
+        <div className="absolute top-1/6 right-1/3 w-48 h-48 bg-pink-500/20 rounded-full blur-2xl animate-float-slow opacity-40"></div>
+        <div className="absolute bottom-1/4 left-1/6 w-80 h-80 bg-indigo-500/25 rounded-full blur-3xl animate-float-reverse opacity-60"></div>
+        
+        {/* Particle Effect Overlay */}
+        <div className="absolute inset-0">
+          <div className="absolute w-2 h-2 bg-white/20 rounded-full top-1/4 left-1/4 animate-ping" style={{ animationDelay: '0s' }}></div>
+          <div className="absolute w-1 h-1 bg-cyan-300/40 rounded-full top-1/3 right-1/3 animate-ping" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute w-3 h-3 bg-purple-300/30 rounded-full bottom-1/3 left-1/2 animate-ping" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute w-1 h-1 bg-yellow-300/50 rounded-full top-1/2 right-1/4 animate-ping" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute w-2 h-2 bg-pink-300/40 rounded-full bottom-1/4 right-1/6 animate-ping" style={{ animationDelay: '3s' }}></div>
+        </div>
       </div>
 
-      {/* Geometric Elements */}
-      <div className="absolute top-20 right-20 opacity-30">
-        <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-          <path d="M60 10L110 35V85L60 110L10 85V35L60 10Z" stroke="#22C55E" strokeWidth="2" fill="rgba(34, 197, 94, 0.05)"/>
-        </svg>
-      </div>
-      
-      <div className="absolute bottom-20 left-20 opacity-20">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-          <circle cx="40" cy="40" r="35" stroke="#22C55E" strokeWidth="2" fill="rgba(34, 197, 94, 0.03)"/>
-          <circle cx="40" cy="40" r="20" stroke="#22C55E" strokeWidth="1" fill="none"/>
-        </svg>
-      </div>
+      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-20 items-center min-h-[80vh]">
+          <div className={`text-white transition-all duration-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+            <div className="mb-12">
+              {/* Enhanced Badge */}
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 mb-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></span>
+                <span className="text-sm font-georgian text-white/90">სანდო პარტნიორი ციფრულ სამყაროში</span>
+              </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-6xl mx-auto">
-          <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-            {/* Large Title */}
-            <h1 className="text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 text-white font-georgian leading-none tracking-tight">
-              <span className="inline-block animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                რატომ აირჩიოთ ჩვენ?
-              </span>
-            </h1>
-            
-            <p className="text-xl lg:text-2xl mb-16 text-gray-400 font-georgian leading-relaxed max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              ჩვენ ვქმნით საიტებს, რომლებიც არა მხოლოდ ლამაზია, არამედ ასევე ფუნქციონალური და ეფექტური. 
-              <br />
-              <span className="text-green-500">
-                თქვენი ბიზნესის წარმატება ჩვენი პრიორიტეტია.
-              </span>
-            </p>
-
-            {/* Five Key Points Grid */}
-            <div className={`grid grid-cols-1 lg:grid-cols-5 gap-8 mb-16 transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-              <div className="text-center group">
-                <div className="text-8xl font-bold text-green-500/20 mb-4 font-mono group-hover:text-green-500/40 transition-colors duration-300">01</div>
-                <p className="text-gray-400 font-georgian leading-relaxed text-sm lg:text-base">
-                  ვასრულებთ პროექტებს დროულად და ბიუჯეტის ფარგლებში, უზრუნველყოფთ 100% კმაყოფილებას.
-                </p>
-              </div>
+              <h1 className="text-7xl lg:text-9xl font-bold mb-8 font-georgian leading-[0.9] tracking-tight">
+                <span className="inline-block animate-slide-up transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.3s' }}>
+                  საიტის
+                </span>
+                <br />
+                <span className="inline-block bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-slide-up transform hover:scale-105 transition-transform duration-300 bg-[length:200%_200%] animate-gradient-x" style={{ animationDelay: '0.5s' }}>
+                  დამზადება
+                </span>
+              </h1>
               
-              <div className="text-center group">
-                <div className="text-8xl font-bold text-green-500/20 mb-4 font-mono group-hover:text-green-500/40 transition-colors duration-300">02</div>
-                <p className="text-gray-400 font-georgian leading-relaxed text-sm lg:text-base">
-                  ვქმნით განსაკუთრებული ხარისხის ვებსაიტებს, რომლებიც არა მხოლოდ ხელმისაწვდომია, არამედ ღირებულიცაა.
-                </p>
-              </div>
+              <h2 className="text-4xl lg:text-5xl mb-10 text-white/95 font-georgian animate-slide-up font-light" style={{ animationDelay: '0.7s' }}>
+                <span className="bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+                  საუკეთესო ხარისხი ხელმისაწვდომ ფასად
+                </span>
+              </h2>
               
-              <div className="text-center group">
-                <div className="text-8xl font-bold text-green-500/20 mb-4 font-mono group-hover:text-green-500/40 transition-colors duration-300">03</div>
-                <p className="text-gray-400 font-georgian leading-relaxed text-sm lg:text-base">
-                  ჩვენი დიზაინი თანამედროვე და მინიმალისტურია, რაც აუმჯობესებს მომხმარებელთა გამოცდილებას.
-                </p>
-              </div>
-              
-              <div className="text-center group">
-                <div className="text-8xl font-bold text-green-500/20 mb-4 font-mono group-hover:text-green-500/40 transition-colors duration-300">04</div>
-                <p className="text-gray-400 font-georgian leading-relaxed text-sm lg:text-base">
-                  ჩვენი ვებსაიტები უნიკალური და მორგებულია თქვენი ბიზნესის ინდივიდუალური ხედვისთვის.
-                </p>
-              </div>
-              
-              <div className="text-center group">
-                <div className="text-8xl font-bold text-green-500/20 mb-4 font-mono group-hover:text-green-500/40 transition-colors duration-300">05</div>
-                <p className="text-gray-400 font-georgian leading-relaxed text-sm lg:text-base">
-                  სხვა ფრილანსერებისგან განსხვავებით, ჩვენ არასოდეს ვაკეთებთ კომპრომისს ხარისხთან დაკავშირებით!
-                </p>
-              </div>
+              <p className="text-2xl lg:text-3xl mb-16 text-white/85 font-georgian leading-relaxed animate-slide-up" style={{ animationDelay: '0.9s' }}>
+                ჩვენი გუნდი ეხმარება კომპანიებს იპოვონ თავიანთი ადგილი 
+                <span className="text-cyan-300 font-semibold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent"> ციფრულ სამყაროში</span>
+                <br />
+                <span className="text-xl text-white/70 block mt-4">
+                  შექმენით თქვენი წარმატებული ონლაინ ბიზნესი დღესვე
+                </span>
+              </p>
             </div>
 
-            {/* CTA Buttons */}
-            <div className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+            <div className={`flex flex-col sm:flex-row gap-8 mb-20 transition-all duration-1200 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
               <Button
                 onClick={scrollToContact}
-                className="bg-green-500 hover:bg-green-600 text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 font-georgian"
+                className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black px-10 py-6 rounded-2xl font-bold text-xl hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 transition-all duration-500 shadow-2xl hover:shadow-yellow-500/50 hover:scale-110 font-georgian group transform-gpu relative overflow-hidden"
               >
-                დაიწყე პროექტი
+                <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="relative flex items-center">
+                  <span className="group-hover:animate-bounce inline-block mr-3 text-2xl">🚀</span>
+                  სწრაფი შეკვეთა
+                </span>
               </Button>
               <Button
                 variant="outline"
                 asChild
-                className="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 font-georgian"
+                className="border-2 border-white/40 text-white px-10 py-6 rounded-2xl font-bold text-xl hover:bg-white/20 hover:border-white/80 transition-all duration-500 backdrop-blur-md font-georgian group transform-gpu hover:scale-105 shadow-lg hover:shadow-white/20"
               >
-                <a href="tel:+995568694879">
+                <a href="tel:+995568694879" className="flex items-center">
+                  <i className="fas fa-phone mr-4 group-hover:animate-pulse text-cyan-300 text-lg"></i>
                   568 69 48 79
                 </a>
               </Button>
+            </div>
+
+            {/* Enhanced Statistics */}
+            <div className={`grid grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1200 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+              <div className="text-center group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+                  <Counter target={7} />
+                  <div className="text-white/80 font-georgian text-sm mt-2 font-medium">წლიანი გამოცდილება</div>
+                </div>
+              </div>
+              <div className="text-center group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-pink-500"></div>
+                  <Counter target={150} />
+                  <div className="text-white/80 font-georgian text-sm mt-2 font-medium">კმაყოფილი კლიენტი</div>
+                </div>
+              </div>
+              <div className="text-center group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
+                  <Counter target={350} />
+                  <div className="text-white/80 font-georgian text-sm mt-2 font-medium">წარმატებული პროექტი</div>
+                </div>
+              </div>
+              <div className="text-center group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-emerald-500"></div>
+                  <Counter target={15} />
+                  <div className="text-white/80 font-georgian text-sm mt-2 font-medium">გუნდის წევრი</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className={`relative transition-all duration-1000 delay-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="Metaweb - საიტის დამზადება და ვებსაიტის დიზაინი"
+                className="relative rounded-3xl shadow-2xl w-full group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-3xl"></div>
+              
+              {/* Floating UI Elements */}
+              <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl animate-float">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-gray-800">ონლაინ რეჟიმი</span>
+                </div>
+              </div>
+              
+              <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl animate-float-delayed">
+                <div className="flex items-center space-x-2">
+                  <span className="text-2xl">⚡</span>
+                  <span className="text-sm font-medium text-gray-800">სწრაფი მომსახურება</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
