@@ -128,7 +128,7 @@ export default function Services() {
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 font-georgian">მზად ხართ დასაწყებად?</h3>
             <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 font-georgian">მიიღეთ უფასო კონსულტაცია და იყავით კონკურენტებზე ერთი ნაბიჯით წინ</p>
             <a
-              href="tel:+99555791514615"
+              href="tel:+995557915146"
               className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 font-georgian group"
             >
               <span className="group-hover:animate-pulse mr-2 sm:mr-3">📞</span>

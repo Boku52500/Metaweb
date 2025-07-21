@@ -57,7 +57,7 @@ export default function Footer() {
                   <i className="fas fa-phone text-white text-sm sm:text-base"></i>
                 </div>
                 <a
-                  href="tel:+99555791514615"
+                  href="tel:+995557915146"
                   className="text-gray-300 hover:text-white transition-colors font-georgian text-base sm:text-lg group-hover:text-yellow-300"
                 >
                   557 91 51 46
@@ -155,7 +155,7 @@ export default function Footer() {
             
             <div className="flex items-center space-x-4 sm:space-x-6">
               <a
-                href="tel:+99555791514615"
+                href="tel:+995557915146"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 hover:scale-105 font-georgian group text-sm sm:text-base"
               >
                 <span className="group-hover:animate-pulse mr-1 sm:mr-2">📞</span>

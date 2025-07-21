@@ -82,7 +82,7 @@ export default function Navigation() {
 
           {/* Phone Button */}
           <a
-            href="tel:+99555791514615"
+            href="tel:+995557915146"
             className={`hidden md:flex items-center px-4 lg:px-6 py-2 lg:py-3 rounded-lg lg:rounded-xl transition-all duration-300 shadow-lg hover:scale-105 font-georgian text-sm lg:text-base ${
               isScrolled 
                 ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
@@ -124,7 +124,7 @@ export default function Navigation() {
                 </button>
               ))}
               <a
-                href="tel:+99555791514615"
+                href="tel:+995557915146"
                 className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center font-georgian shadow-lg text-sm sm:text-base"
               >
                 <i className="fas fa-phone mr-1 sm:mr-2 text-sm"></i>557 91 51 46

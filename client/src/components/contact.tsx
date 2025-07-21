@@ -98,7 +98,7 @@ export default function Contact() {
                     <div>
                       <p className="text-gray-400 font-georgian text-sm sm:text-base">ტელეფონი</p>
                       <a
-                        href="tel:+99555791514615"
+                        href="tel:+995557915146"
                         className="text-lg sm:text-xl md:text-2xl font-bold text-white hover:text-yellow-300 transition-colors font-georgian group-hover:text-yellow-300"
                       >
                         557 91 51 46
@@ -218,7 +218,7 @@ export default function Contact() {
                 <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-white/5 rounded-xl sm:rounded-2xl border border-white/10">
                   <p className="text-gray-300 text-xs sm:text-sm font-georgian text-center">
                     📞 სწრაფი პასუხისთვის დარეკეთ: 
-                    <a href="tel:+99555791514615" className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors ml-1">
+                    <a href="tel:+995557915146" className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors ml-1">
                       557 91 51 46
                     </a>
                   </p>

@@ -184,7 +184,7 @@ export default function Portfolio() {
 
               ზედამხედველობაშემდეგი წარმატებული პროექტი</p>
             <a
-              href="tel:+995568694879"
+              href="tel:+995557915146"
               className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
             >
               <span className="group-hover:animate-bounce mr-3">💬</span>

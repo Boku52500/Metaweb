@@ -199,13 +199,18 @@ export default function Pricing() {
             <h3 className="text-3xl font-bold mb-4 font-georgian">ვერ იპოვეთ შესაფერისი პაკეტი?</h3>
             <p className="text-lg mb-6 font-georgian">დაგვიკავშირდით ინდივიდუალური შეთავაზებისთვის თქვენი საჭიროებების მიხედვით</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+99555791514615"
+              <button
+                onClick={() => {
+                  const element = document.getElementById("კონტაქტი");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                }}
                 className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
               >
                 <span className="group-hover:animate-bounce mr-3">💬</span>
                 ინდივიდუალური კონსულტაცია
-              </a>
+              </button>
               <a
                 href="mailto:info@metaweb.ge"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
