@@ -145,7 +145,7 @@ export default function Hero() {
               <Button
                 variant="outline"
                 asChild
-                className="relative group px-8 py-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-700 transform hover:scale-[1.02] font-georgian border-2 border-cyan-400/40 hover:border-cyan-300/60 w-full sm:w-64"
+                className="relative group px-8 py-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-700 transform hover:scale-[1.02] font-georgian border border-cyan-400/40 hover:border-cyan-300/60 w-full sm:w-64"
               >
                   <a href="tel:+99555791514615" className="relative flex items-center justify-center w-full h-full">
                     {/* Animated background */}
