@@ -6,6 +6,10 @@ export default function Footer() {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const services = [
     "საიტის დამზადება",
     "ვებსაიტის დიზაინი", 
@@ -33,7 +37,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-8 group">
+            <div className="flex items-center mb-8 group cursor-pointer" onClick={scrollToTop}>
               <img 
                 src="/metaweb-logo-new.png"
                 alt="MetaWeb Logo"
@@ -42,8 +46,8 @@ export default function Footer() {
             </div>
             
             <p className="text-gray-300 mb-8 text-lg leading-relaxed font-georgian">
-              ჩვენ ვქმნით ინოვაციურ და ფუნქციონალურ გადაწყვეტილებებს, რომლებიც ეხმარება
-              ბიზნესებს წარმატების მიღწევაში ციფრულ სამყაროში. თქვენი წარმატება - ჩვენი მიზანია.
+              ჩვენ ვქმნით ინოვაციურ ვებ-გვერდებს, ვეხმარებით
+              ბიზნესებს წარმატების მიღწევაში. თქვენი წარმატება - ჩვენი მიზანია.
             </p>
 
             {/* Contact Info */}

@@ -23,6 +23,11 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
     { label: "უპირატესობები", id: "უპირატესობები" },
     { label: "პორტფოლიო", id: "პორტფოლიო" },
@@ -41,7 +46,7 @@ export default function Navigation() {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div className="flex items-center group cursor-pointer">
+          <div className="flex items-center group cursor-pointer" onClick={scrollToTop}>
             <img 
               src="/metaweb-logo-new.png"
               alt="MetaWeb Logo"
