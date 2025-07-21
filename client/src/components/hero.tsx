@@ -52,11 +52,7 @@ export default function Hero() {
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 font-georgian leading-tight tracking-tight">
                 <span className="inline-block animate-slide-up transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.3s' }}>
-                  საიტის
-                </span>
-                <br />
-                <span className="inline-block bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-slide-up transform hover:scale-105 transition-transform duration-300 bg-[length:200%_200%] animate-gradient-x" style={{ animationDelay: '0.5s' }}>
-                  დამზადება
+                  საიტის დამზადება
                 </span>
               </h1>
               
@@ -79,58 +75,66 @@ export default function Hero() {
             <div className={`flex flex-col sm:flex-row gap-6 mb-16 transition-all duration-1200 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
               <Button
                 onClick={scrollToContact}
-                className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 transition-all duration-500 shadow-2xl hover:shadow-yellow-500/50 hover:scale-105 font-georgian group transform-gpu relative overflow-hidden"
+                className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 transition-all duration-500 shadow-2xl hover:shadow-yellow-500/50 hover:scale-105 font-georgian group transform-gpu relative overflow-hidden border-2 border-yellow-400/50"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="relative flex items-center">
+                <span className="relative flex items-center justify-center">
                   <span className="group-hover:animate-bounce inline-block mr-3 text-2xl">🚀</span>
-                  სწრაფი შეკვეთა
+                  <span className="font-extrabold text-shadow-lg">სწრაფი შეკვეთა</span>
                 </span>
               </Button>
               <Button
                 variant="outline"
                 asChild
-                className="border-2 border-white/40 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/80 transition-all duration-500 backdrop-blur-md font-georgian group transform-gpu hover:scale-105 shadow-lg hover:shadow-white/20"
+                className="border-3 border-yellow-400/80 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 backdrop-blur-md text-yellow-100 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gradient-to-r hover:from-yellow-400/20 hover:to-orange-400/20 hover:border-yellow-300 transition-all duration-500 font-georgian group transform-gpu hover:scale-105 shadow-2xl hover:shadow-yellow-400/30"
               >
-                <a href="tel:+995568694879" className="flex items-center">
-                  <i className="fas fa-phone mr-4 group-hover:animate-pulse text-cyan-300 text-lg"></i>
-                  568 69 48 79
+                <a href="tel:+995568694879" className="flex items-center justify-center">
+                  <i className="fas fa-phone mr-4 group-hover:animate-pulse text-yellow-300 text-lg"></i>
+                  <span className="font-extrabold text-yellow-100 text-shadow-md">568 69 48 79</span>
                 </a>
               </Button>
             </div>
 
             {/* Enhanced Statistics */}
-            <div className={`grid grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1200 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+            <div className={`grid grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-1200 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
               <div className="text-center group relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden">
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
-                  <Counter target={7} />
-                  <div className="text-white/80 font-georgian text-sm mt-2 font-medium">წლიანი გამოცდილება</div>
+                  <div className="mb-2">
+                    <Counter target={7} />
+                  </div>
+                  <div className="text-white/80 font-georgian text-sm font-medium leading-tight">წლიანი გამოცდილება</div>
                 </div>
               </div>
               <div className="text-center group relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden">
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-pink-500"></div>
-                  <Counter target={150} />
-                  <div className="text-white/80 font-georgian text-sm mt-2 font-medium">კმაყოფილი კლიენტი</div>
+                  <div className="mb-2">
+                    <Counter target={150} />
+                  </div>
+                  <div className="text-white/80 font-georgian text-sm font-medium leading-tight">კმაყოფილი კლიენტი</div>
                 </div>
               </div>
               <div className="text-center group relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden">
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-                  <Counter target={350} />
-                  <div className="text-white/80 font-georgian text-sm mt-2 font-medium">წარმატებული პროექტი</div>
+                  <div className="mb-2">
+                    <Counter target={350} />
+                  </div>
+                  <div className="text-white/80 font-georgian text-sm font-medium leading-tight">წარმატებული პროექტი</div>
                 </div>
               </div>
               <div className="text-center group relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden">
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-emerald-500"></div>
-                  <Counter target={15} />
-                  <div className="text-white/80 font-georgian text-sm mt-2 font-medium">გუნდის წევრი</div>
+                  <div className="mb-2">
+                    <Counter target={15} />
+                  </div>
+                  <div className="text-white/80 font-georgian text-sm font-medium leading-tight">გუნდის წევრი</div>
                 </div>
               </div>
             </div>
