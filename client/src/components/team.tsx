@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
 
+const scrollToContact = () => {
+  const element = document.getElementById("კონტაქტი");
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
 export default function Pricing() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -52,8 +59,7 @@ export default function Pricing() {
         "ფოტო გალერეა",
         "ბლოგი/სიახლეები",
         "3 თვის უფასო საარსებო"
-      ],
-      popular: true
+      ]
     },
     {
       name: "ონლაინ მაღაზია",
@@ -85,8 +91,7 @@ export default function Pricing() {
         "ადვანსირებული ანალიტიკა",
         "24/7 ტექნიკური მხარდაჭერა",
         "1 წლის უფასო საარსებო"
-      ],
-      premium: true
+      ]
     }
   ];
 
@@ -115,7 +120,7 @@ export default function Pricing() {
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 ${plan.popular ? 'border-purple-500 scale-105' : plan.premium ? 'border-gradient-to-r from-orange-500 to-red-600' : 'border-gray-100'} ${
+              className={`group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 border-gray-100 hover:border-transparent ${
                 isVisible 
                   ? 'translate-y-0 opacity-100' 
                   : 'translate-y-8 opacity-0'
@@ -125,70 +130,57 @@ export default function Pricing() {
                 transitionDelay: `${index * 150}ms`
               }}
             >
-              {/* Popular/Premium Badge */}
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg font-georgian">
-                    ყველაზე პოპულარული
+              {/* Enhanced Border Effect - Only on Hover */}
+              <div className={`absolute inset-0 rounded-3xl p-0.5 bg-gradient-to-r ${plan.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
+                <div className="bg-white rounded-3xl h-full w-full"></div>
+              </div>
+
+              {/* Content Container - positioned relatively */}
+              <div className="relative z-10 p-8 h-full flex flex-col">
+                {/* Icon Header */}
+                <div className="text-center mb-6">
+                  <div className={`w-20 h-20 bg-gradient-to-br ${plan.color} rounded-full flex items-center justify-center mx-auto shadow-xl transition-all duration-300 mb-4`}>
+                    <span className="text-4xl">{plan.icon}</span>
                   </div>
+                  <h4 className="text-2xl font-bold mb-2 text-gray-800 font-georgian">
+                    {plan.name}
+                  </h4>
+                  <p className="text-gray-600 mb-4 font-georgian leading-relaxed">
+                    {plan.description}
+                  </p>
                 </div>
-              )}
-              {plan.premium && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg font-georgian">
-                    პრემიუმი
+
+                {/* Pricing */}
+                <div className="text-center mb-6">
+                  <div className="flex items-center justify-center mb-4">
+                    <span className={`text-4xl font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent font-georgian`}>
+                      {plan.price}
+                    </span>
+                    <span className="text-lg text-gray-600 ml-2 font-georgian">{plan.priceNote}</span>
                   </div>
+                  <div className={`w-24 h-1 bg-gradient-to-r ${plan.color} mx-auto rounded-full`}></div>
                 </div>
-              )}
 
-              {/* Enhanced Border Effect */}
-              <div className={`absolute inset-0 border-2 border-transparent bg-gradient-to-r ${plan.color} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                   style={{
-                     background: `linear-gradient(rgba(255,255,255,1), rgba(255,255,255,1)) padding-box, linear-gradient(45deg, var(--tw-gradient-stops)) border-box`,
-                     backgroundClip: 'padding-box, border-box'
-                   }}>
-              </div>
-
-              {/* Icon Header */}
-              <div className="text-center pt-8 pb-4">
-                <div className={`w-20 h-20 bg-gradient-to-br ${plan.color} rounded-full flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 mb-4`}>
-                  <span className="text-4xl">{plan.icon}</span>
+                {/* Features */}
+                <div className="flex-grow">
+                  <ul className="space-y-3 mb-6">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start font-georgian">
+                        <div className={`w-5 h-5 bg-gradient-to-r ${plan.color} rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0`}>
+                          <span className="text-white text-xs">✓</span>
+                        </div>
+                        <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h4 className="text-2xl font-bold mb-2 text-gray-800 font-georgian group-hover:scale-105 transition-all duration-300">
-                  {plan.name}
-                </h4>
-                <p className="text-gray-600 mb-6 font-georgian leading-relaxed">
-                  {plan.description}
-                </p>
-              </div>
-
-              {/* Pricing */}
-              <div className="text-center mb-8">
-                <div className="flex items-center justify-center mb-4">
-                  <span className={`text-5xl font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent font-georgian`}>
-                    {plan.price}
-                  </span>
-                  <span className="text-xl text-gray-600 ml-2 font-georgian">{plan.priceNote}</span>
-                </div>
-                <div className={`w-24 h-1 bg-gradient-to-r ${plan.color} mx-auto rounded-full`}></div>
-              </div>
-
-              {/* Features */}
-              <div className="px-8 pb-8">
-                <ul className="space-y-4">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start font-georgian">
-                      <div className={`w-6 h-6 bg-gradient-to-r ${plan.color} rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0`}>
-                        <span className="text-white text-sm">✓</span>
-                      </div>
-                      <span className="text-gray-700 leading-relaxed">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
 
                 {/* CTA Button */}
-                <div className="mt-8">
-                  <button className={`w-full bg-gradient-to-r ${plan.color} text-white py-4 rounded-2xl font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-georgian group-hover:animate-pulse`}>
+                <div className="mt-auto">
+                  <button 
+                    onClick={scrollToContact}
+                    className={`w-full bg-gradient-to-r ${plan.color} text-white py-3 rounded-2xl font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-georgian`}
+                  >
                     შეკვეთა
                   </button>
                 </div>
