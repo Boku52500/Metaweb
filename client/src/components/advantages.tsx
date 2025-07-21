@@ -120,34 +120,27 @@ export default function Advantages() {
               {/* Glass Card */}
               <div className="relative p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden h-full flex flex-col group-hover:-translate-y-1">
                 
-                {/* Animated Border Lines */}
-                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  {/* Top Border Line */}
-                  <div className={`absolute top-0 left-1/2 w-0 h-[2px] bg-gradient-to-r ${advantage.gradient} group-hover:w-full group-hover:left-0 transition-all duration-700 delay-100`}></div>
-                  {/* Right Border Line */}
-                  <div className={`absolute top-1/2 right-0 w-[2px] h-0 bg-gradient-to-b ${advantage.gradient} group-hover:h-full group-hover:top-0 transition-all duration-700 delay-200`}></div>
-                  {/* Bottom Border Line */}
-                  <div className={`absolute bottom-0 right-1/2 w-0 h-[2px] bg-gradient-to-l ${advantage.gradient} group-hover:w-full group-hover:right-0 transition-all duration-700 delay-300`}></div>
-                  {/* Left Border Line */}
-                  <div className={`absolute bottom-1/2 left-0 w-[2px] h-0 bg-gradient-to-t ${advantage.gradient} group-hover:h-full group-hover:bottom-0 transition-all duration-700 delay-400`}></div>
-                </div>
-
-                {/* Corner Accent Lines */}
-                <div className="absolute top-0 left-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-500">
-                  <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r ${advantage.gradient}`}></div>
-                  <div className={`absolute top-0 left-0 w-[2px] h-full bg-gradient-to-b ${advantage.gradient}`}></div>
-                </div>
-                <div className="absolute top-0 right-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-600">
-                  <div className={`absolute top-0 right-0 w-full h-[2px] bg-gradient-to-l ${advantage.gradient}`}></div>
-                  <div className={`absolute top-0 right-0 w-[2px] h-full bg-gradient-to-b ${advantage.gradient}`}></div>
-                </div>
-                <div className="absolute bottom-0 right-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-700">
-                  <div className={`absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-l ${advantage.gradient}`}></div>
-                  <div className={`absolute bottom-0 right-0 w-[2px] h-full bg-gradient-to-t ${advantage.gradient}`}></div>
-                </div>
-                <div className="absolute bottom-0 left-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-800">
-                  <div className={`absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r ${advantage.gradient}`}></div>
-                  <div className={`absolute bottom-0 left-0 w-[2px] h-full bg-gradient-to-t ${advantage.gradient}`}></div>
+                {/* Unified Border Animation */}
+                <div className="absolute inset-0 rounded-3xl">
+                  {/* Complete Border Outline */}
+                  <div className={`absolute inset-0 border-2 border-transparent bg-gradient-to-r ${advantage.gradient} rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500`} 
+                       style={{ 
+                         background: `linear-gradient(white, white) padding-box, linear-gradient(45deg, var(--tw-gradient-stops)) border-box`,
+                         backgroundClip: 'padding-box, border-box'
+                       }}>
+                  </div>
+                  
+                  {/* Animated Border Lines - Synchronized */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* Top Border Line */}
+                    <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r ${advantage.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
+                    {/* Right Border Line */}
+                    <div className={`absolute top-0 right-0 w-[2px] h-full bg-gradient-to-b ${advantage.gradient} transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top delay-100`}></div>
+                    {/* Bottom Border Line */}
+                    <div className={`absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-l ${advantage.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right delay-200`}></div>
+                    {/* Left Border Line */}
+                    <div className={`absolute bottom-0 left-0 w-[2px] h-full bg-gradient-to-t ${advantage.gradient} transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom delay-300`}></div>
+                  </div>
                 </div>
 
                 {/* Subtle Background Gradient on Hover */}
@@ -181,7 +174,7 @@ export default function Advantages() {
                 </div>
 
                 {/* Bottom Accent Bar */}
-                <div className={`absolute bottom-0 left-1/2 w-0 h-1 bg-gradient-to-r ${advantage.gradient} group-hover:w-full group-hover:left-0 transition-all duration-700 delay-900 rounded-b-3xl`}></div>
+                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${advantage.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 delay-400 origin-center rounded-b-3xl`}></div>
               </div>
 
               {/* Card Number */}
