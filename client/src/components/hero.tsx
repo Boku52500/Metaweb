@@ -27,21 +27,58 @@ export default function Hero() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent"></div>
         </div>
         
-        {/* Enhanced Floating Shapes */}
+        {/* Enhanced Floating Shapes - Layer 1 */}
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl animate-float opacity-60"></div>
         <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-blue-500/25 rounded-full blur-3xl animate-float-delayed opacity-70"></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500/30 rounded-full blur-3xl animate-pulse opacity-50"></div>
         <div className="absolute top-1/6 right-1/3 w-48 h-48 bg-pink-500/20 rounded-full blur-2xl animate-float-slow opacity-40"></div>
         <div className="absolute bottom-1/4 left-1/6 w-80 h-80 bg-indigo-500/25 rounded-full blur-3xl animate-float-reverse opacity-60"></div>
         
-        {/* Particle Effect Overlay */}
+        {/* Enhanced Floating Shapes - Layer 2 */}
+        <div className="absolute top-1/5 right-1/5 w-56 h-56 bg-emerald-500/25 rounded-full blur-3xl animate-float opacity-50"></div>
+        <div className="absolute bottom-1/3 right-1/2 w-72 h-72 bg-violet-500/20 rounded-full blur-3xl animate-float-delayed opacity-45"></div>
+        <div className="absolute top-2/3 left-1/3 w-40 h-40 bg-teal-500/30 rounded-full blur-2xl animate-float-slow opacity-55"></div>
+        <div className="absolute top-1/8 left-1/2 w-88 h-88 bg-rose-500/15 rounded-full blur-3xl animate-pulse opacity-40"></div>
+        <div className="absolute bottom-1/5 left-2/3 w-64 h-64 bg-orange-500/25 rounded-full blur-3xl animate-float-reverse opacity-50"></div>
+        
+        {/* Enhanced Floating Shapes - Layer 3 */}
+        <div className="absolute top-3/5 right-1/6 w-36 h-36 bg-lime-500/30 rounded-full blur-2xl animate-float opacity-45"></div>
+        <div className="absolute bottom-2/5 left-1/5 w-52 h-52 bg-sky-500/25 rounded-full blur-3xl animate-float-delayed opacity-55"></div>
+        <div className="absolute top-1/3 right-2/3 w-44 h-44 bg-fuchsia-500/20 rounded-full blur-2xl animate-float-slow opacity-40"></div>
+        <div className="absolute bottom-1/6 right-1/3 w-60 h-60 bg-amber-500/25 rounded-full blur-3xl animate-pulse opacity-50"></div>
+        <div className="absolute top-4/5 left-1/4 w-32 h-32 bg-red-500/30 rounded-full blur-2xl animate-float-reverse opacity-45"></div>
+        
+        {/* Geometric Shapes */}
+        <div className="absolute top-1/3 left-1/5 w-24 h-24 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rotate-45 animate-spin-slow opacity-60"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-32 h-32 bg-gradient-to-r from-cyan-400/15 to-pink-400/15 rotate-12 animate-pulse opacity-50"></div>
+        <div className="absolute top-2/5 right-1/5 w-20 h-20 bg-gradient-to-r from-green-400/25 to-blue-400/25 -rotate-12 animate-bounce opacity-40" style={{ animationDuration: '3s' }}></div>
+        <div className="absolute bottom-2/5 left-1/3 w-28 h-28 bg-gradient-to-r from-purple-400/20 to-cyan-400/20 rotate-45 animate-spin-slow opacity-55"></div>
+        
+        {/* Particle Effect Overlay - Enhanced */}
         <div className="absolute inset-0">
           <div className="absolute w-2 h-2 bg-white/20 rounded-full top-1/4 left-1/4 animate-ping" style={{ animationDelay: '0s' }}></div>
           <div className="absolute w-1 h-1 bg-cyan-300/40 rounded-full top-1/3 right-1/3 animate-ping" style={{ animationDelay: '2s' }}></div>
           <div className="absolute w-3 h-3 bg-purple-300/30 rounded-full bottom-1/3 left-1/2 animate-ping" style={{ animationDelay: '4s' }}></div>
           <div className="absolute w-1 h-1 bg-yellow-300/50 rounded-full top-1/2 right-1/4 animate-ping" style={{ animationDelay: '1s' }}></div>
           <div className="absolute w-2 h-2 bg-pink-300/40 rounded-full bottom-1/4 right-1/6 animate-ping" style={{ animationDelay: '3s' }}></div>
+          
+          {/* Additional Particles */}
+          <div className="absolute w-1 h-1 bg-emerald-300/45 rounded-full top-1/5 right-1/5 animate-ping" style={{ animationDelay: '1.5s' }}></div>
+          <div className="absolute w-2 h-2 bg-violet-300/35 rounded-full bottom-1/5 left-1/3 animate-ping" style={{ animationDelay: '2.5s' }}></div>
+          <div className="absolute w-1 h-1 bg-teal-300/50 rounded-full top-3/5 left-1/5 animate-ping" style={{ animationDelay: '3.5s' }}></div>
+          <div className="absolute w-3 h-3 bg-rose-300/30 rounded-full bottom-2/5 right-1/3 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute w-1 h-1 bg-orange-300/45 rounded-full top-4/5 right-2/5 animate-ping" style={{ animationDelay: '4.5s' }}></div>
+          <div className="absolute w-2 h-2 bg-lime-300/40 rounded-full top-2/3 left-2/3 animate-ping" style={{ animationDelay: '1.2s' }}></div>
+          <div className="absolute w-1 h-1 bg-sky-300/50 rounded-full bottom-1/6 left-1/4 animate-ping" style={{ animationDelay: '3.8s' }}></div>
+          <div className="absolute w-2 h-2 bg-fuchsia-300/35 rounded-full top-1/6 right-2/3 animate-ping" style={{ animationDelay: '2.2s' }}></div>
+          <div className="absolute w-1 h-1 bg-amber-300/45 rounded-full bottom-3/5 right-1/5 animate-ping" style={{ animationDelay: '4.2s' }}></div>
+          <div className="absolute w-3 h-3 bg-red-300/30 rounded-full top-5/6 left-1/6 animate-ping" style={{ animationDelay: '0.8s' }}></div>
         </div>
+        
+        {/* Floating Lines */}
+        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent animate-float opacity-60"></div>
+        <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/25 to-transparent animate-float-delayed opacity-50"></div>
+        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-400/20 to-transparent animate-float-slow opacity-45"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 md:pt-40 pb-16 sm:pb-20 relative z-10">
