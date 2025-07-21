@@ -94,7 +94,7 @@ export default function Advantages() {
             </span>
           </div>
           <h2 className="text-6xl lg:text-7xl font-bold mb-8 font-georgian">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
               რატომ ჩვენ?
             </span>
           </h2>
@@ -118,31 +118,70 @@ export default function Advantages() {
               }}
             >
               {/* Glass Card */}
-              <div className="relative p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden h-full flex flex-col">
+              <div className="relative p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden h-full flex flex-col group-hover:-translate-y-1">
+                
+                {/* Animated Border Lines */}
+                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  {/* Top Border Line */}
+                  <div className={`absolute top-0 left-1/2 w-0 h-[2px] bg-gradient-to-r ${advantage.gradient} group-hover:w-full group-hover:left-0 transition-all duration-700 delay-100`}></div>
+                  {/* Right Border Line */}
+                  <div className={`absolute top-1/2 right-0 w-[2px] h-0 bg-gradient-to-b ${advantage.gradient} group-hover:h-full group-hover:top-0 transition-all duration-700 delay-200`}></div>
+                  {/* Bottom Border Line */}
+                  <div className={`absolute bottom-0 right-1/2 w-0 h-[2px] bg-gradient-to-l ${advantage.gradient} group-hover:w-full group-hover:right-0 transition-all duration-700 delay-300`}></div>
+                  {/* Left Border Line */}
+                  <div className={`absolute bottom-1/2 left-0 w-[2px] h-0 bg-gradient-to-t ${advantage.gradient} group-hover:h-full group-hover:bottom-0 transition-all duration-700 delay-400`}></div>
+                </div>
+
+                {/* Corner Accent Lines */}
+                <div className="absolute top-0 left-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-500">
+                  <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r ${advantage.gradient}`}></div>
+                  <div className={`absolute top-0 left-0 w-[2px] h-full bg-gradient-to-b ${advantage.gradient}`}></div>
+                </div>
+                <div className="absolute top-0 right-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-600">
+                  <div className={`absolute top-0 right-0 w-full h-[2px] bg-gradient-to-l ${advantage.gradient}`}></div>
+                  <div className={`absolute top-0 right-0 w-[2px] h-full bg-gradient-to-b ${advantage.gradient}`}></div>
+                </div>
+                <div className="absolute bottom-0 right-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-700">
+                  <div className={`absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-l ${advantage.gradient}`}></div>
+                  <div className={`absolute bottom-0 right-0 w-[2px] h-full bg-gradient-to-t ${advantage.gradient}`}></div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-800">
+                  <div className={`absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r ${advantage.gradient}`}></div>
+                  <div className={`absolute bottom-0 left-0 w-[2px] h-full bg-gradient-to-t ${advantage.gradient}`}></div>
+                </div>
+
+                {/* Subtle Background Gradient on Hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${advantage.gradient} opacity-0 group-hover:opacity-3 transition-opacity duration-700 rounded-3xl`}></div>
                 
                 {/* Premium Icon Container */}
                 <div className="relative z-10 mb-8 flex-shrink-0">
                   <div className="relative">
                     {/* Main Icon */}
-                    <div className={`w-20 h-20 bg-gradient-to-br ${advantage.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-lg transition-all duration-500`}>
-                      <span className="text-3xl filter drop-shadow-sm">{advantage.emoji}</span>
+                    <div className={`w-20 h-20 bg-gradient-to-br ${advantage.gradient} rounded-2xl flex items-center justify-center mx-auto shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                      <span className="text-3xl filter drop-shadow-sm group-hover:scale-110 transition-transform duration-500">{advantage.emoji}</span>
                     </div>
                     
                     {/* Fixed Glow on Hover */}
-                    <div className={`absolute -inset-3 bg-gradient-to-br ${advantage.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
+                    <div className={`absolute -inset-3 bg-gradient-to-br ${advantage.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500`}></div>
+                    
+                    {/* Pulse Ring */}
+                    <div className={`absolute -inset-2 border-2 border-transparent bg-gradient-to-r ${advantage.gradient} rounded-2xl opacity-0 group-hover:opacity-50 group-hover:scale-125 transition-all duration-700`} style={{ WebkitMaskImage: 'linear-gradient(#fff 0 0), linear-gradient(#fff 0 0)', WebkitMaskComposite: 'xor', maskComposite: 'exclude' }}></div>
                   </div>
                 </div>
                 
                 {/* Content */}
                 <div className="relative z-10 text-center flex-grow flex flex-col">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900 font-georgian transition-colors duration-300">
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900 font-georgian transition-all duration-500 group-hover:text-gray-800 group-hover:scale-105">
                     {advantage.title}
                   </h3>
                   
-                  <p className="text-gray-600 leading-relaxed font-georgian transition-colors duration-300 flex-grow">
+                  <p className="text-gray-600 leading-relaxed font-georgian transition-colors duration-300 flex-grow group-hover:text-gray-700">
                     {advantage.description}
                   </p>
                 </div>
+
+                {/* Bottom Accent Bar */}
+                <div className={`absolute bottom-0 left-1/2 w-0 h-1 bg-gradient-to-r ${advantage.gradient} group-hover:w-full group-hover:left-0 transition-all duration-700 delay-900 rounded-b-3xl`}></div>
               </div>
 
               {/* Card Number */}
