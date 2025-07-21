@@ -98,42 +98,42 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-2xl font-bold mb-8 font-georgian bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <h4 className="text-2xl font-bold mb-4 font-georgian bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               სერვისები
             </h4>
-            <ul className="space-y-4">
+            <div className="space-y-3">
               {services.map((service, index) => (
-                <li key={index}>
+                <div key={index}>
                   <button
                     onClick={() => scrollToSection("სერვისები")}
-                    className="text-gray-300 hover:text-white transition-all duration-300 text-left font-georgian text-lg hover:translate-x-2 group flex items-center w-full"
+                    className="text-gray-300 hover:text-white transition-all duration-300 font-georgian text-lg hover:translate-x-2 group flex items-start w-full text-left"
                   >
-                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"></span>
-                    <span className="flex-1 text-left">{service}</span>
+                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0 mt-2"></span>
+                    <span className="leading-relaxed">{service}</span>
                   </button>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-2xl font-bold mb-8 font-georgian bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <h4 className="text-2xl font-bold mb-4 font-georgian bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               ნავიგაცია
             </h4>
-            <ul className="space-y-4">
+            <div className="space-y-3">
               {navItems.map((item, index) => (
-                <li key={index}>
+                <div key={index}>
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="text-gray-300 hover:text-white transition-all duration-300 text-left font-georgian text-lg hover:translate-x-2 group flex items-center w-full"
+                    className="text-gray-300 hover:text-white transition-all duration-300 font-georgian text-lg hover:translate-x-2 group flex items-start w-full text-left"
                   >
-                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"></span>
-                    <span className="flex-1 text-left">{item.label}</span>
+                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0 mt-2"></span>
+                    <span className="leading-relaxed">{item.label}</span>
                   </button>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 

@@ -175,7 +175,14 @@ export default function Portfolio() {
         <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4 font-georgian">გაქვთ საინტერესო იდეა?</h3>
-            <p className="text-lg mb-6 font-georgian">ერთად შევქმნათ შემდეგი წარმატებული პროექტი</p>
+            <p className="text-lg mb-6 font-georgian">ერთად შევქმნათ 
+              საიტის დამზადება
+
+              ვებსაიტის დიზაინი
+
+              SEO მომსახურება
+
+              ზედამხედველობაშემდეგი წარმატებული პროექტი</p>
             <a
               href="tel:+995568694879"
               className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
