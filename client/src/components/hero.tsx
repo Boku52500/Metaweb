@@ -68,7 +68,7 @@ export default function Hero() {
                 <span className="text-cyan-300 font-semibold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent"> ციფრულ სამყაროში</span>
                 <br />
                 <span className="text-xl text-white/70 block mt-4">
-                  შექმენით თქვენი წარმატებული ონლაინ ბიზნესი დღესვე
+                  გახადეთ თქვენი ბიზნესი წარმატებული დღესვე
                 </span>
               </p>
             </div>
@@ -122,7 +122,7 @@ export default function Hero() {
                     </div>
                     
                     <span className="relative text-cyan-100 group-hover:text-white transition-colors duration-300">
-                      568 69 48 79
+                     557 91 51 46
                       <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-500"></div>
                     </span>
                     
@@ -140,7 +140,7 @@ export default function Hero() {
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
                   <div className="mb-2">
-                    <Counter target={7} />
+                    <Counter target={10} />
                   </div>
                   <div className="text-white/80 font-georgian text-sm font-medium leading-tight">წლიანი გამოცდილება</div>
                 </div>
@@ -150,7 +150,7 @@ export default function Hero() {
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-pink-500"></div>
                   <div className="mb-2">
-                    <Counter target={150} />
+                    <Counter target={500} />
                   </div>
                   <div className="text-white/80 font-georgian text-sm font-medium leading-tight">კმაყოფილი კლიენტი</div>
                 </div>
@@ -160,7 +160,7 @@ export default function Hero() {
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 relative overflow-hidden min-h-[120px] flex flex-col justify-center">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
                   <div className="mb-2">
-                    <Counter target={350} />
+                    <Counter target={850} />
                   </div>
                   <div className="text-white/80 font-georgian text-sm font-medium leading-tight">წარმატებული პროექტი</div>
                 </div>

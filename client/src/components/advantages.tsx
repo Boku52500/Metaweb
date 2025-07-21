@@ -24,21 +24,21 @@ export default function Advantages() {
   const advantages = [
     {
       title: "პროფესიონალიზმი",
-      description: "7 წლიანი გამოცდილება ვებსაიტების დამზადებაში",
+      description: "10+ წლიანი გამოცდილება ვებსაიტების დამზადებაში",
       emoji: "🎯",
       gradient: "from-blue-500 to-indigo-600",
       shadow: "shadow-blue-500/25"
     },
     {
       title: "პუნქტუალურობა", 
-      description: "ყველა პროექტი ეწყობა დადგენილ ვადებში",
+      description: "ყველა პროექტი ბარდება დადგენილ ვადებში",
       emoji: "⚡",
       gradient: "from-amber-500 to-orange-600",
       shadow: "shadow-amber-500/25"
     },
     {
       title: "კრეატიულობა",
-      description: "უნიკალური და ინოვაციური დიზაინის გადაწყვეტილებები",
+      description: "უნიკალური და ინოვაციური დიზაინი",
       emoji: "🎨",
       gradient: "from-purple-500 to-pink-600",
       shadow: "shadow-purple-500/25"
@@ -52,7 +52,7 @@ export default function Advantages() {
     },
     {
       title: "სანდოობა",
-      description: "150+ კმაყოფილი კლიენტი და გაგრძელებული თანამშრომლობა",
+      description: "500+ კმაყოფილი კლიენტი და გაგრძელებული თანამშრომლობა",
       emoji: "🛡️",
       gradient: "from-red-500 to-rose-600",
       shadow: "shadow-red-500/25"
@@ -99,7 +99,7 @@ export default function Advantages() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 font-georgian max-w-3xl mx-auto leading-relaxed">
-            ფაქტორები, რომლებიც განგვასხვავებენ და ქმნიან ჩვენს უნიკალურობას
+            ფაქტორები, რომლებიც განგვასხვავებენ და გვხდიან უნიკალურებს
           </p>
         </div>
 

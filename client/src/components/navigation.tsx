@@ -84,7 +84,7 @@ export default function Navigation() {
                 : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
             }`}
           >
-            <i className="fas fa-phone mr-2 animate-pulse"></i>568 69 48 79
+            <i className="fas fa-phone mr-2 animate-pulse"></i>557 91 51 46
           </a>
 
           {/* Mobile Menu Button */}
@@ -122,7 +122,7 @@ export default function Navigation() {
                 href="tel:+995568694879"
                 className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center font-georgian shadow-lg"
               >
-                <i className="fas fa-phone mr-2"></i>568 69 48 79
+                <i className="fas fa-phone mr-2"></i>557 91 51 46
               </a>
             </div>
           </div>
