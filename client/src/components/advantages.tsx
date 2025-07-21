@@ -180,7 +180,7 @@ export default function Advantages() {
               {/* Card Number */}
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full border border-gray-200/50 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110">
                 <span className="text-sm font-bold text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                  {(index + 1).toString().padStart(2, '0')}
+                  {(index + 1).toString().padStart(2)}
                 </span>
               </div>
             </div>

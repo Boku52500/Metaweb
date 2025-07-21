@@ -72,7 +72,7 @@ export default function Contact() {
             </span>
           </h2>
           <p className="text-xl lg:text-2xl text-gray-300 font-georgian mb-8">
-            მიიღეთ უფასო კონსულტაცია თქვენი ბიზნესის გასაძლიერებლად
+            მიიღეთ უფასო კონსულტაცია თქვენი ბიზნესის განსავითარებლად
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-cyan-400 mx-auto rounded-full"></div>
         </div>
@@ -86,8 +86,8 @@ export default function Contact() {
                   საიტის დამზადება და ვებსაიტის დიზაინი
                 </h3>
                 <p className="text-gray-300 mb-8 text-lg font-georgian leading-relaxed">
-                  ჩვენ ვიღებთ ვალდებულებას, რომ შევქმნათ ვებსაიტი, რომელიც აღემატება თქვენს
-                  მოლოდინს. დაგვიკავშირდით და მოგვითხარით თქვენი იდეა!
+                  ჩვენ ვიღებთ პასუხისმგებლობას, რომ შევქმნათ ვებსაიტი, რომელიც აღემატება თქვენს
+                  მოლოდინებს. დაგვიკავშირდით და გაგვიზიარეთ თქვენი იდეა!
                 </p>
 
                 <div className="space-y-6">
@@ -98,10 +98,10 @@ export default function Contact() {
                     <div>
                       <p className="text-gray-400 font-georgian">ტელეფონი</p>
                       <a
-                        href="tel:+995568694879"
+                        href="tel:+99555791514615"
                         className="text-2xl font-bold text-white hover:text-yellow-300 transition-colors font-georgian group-hover:text-yellow-300"
                       >
-                        568 69 48 79
+                        557 91 51 46
                       </a>
                     </div>
                   </div>
@@ -121,40 +121,17 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-6 group">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-green-500/30 transition-all duration-300 group-hover:scale-110">
-                      <i className="fas fa-map-marker-alt text-white text-xl"></i>
-                    </div>
-                    <div>
-                      <p className="text-gray-400 font-georgian">მისამართი</p>
-                      <p className="text-2xl font-bold text-white font-georgian">თბილისი, საქართველო</p>
-                    </div>
-                  </div>
 
-                  <div className="flex items-center space-x-6 group">
-                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-orange-500/30 transition-all duration-300 group-hover:scale-110">
-                      <i className="fas fa-clock text-white text-xl"></i>
-                    </div>
-                    <div>
-                      <p className="text-gray-400 font-georgian">სამუშაო საათები</p>
-                      <p className="text-xl font-bold text-white font-georgian">
-                        ორშ-პარ: 9:00 - 18:00
-                      </p>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Social Links */}
                 <div className="mt-8 pt-8 border-t border-white/20">
                   <p className="text-gray-400 mb-4 font-georgian">გამოგვყევით სოციალურ ქსელებში</p>
                   <div className="flex space-x-4">
-                    <a href="#" className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <a href="https://www.facebook.com/metawebstudios" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
                       <i className="fab fa-facebook-f text-white"></i>
                     </a>
-                    <a href="#" className="w-12 h-12 bg-gradient-to-r from-pink-600 to-pink-700 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <i className="fab fa-instagram text-white"></i>
-                    </a>
-                    <a href="#" className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <a href="https://www.linkedin.com/company/metawebge/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
                       <i className="fab fa-linkedin-in text-white"></i>
                     </a>
                   </div>
@@ -165,7 +142,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <h4 className="text-3xl font-bold mb-8 text-white font-georgian">სწრაფი კონტაქტი</h4>
+                <h4 className="text-3xl font-bold mb-8 text-white font-georgian">მოგვწერეთ</h4>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="relative group">
                     <Input

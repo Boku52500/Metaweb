@@ -38,11 +38,10 @@ export default function Pricing() {
       color: "from-blue-500 to-blue-700",
       features: [
         "1 გვერდი",
-        "მობაილზე ადაპტირება",
+        "მობილური ოპტიმიზაცია",
         "SEO ოპტიმიზაცია",
         "კონტაქტის ფორმა",
-        "სოციალური მედიის ინტეგრაცია",
-        "1 თვის უფასო საარსებო"
+        "სოციალური მედიის ინტეგრაცია"
       ]
     },
     {
@@ -53,12 +52,11 @@ export default function Pricing() {
       icon: "📚",
       color: "from-purple-500 to-purple-700",
       features: [
-        "რამდენიმე გვერდი",
+        "რამოდენიმე გვერდი",
         "ადმინ პანელი",
         "კონტენტის მართვა",
         "ფოტო გალერეა",
-        "ბლოგი/სიახლეები",
-        "3 თვის უფასო საარსებო"
+        "ბლოგი/სიახლეები"
       ]
     },
     {
@@ -69,12 +67,11 @@ export default function Pricing() {
       icon: "🛒",
       color: "from-green-500 to-green-700",
       features: [
-        "პროდუქტების კატალოგი",
-        "საყიდლის კალათა",
+        "კატალოგი",
+        "კალათა",
         "ონლაინ გადახდა",
         "მომხმარებლის ანგარიში",
-        "შეკვეთების მართვა",
-        "6 თვის უფასო საარსებო"
+        "შეკვეთების მართვა"
       ]
     },
     {
@@ -86,11 +83,10 @@ export default function Pricing() {
       color: "from-orange-500 to-red-600",
       features: [
         "100% უნიკალური დიზაინი",
-        "განსაკუთრებული ფუნქციონალი",
+        "ინდივიდუალური ფუნქციონალი",
         "API ინტეგრაციები",
-        "ადვანსირებული ანალიტიკა",
-        "24/7 ტექნიკური მხარდაჭერა",
-        "1 წლის უფასო საარსებო"
+        "ანალიტიკა",
+        "უვადო ტექნიკური მხარდაჭერა"
       ]
     }
   ];
@@ -112,7 +108,7 @@ export default function Pricing() {
           <h3 className="text-2xl lg:text-3xl text-gray-600 mb-8 font-georgian">აირჩიეთ თქვენთვის შესაფერისი პაკეტი</h3>
           <div className="w-32 h-1 bg-gradient-to-r from-purple-600 to-cyan-500 mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto font-georgian">
-            ყველა ფასი მოიცავს პროფესიონალურ დიზაინს, ტექნიკურ მხარდაჭერას და გარანტიას
+            ყველა პაკეტი მოიცავს პროფესიონალურ დიზაინს, ტექნიკურ მხარდაჭერას და გარანტიას
           </p>
         </div>
 
@@ -200,11 +196,11 @@ export default function Pricing() {
         {/* Bottom CTA Section */}
         <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4 font-georgian">არ იპოვეთ შესაფერისი პაკეტი?</h3>
-            <p className="text-lg mb-6 font-georgian">დაგვიკავშირდით ინდივიდუალური შეთავაზებისთვის თქვენი სპეციფიკური საჭიროებების მიხედვით</p>
+            <h3 className="text-3xl font-bold mb-4 font-georgian">ვერ იპოვეთ შესაფერისი პაკეტი?</h3>
+            <p className="text-lg mb-6 font-georgian">დაგვიკავშირდით ინდივიდუალური შეთავაზებისთვის თქვენი საჭიროებების მიხედვით</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+995568694879"
+                href="tel:+99555791514615"
                 className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
               >
                 <span className="group-hover:animate-bounce mr-3">💬</span>

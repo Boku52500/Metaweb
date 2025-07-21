@@ -25,21 +25,21 @@ export default function Services() {
     {
       icon: "fas fa-code",
       title: "ვებ-გვერდის დამზადება",
-      description: "ჩვენ ვქმნით თანამედროვე, ფუნქციურ და მომხმარებელზე ორიენტირებულ ვებ-გვერდებს, რომლებიც მოერგება თქვენს ბიზნესის საჭიროებებს.",
+      description: "ჩვენ ვქმნით თანამედროვე, ფუნქციურ და მომხმარებელზე ორიენტირებულ ვებ-გვერდებს, რომელიც მოერგება თქვენი ბიზნესის საჭიროებებს.",
       color: "from-purple-500 to-purple-700",
       emoji: "💻"
     },
     {
       icon: "fas fa-paint-brush",
       title: "ვებსაიტის დიზაინი",
-      description: "უნიკალური და მომხიბვლელი დიზაინი, რომელიც ასახავს თქვენი ბრენდის იდენტობას და მაქსიმალურად აღიქმება მომხმარებლების მიერ.",
+      description: "უნიკალური და მომხიბვლელი დიზაინი, რომელიც ასახავს თქვენი ბრენდის იდენტობას და გხდით გამორჩეულს.",
       color: "from-blue-500 to-blue-700",
       emoji: "🎨"
     },
     {
       icon: "fas fa-search",
       title: "SEO ოპტიმიზაცია",
-      description: "SEO მომსახურება, რომელიც უზრუნველყოფს თქვენი ვებ-გვერდის უკეთეს ხილვადობას საძიებო სისტემებში და ზრდის ორგანული ტრაფიკის მოცულობას.",
+      description: "SEO მომსახურება, რომელიც უზრუნველყოფს თქვენი ვებ-გვერდის უკეთეს ხილვადობას საძიებო სისტემებში და ზრდის ორგანულ ტრაფიკს.",
       color: "from-green-500 to-green-700",
       emoji: "📈"
     },
@@ -68,7 +68,7 @@ export default function Services() {
               ჩვენი სერვისები
             </span>
           </h2>
-          <p className="text-xl lg:text-2xl text-gray-300 font-georgian mb-8">სრული სპექტრის ციფრული გადაწყვეტილებები</p>
+          <p className="text-xl lg:text-2xl text-gray-300 font-georgian mb-8">სრული სპექტრის ციფრული მომსახურება</p>
           <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-cyan-400 mx-auto rounded-full"></div>
         </div>
 
@@ -94,9 +94,9 @@ export default function Services() {
                    }}>
               </div>
               
-              <div className="relative p-8 text-center">
-                {/* Icon */}
-                <div className="relative mb-8">
+              <div className="relative p-8 text-center h-full flex flex-col">
+                {/* Icon - Fixed Height */}
+                <div className="relative mb-6 h-32 flex flex-col justify-center">
                   <div className={`w-24 h-24 bg-gradient-to-br ${service.color} rounded-3xl flex items-center justify-center mx-auto shadow-xl transition-all duration-500 group-hover:scale-105`}>
                     <span className="text-4xl transition-transform duration-500">{service.emoji}</span>
                   </div>
@@ -104,13 +104,19 @@ export default function Services() {
                   <div className={`absolute -inset-3 bg-gradient-to-br ${service.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
                 </div>
                 
-                <h3 className="text-xl lg:text-2xl font-bold mb-6 text-white font-georgian transition-all duration-300">
-                  {service.title}
-                </h3>
+                {/* Title - Fixed Height */}
+                <div className="mb-6 h-16 flex items-center justify-center">
+                  <h3 className="text-xl lg:text-2xl font-bold text-white font-georgian transition-all duration-300 text-center">
+                    {service.title}
+                  </h3>
+                </div>
                 
-                <p className="text-gray-300 leading-relaxed font-georgian group-hover:text-gray-200 transition-colors duration-300">
-                  {service.description}
-                </p>
+                {/* Description - Flexible Height */}
+                <div className="flex-grow flex items-start justify-center">
+                  <p className="text-gray-300 leading-relaxed font-georgian group-hover:text-gray-200 transition-colors duration-300 text-center">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
@@ -120,9 +126,9 @@ export default function Services() {
         <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
             <h3 className="text-3xl font-bold text-white mb-4 font-georgian">მზად ხართ დასაწყებად?</h3>
-            <p className="text-gray-300 mb-6 font-georgian">მიიღეთ უფასო კონსულტაცია და იყავით ნაბიჯი წინ კონკურენტებთან შედარებით</p>
+            <p className="text-gray-300 mb-6 font-georgian">მიიღეთ უფასო კონსულტაცია და იყავით კონკურენტებზე ერთი ნაბიჯით წინ</p>
             <a
-              href="tel:+995568694879"
+              href="tel:+99555791514615"
               className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 font-georgian group"
             >
               <span className="group-hover:animate-pulse mr-3">📞</span>

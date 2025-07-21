@@ -17,7 +17,7 @@ export default function Footer() {
     { label: "უპირატესობები", id: "უპირატესობები" },
     { label: "პორტფოლიო", id: "პორტფოლიო" },
     { label: "სერვისები", id: "სერვისები" },
-    { label: "გუნდი", id: "გუნდი" },
+    { label: "ფასები", id: "ფასები" },
     { label: "კონტაქტი", id: "კონტაქტი" },
   ];
 
@@ -53,10 +53,10 @@ export default function Footer() {
                   <i className="fas fa-phone text-white"></i>
                 </div>
                 <a
-                  href="tel:+995568694879"
+                  href="tel:+99555791514615"
                   className="text-gray-300 hover:text-white transition-colors font-georgian text-lg group-hover:text-yellow-300"
                 >
-                  568 69 48 79
+                  557 91 51 46
                 </a>
               </div>
               
@@ -72,39 +72,26 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className="flex items-center space-x-4 group">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-green-500/30 transition-all duration-300">
-                  <i className="fas fa-map-marker-alt text-white"></i>
-                </div>
-                <span className="text-gray-300 font-georgian text-lg">თბილისი, საქართველო</span>
-              </div>
+
             </div>
 
             {/* Social Links */}
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/metawebstudios"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-blue-500/30 group"
               >
                 <i className="fab fa-facebook-f text-white group-hover:scale-110 transition-transform duration-200"></i>
               </a>
               <a
-                href="#"
-                className="w-12 h-12 bg-gradient-to-r from-pink-600 to-pink-700 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-pink-500/30 group"
-              >
-                <i className="fab fa-instagram text-white group-hover:scale-110 transition-transform duration-200"></i>
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/metawebge/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-blue-500/30 group"
               >
                 <i className="fab fa-linkedin-in text-white group-hover:scale-110 transition-transform duration-200"></i>
-              </a>
-              <a
-                href="#"
-                className="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-gray-500/30 group"
-              >
-                <i className="fab fa-github text-white group-hover:scale-110 transition-transform duration-200"></i>
               </a>
             </div>
           </div>
@@ -164,7 +151,7 @@ export default function Footer() {
             
             <div className="flex items-center space-x-6">
               <a
-                href="tel:+995568694879"
+                href="tel:+99555791514615"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 hover:scale-105 font-georgian group"
               >
                 <span className="group-hover:animate-pulse mr-2">📞</span>
