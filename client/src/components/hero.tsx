@@ -51,10 +51,10 @@ export default function Hero() {
               
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 font-georgian leading-tight tracking-tight">
-                <span className="inline-flex items-center gap-4 animate-slide-up transform hover:scale-105 transition-transform duration-300 text-white font-black tracking-wider relative whitespace-nowrap" style={{ animationDelay: '0.3s' }}>
-                  <span>საიტის</span>
-                  <span>დამზადება</span>
-                  <div className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/0 via-white/60 to-white/0"></div>
+                <span className="inline-flex items-center gap-4 animate-slide-up transform hover:scale-110 transition-all duration-500 text-white font-black tracking-wider relative whitespace-nowrap cursor-pointer group" style={{ animationDelay: '0.3s', textShadow: '0 4px 12px rgba(0, 0, 0, 0.6)' }}>
+                  <span className="group-hover:text-violet-300 transition-colors duration-300">საიტის</span>
+                  <span className="group-hover:text-cyan-300 transition-colors duration-300">დამზადება</span>
+                  <div className="absolute inset-0 bg-white/5 rounded-2xl scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-500 -z-10 blur-xl"></div>
                 </span>
               </h1>
               
