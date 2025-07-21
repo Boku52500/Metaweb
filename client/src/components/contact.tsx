@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { trackContactFormSubmission, trackPhoneClick } from "@/lib/google-conversion";
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,6 +37,9 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // Track conversion
+    trackContactFormSubmission();
 
     // Simulate form submission
     setTimeout(() => {
@@ -99,6 +103,7 @@ export default function Contact() {
                       <p className="text-gray-400 font-georgian text-sm sm:text-base">ტელეფონი</p>
                       <a
                         href="tel:+995557915146"
+                        onClick={trackPhoneClick}
                         className="text-lg sm:text-xl md:text-2xl font-bold text-white hover:text-yellow-300 transition-colors font-georgian group-hover:text-yellow-300"
                       >
                         557 91 51 46

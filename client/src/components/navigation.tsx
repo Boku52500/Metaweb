@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { trackPhoneClick } from "@/lib/google-conversion";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -84,6 +85,7 @@ export default function Navigation() {
           {/* Phone Button */}
           <a
             href="tel:+995557915146"
+            onClick={trackPhoneClick}
             className={`hidden md:flex items-center px-4 lg:px-6 py-2 lg:py-3 rounded-lg lg:rounded-xl transition-all duration-300 shadow-lg hover:scale-105 font-georgian text-sm lg:text-base ${
               isScrolled 
                 ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
