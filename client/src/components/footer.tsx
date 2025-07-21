@@ -103,14 +103,14 @@ export default function Footer() {
             </h4>
             <div className="space-y-3">
               {services.map((service, index) => (
-                <div key={index}>
+                <div key={index} className="relative">
                   <button
                     onClick={() => scrollToSection("სერვისები")}
-                    className="text-gray-300 hover:text-white transition-all duration-300 font-georgian text-lg hover:translate-x-2 group flex items-start w-full text-left"
+                    className="text-gray-300 hover:text-white transition-all duration-300 font-georgian text-lg hover:translate-x-2 group w-full text-left"
                   >
-                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0 mt-2"></span>
-                    <span className="leading-relaxed">{service}</span>
+                    {service}
                   </button>
+                  <span className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full -ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </div>
               ))}
             </div>
@@ -123,14 +123,14 @@ export default function Footer() {
             </h4>
             <div className="space-y-3">
               {navItems.map((item, index) => (
-                <div key={index}>
+                <div key={index} className="relative">
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="text-gray-300 hover:text-white transition-all duration-300 font-georgian text-lg hover:translate-x-2 group flex items-start w-full text-left"
+                    className="text-gray-300 hover:text-white transition-all duration-300 font-georgian text-lg hover:translate-x-2 group w-full text-left"
                   >
-                    <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0 mt-2"></span>
-                    <span className="leading-relaxed">{item.label}</span>
+                    {item.label}
                   </button>
+                  <span className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full -ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </div>
               ))}
             </div>
