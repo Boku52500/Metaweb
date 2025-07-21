@@ -143,33 +143,28 @@ export default function Hero() {
 
               {/* Phone Button */}
               <Button
-                variant="outline"
-                asChild
+                onClick={() => window.location.href = 'tel:+99555791514615'}
                 className="relative group px-8 py-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-700 transform hover:scale-[1.02] font-georgian border border-cyan-400/40 hover:border-cyan-300/60 w-full sm:w-64"
               >
-                  <a href="tel:+99555791514615" className="relative flex items-center justify-center w-full h-full">
-                    {/* Animated background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    {/* Content container with perfect centering */}
-                    <div className="flex items-center justify-center space-x-3">
-                      {/* Pulse rings around phone icon */}
-                      <div className="relative flex items-center justify-center w-6 h-6">
-                        <div className="absolute inset-0 rounded-full bg-cyan-400/30 animate-ping opacity-0 group-hover:opacity-75"></div>
-                        <div className="absolute inset-0 rounded-full bg-cyan-400/20 animate-ping opacity-0 group-hover:opacity-50" style={{ animationDelay: '0.2s' }}></div>
-                        <i className="fas fa-phone relative text-cyan-400 text-lg group-hover:text-cyan-300 transition-colors duration-300 group-hover:rotate-12 transform transition-transform"></i>
-                      </div>
-                      
-                      <span className="relative text-cyan-100 group-hover:text-white transition-colors duration-300 font-medium">
-                       557 91 51 46
-                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-500"></div>
-                      </span>
-                    </div>
-                    
-                    {/* Side glow */}
-                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 -z-10"></div>
-                  </a>
-                </Button>
+                {/* Animated background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Content */}
+                <div className="relative flex items-center justify-center space-x-3">
+                  <div className="relative flex items-center justify-center w-8 h-8">
+                    <i className="fas fa-phone relative text-cyan-400 text-lg group-hover:text-cyan-300 transition-colors duration-300 group-hover:rotate-12 transform transition-transform"></i>
+                    <div className="absolute inset-0 bg-cyan-400/20 rounded-full scale-0 group-hover:scale-150 opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-cyan-400/30 rounded-full scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-50 transition-all duration-700 animate-ping"></div>
+                  </div>
+                  <span className="relative text-cyan-100 group-hover:text-white transition-colors duration-300">
+                    557 91 51 46
+                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-500"></div>
+                  </span>
+                </div>
+                
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-cyan-400 via-blue-400 to-cyan-400 opacity-0 group-hover:opacity-20 blur-sm transition-all duration-500 -z-10"></div>
+              </Button>
             </div>
 
             {/* Enhanced Statistics - Mobile Only */}
