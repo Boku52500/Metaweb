@@ -76,7 +76,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative bg-white/10 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 overflow-hidden border border-white/20 transform hover:scale-105 hover:bg-white/20 ${
+              className={`group relative bg-white/10 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-white/20 hover:-translate-y-2 hover:bg-white/15 ${
                 isVisible 
                   ? 'translate-y-0 opacity-100' 
                   : 'translate-y-8 opacity-0'
@@ -86,33 +86,41 @@ export default function Services() {
                 transitionDelay: `${index * 150}ms`
               }}
             >
-              {/* Gradient Background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+              {/* Sophisticated Border Effect */}
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                {/* Animated border outline */}
+                <div className={`absolute inset-0 border-2 border-transparent bg-gradient-to-r ${service.color} rounded-3xl`} 
+                     style={{ 
+                       background: `linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)) padding-box, linear-gradient(45deg, var(--tw-gradient-stops)) border-box`,
+                       backgroundClip: 'padding-box, border-box'
+                     }}>
+                </div>
+              </div>
+
+              {/* Subtle gradient overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl`}></div>
               
               <div className="relative p-8 text-center">
                 {/* Icon */}
                 <div className="relative mb-8">
-                  <div className={`w-24 h-24 bg-gradient-to-br ${service.color} rounded-3xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
-                    <span className="text-4xl">{service.emoji}</span>
+                  <div className={`w-24 h-24 bg-gradient-to-br ${service.color} rounded-3xl flex items-center justify-center mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110`}>
+                    <span className="text-4xl group-hover:scale-110 transition-transform duration-500">{service.emoji}</span>
                   </div>
-                  <div className={`absolute -inset-3 bg-gradient-to-br ${service.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300`}></div>
+                  {/* Enhanced glow effect */}
+                  <div className={`absolute -inset-3 bg-gradient-to-br ${service.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500`}></div>
                 </div>
                 
-                <h3 className="text-xl lg:text-2xl font-bold mb-6 text-white font-georgian group-hover:text-yellow-300 transition-colors duration-300">
+                <h3 className="text-xl lg:text-2xl font-bold mb-6 text-white font-georgian group-hover:scale-105 transition-all duration-300">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-300 leading-relaxed font-georgian group-hover:text-white transition-colors duration-300">
+                <p className="text-gray-300 leading-relaxed font-georgian group-hover:text-gray-100 transition-colors duration-300">
                   {service.description}
                 </p>
 
-                {/* Hover Effect Border */}
-                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
+                {/* Enhanced bottom accent */}
+                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center rounded-b-3xl`}></div>
               </div>
-
-              {/* Floating Particles */}
-              <div className="absolute top-4 right-4 w-2 h-2 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-300"></div>
-              <div className="absolute bottom-4 left-4 w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div>
             </div>
           ))}
         </div>
