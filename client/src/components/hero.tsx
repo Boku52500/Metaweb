@@ -88,11 +88,12 @@ export default function Hero() {
                 </span>
               </Button>
               <Button
+                variant="outline"
                 asChild
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-500 font-georgian group transform-gpu hover:scale-105 shadow-lg hover:shadow-purple-500/30"
+                className="border-2 border-white/40 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/80 transition-all duration-500 backdrop-blur-md font-georgian group transform-gpu hover:scale-105 shadow-lg hover:shadow-white/20"
               >
                 <a href="tel:+995568694879" className="flex items-center">
-                  <i className="fas fa-phone mr-4 group-hover:animate-pulse text-white text-lg"></i>
+                  <i className="fas fa-phone mr-4 group-hover:animate-pulse text-cyan-300 text-lg"></i>
                   568 69 48 79
                 </a>
               </Button>
