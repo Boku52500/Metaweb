@@ -73,24 +73,58 @@ export default function Hero() {
             </div>
 
             <div className={`flex flex-col sm:flex-row gap-6 mb-16 transition-all duration-1200 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+              {/* Primary CTA Button */}
               <Button
                 onClick={scrollToContact}
-                className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 transition-all duration-500 shadow-2xl hover:shadow-yellow-500/50 hover:scale-105 font-georgian group transform-gpu relative overflow-hidden border-2 border-yellow-400/50"
+                className="relative group px-10 py-6 bg-gradient-to-br from-violet-600 via-purple-600 to-blue-600 text-white font-bold text-lg rounded-3xl overflow-hidden shadow-2xl hover:shadow-violet-500/40 transition-all duration-700 transform hover:scale-[1.02] font-georgian border border-violet-400/30"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="relative flex items-center justify-center">
-                  <span className="group-hover:animate-bounce inline-block mr-3 text-2xl">🚀</span>
-                  <span className="font-extrabold text-shadow-lg">სწრაფი შეკვეთა</span>
-                </span>
+                {/* Animated background layers */}
+                <div className="absolute inset-0 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-1000"></div>
+                
+                {/* Content */}
+                <div className="relative flex items-center justify-center space-x-3">
+                  <div className="relative overflow-hidden">
+                    <span className="block group-hover:-translate-y-full transition-transform duration-300 text-xl">✨</span>
+                    <span className="absolute top-full left-0 group-hover:translate-y-0 transition-transform duration-300 text-xl">🚀</span>
+                  </div>
+                  <span className="relative">
+                    სწრაფი შეკვეთა
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -skew-x-12 opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700"></div>
+                  </span>
+                </div>
+                
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-violet-400 via-purple-400 to-blue-400 opacity-0 group-hover:opacity-20 blur-sm transition-all duration-500 -z-10"></div>
               </Button>
+
+              {/* Phone Button */}
               <Button
                 variant="outline"
                 asChild
-                className="border-3 border-yellow-400/80 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 backdrop-blur-md text-yellow-100 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gradient-to-r hover:from-yellow-400/20 hover:to-orange-400/20 hover:border-yellow-300 transition-all duration-500 font-georgian group transform-gpu hover:scale-105 shadow-2xl hover:shadow-yellow-400/30"
+                className="relative group px-10 py-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl text-white font-bold text-lg rounded-3xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-700 transform hover:scale-[1.02] font-georgian border-2 border-cyan-400/40 hover:border-cyan-300/60"
               >
-                <a href="tel:+995568694879" className="flex items-center justify-center">
-                  <i className="fas fa-phone mr-4 group-hover:animate-pulse text-yellow-300 text-lg"></i>
-                  <span className="font-extrabold text-yellow-100 text-shadow-md">568 69 48 79</span>
+                <a href="tel:+995568694879" className="relative flex items-center justify-center space-x-4">
+                  {/* Animated background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Pulse rings around phone icon */}
+                  <div className="relative">
+                    <div className="absolute inset-0 rounded-full bg-cyan-400/30 animate-ping opacity-0 group-hover:opacity-75"></div>
+                    <div className="absolute inset-0 rounded-full bg-cyan-400/20 animate-ping opacity-0 group-hover:opacity-50" style={{ animationDelay: '0.2s' }}></div>
+                    <i className="fas fa-phone relative text-cyan-400 text-xl group-hover:text-cyan-300 transition-colors duration-300 group-hover:rotate-12 transform transition-transform"></i>
+                  </div>
+                  
+                  <span className="relative text-cyan-100 group-hover:text-white transition-colors duration-300">
+                    568 69 48 79
+                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-500"></div>
+                  </span>
+                  
+                  {/* Side glow */}
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 -z-10"></div>
                 </a>
               </Button>
             </div>
