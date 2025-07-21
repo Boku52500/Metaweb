@@ -34,15 +34,17 @@ export default function Portfolio() {
       image: techProject,
       alt: "Green IT Solution - ტექნოლოგიური კომპანიის ვებსაიტი",
       color: "from-green-500 to-green-700",
-      tech: ["React", "Node.js", "PostgreSQL"]
+      tech: ["React", "Node.js", "PostgreSQL"],
+      url: "https://www.greenit-solution.de/en/"
     },
     {
-      name: "GYMSHARK GEORGIA",
+      name: "PHYSIQ APPAREL",
       description: "სპორტული ბრენდის ვებსაიტი",
       image: sportsProject,
-      alt: "Gymshark Georgia - სპორტული ბრენდის ვებსაიტი",
+      alt: "Physiq Apparel - სპორტული ბრენდის ვებსაიტი",
       color: "from-orange-500 to-red-600",
-      tech: ["Vue.js", "FastAPI", "Redis"]
+      tech: ["Vue.js", "FastAPI", "Redis"],
+      url: "https://www.physiqapparel.com/"
     },
     {
       name: "CLARE FASHION",
@@ -50,23 +52,26 @@ export default function Portfolio() {
       image: fashionProject,
       alt: "Clare Fashion - მოდის ბრენდის ვებსაიტი",
       color: "from-gray-600 to-gray-800",
-      tech: ["Next.js", "Prisma", "TypeScript"]
+      tech: ["Next.js", "Prisma", "TypeScript"],
+      url: "https://clare.pro/"
     },
     {
       name: "MANNING ELLIOTT",
-      description: "კორპორაციული საკონსულტაციო ვებსაიტი",
+      description: "საკონსულტაციო ვებსაიტი",
       image: corporateProject,
       alt: "Manning Elliott - კორპორაციული საკონსულტაციო ვებსაიტი",
       color: "from-blue-600 to-blue-800",
-      tech: ["Svelte", "GraphQL", "Docker"]
+      tech: ["Svelte", "GraphQL", "Docker"],
+      url: "https://manningelliott.com/"
     },
     {
       name: "PABCO GYPSUM",
-      description: "მშენებლობითი კომპანიის ვებსაიტი",
+      description: "სამშენებლო კომპანიის ვებსაიტი",
       image: constructionProject,
       alt: "Pabco Gypsum - მშენებლობითი კომპანიის ვებსაიტი",
       color: "from-red-600 to-red-800",
-      tech: ["Angular", "NestJS", "MongoDB"]
+      tech: ["Angular", "NestJS", "MongoDB"],
+      url: "https://pabcogypsum.com/"
     },
     {
       name: "JACKY'S ELECTRONICS",
@@ -74,7 +79,8 @@ export default function Portfolio() {
       image: ecommerceProject,
       alt: "Jacky's Electronics - ელექტრონული კომერციის ვებსაიტი",
       color: "from-cyan-500 to-blue-600",
-      tech: ["React", "Microservices", "Tailwind"]
+      tech: ["React", "Microservices", "Tailwind"],
+      url: "https://www.jackyselectronics.com/"
     },
   ];
 
@@ -103,7 +109,7 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 transform hover:scale-105 ${
+              className={`group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 transform hover:scale-105 cursor-pointer ${
                 isVisible 
                   ? 'translate-y-0 opacity-100' 
                   : 'translate-y-8 opacity-0'
@@ -112,6 +118,7 @@ export default function Portfolio() {
                 animationDelay: `${index * 100}ms`,
                 transitionDelay: `${index * 100}ms`
               }}
+              onClick={() => window.open(project.url, '_blank')}
             >
               {/* Image Container */}
               <div className="relative overflow-hidden">
@@ -128,7 +135,7 @@ export default function Portfolio() {
                 {/* View Project Button */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 scale-0 group-hover:scale-100">
                   <button className={`bg-gradient-to-r ${project.color} text-white px-6 py-3 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 font-georgian`}>
-                    🔍 ნახვა
+                    🌐 ვებსაიტზე გადასვლა
                   </button>
                 </div>
               </div>
