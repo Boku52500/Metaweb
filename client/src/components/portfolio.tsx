@@ -42,7 +42,7 @@ export default function Portfolio() {
       image: sportsProject,
       alt: "Gymshark Georgia - სპორტული ბრენდის ვებსაიტი",
       color: "from-orange-500 to-red-600",
-      tech: ["Vue.js", "Laravel", "Stripe"]
+      tech: ["Vue.js", "FastAPI", "Redis"]
     },
     {
       name: "CLARE FASHION",
@@ -50,7 +50,7 @@ export default function Portfolio() {
       image: fashionProject,
       alt: "Clare Fashion - მოდის ბრენდის ვებსაიტი",
       color: "from-gray-600 to-gray-800",
-      tech: ["Next.js", "Shopify", "TypeScript"]
+      tech: ["Next.js", "Prisma", "TypeScript"]
     },
     {
       name: "MANNING ELLIOTT",
@@ -58,7 +58,7 @@ export default function Portfolio() {
       image: corporateProject,
       alt: "Manning Elliott - კორპორაციული საკონსულტაციო ვებსაიტი",
       color: "from-blue-600 to-blue-800",
-      tech: ["WordPress", "PHP", "MySQL"]
+      tech: ["Svelte", "GraphQL", "Docker"]
     },
     {
       name: "PABCO GYPSUM",
@@ -66,7 +66,7 @@ export default function Portfolio() {
       image: constructionProject,
       alt: "Pabco Gypsum - მშენებლობითი კომპანიის ვებსაიტი",
       color: "from-red-600 to-red-800",
-      tech: ["Angular", "Express", "MongoDB"]
+      tech: ["Angular", "NestJS", "MongoDB"]
     },
     {
       name: "JACKY'S ELECTRONICS",
@@ -74,7 +74,7 @@ export default function Portfolio() {
       image: ecommerceProject,
       alt: "Jacky's Electronics - ელექტრონული კომერციის ვებსაიტი",
       color: "from-cyan-500 to-blue-600",
-      tech: ["React", "WooCommerce", "Tailwind"]
+      tech: ["React", "Microservices", "Tailwind"]
     },
   ];
 
