@@ -78,7 +78,7 @@ export default function Hero() {
 
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 md:pt-40 pb-16 sm:pb-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 md:pt-24 lg:pt-20 pb-16 sm:pb-20 relative z-10">
         <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-20 items-center text-center lg:text-left min-h-[70vh] sm:min-h-[80vh]">
           <div className={`text-white transition-all duration-1200 w-full max-w-4xl lg:max-w-none ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             <div className="mb-8 sm:mb-12">
@@ -283,7 +283,7 @@ export default function Hero() {
         </div>
 
         {/* Enhanced Statistics - Desktop Below Grid */}
-        <div className={`hidden lg:block w-full max-w-6xl mx-auto mt-12 transition-all duration-1200 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+        <div className={`hidden lg:block w-full max-w-6xl mx-auto mt-6 lg:mt-4 xl:mt-6 transition-all duration-1200 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
           <div className="grid grid-cols-4 gap-6">
             <div className="text-center group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500"></div>
