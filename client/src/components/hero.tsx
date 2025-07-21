@@ -51,12 +51,9 @@ export default function Hero() {
               
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 font-georgian leading-tight tracking-tight">
-                <span className="inline-block animate-slide-up transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.3s' }}>
-                  <span className="text-white/70 mr-8 font-light">საიტის</span>
-                  <span className="text-white font-black tracking-wider relative">
-                    დამზადება
-                    <div className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/0 via-white/60 to-white/0"></div>
-                  </span>
+                <span className="inline-block animate-slide-up transform hover:scale-105 transition-transform duration-300 text-white font-black tracking-wider relative" style={{ animationDelay: '0.3s' }}>
+                  საიტის დამზადება
+                  <div className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-white/0 via-white/60 to-white/0"></div>
                 </span>
               </h1>
               
