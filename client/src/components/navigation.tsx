@@ -64,7 +64,9 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium text-lg font-georgian group py-2"
+                className={`relative hover:text-purple-600 transition-all duration-300 font-medium text-lg font-georgian group py-2 ${
+                  isScrolled ? 'text-gray-700' : 'text-white'
+                }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.label}
