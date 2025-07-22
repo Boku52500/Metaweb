@@ -16,48 +16,102 @@ interface ContactSubmission {
 
 export async function sendContactNotification(submission: ContactSubmission): Promise<boolean> {
   try {
-    // Create email content for webhook or HTTP service
-    const emailData = {
-      to: EMAIL_CONFIG.to,
-      from: EMAIL_CONFIG.from,
-      subject: EMAIL_CONFIG.subject,
-      html: generateEmailContent(submission),
-      text: generateTextContent(submission)
-    };
-
-    // For now, we'll use a simple HTTP service like EmailJS or Formspree
-    // You can also use Zapier webhooks, Make.com, or similar services
+    // Try multiple email services in order of preference
     
-    // Option 1: Use Formspree (simple, no auth needed)
-    const formspreeEndpoint = 'https://formspree.io/f/your-form-id'; // You'd get this from formspree.io
-    
-    // Option 2: Use a webhook service (recommended)
-    const webhookUrl = process.env.WEBHOOK_URL || null;
-    
-    if (webhookUrl) {
-      const response = await fetch(webhookUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: EMAIL_CONFIG.to,
-          subject: EMAIL_CONFIG.subject,
-          content: generateTextContent(submission),
-          html: generateEmailContent(submission),
-          submission: submission
-        }),
-      });
-      
-      if (response.ok) {
-        console.log(`✅ Webhook notification sent to ${EMAIL_CONFIG.to}`);
-        return true;
+    // Option 1: Use Formspree if configured
+    const formspreeId = process.env.FORMSPREE_ID;
+    if (formspreeId) {
+      try {
+        const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: submission.name,
+            phone: submission.phone,
+            email: submission.email || '',
+            message: submission.message,
+            _subject: EMAIL_CONFIG.subject,
+            _replyto: submission.email || EMAIL_CONFIG.to,
+          }),
+        });
+        
+        if (response.ok) {
+          console.log(`✅ Email sent via Formspree to ${EMAIL_CONFIG.to}`);
+          return true;
+        }
+      } catch (error) {
+        console.log('⚠️ Formspree failed, trying next option...');
       }
     }
     
-    // Fallback: Just log to console (you'll see submissions in server logs)
+    // Option 2: Use EmailJS if configured
+    const emailjsServiceId = process.env.EMAILJS_SERVICE_ID;
+    const emailjsTemplateId = process.env.EMAILJS_TEMPLATE_ID;
+    const emailjsUserId = process.env.EMAILJS_USER_ID;
+    
+    if (emailjsServiceId && emailjsTemplateId && emailjsUserId) {
+      try {
+        const emailjsResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            service_id: emailjsServiceId,
+            template_id: emailjsTemplateId,
+            user_id: emailjsUserId,
+            template_params: {
+              to_email: EMAIL_CONFIG.to,
+              from_name: submission.name,
+              from_phone: submission.phone,
+              from_email: submission.email || '',
+              message: submission.message,
+              subject: EMAIL_CONFIG.subject,
+            },
+          }),
+        });
+        
+        if (emailjsResponse.ok) {
+          console.log(`✅ Email sent via EmailJS to ${EMAIL_CONFIG.to}`);
+          return true;
+        }
+      } catch (error) {
+        console.log('⚠️ EmailJS failed, trying next option...');
+      }
+    }
+    
+    // Option 3: Use webhook service
+    const webhookUrl = process.env.WEBHOOK_URL;
+    if (webhookUrl) {
+      try {
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            to: EMAIL_CONFIG.to,
+            subject: EMAIL_CONFIG.subject,
+            content: generateTextContent(submission),
+            html: generateEmailContent(submission),
+            submission: submission
+          }),
+        });
+        
+        if (response.ok) {
+          console.log(`✅ Email sent via webhook to ${EMAIL_CONFIG.to}`);
+          return true;
+        }
+      } catch (error) {
+        console.log('⚠️ Webhook failed, logging to console...');
+      }
+    }
+    
+    // Fallback: Log to console with clear formatting
     console.log('='.repeat(60));
-    console.log('📧 EMAIL NOTIFICATION (Check server logs)');
+    console.log('📧 EMAIL NOTIFICATION - Configure service for delivery');
     console.log('='.repeat(60));
     console.log(`To: ${EMAIL_CONFIG.to}`);
     console.log(`Subject: ${EMAIL_CONFIG.subject}`);
@@ -65,8 +119,12 @@ export async function sendContactNotification(submission: ContactSubmission): Pr
     console.log('Content:');
     console.log(generateTextContent(submission));
     console.log('='.repeat(60));
+    console.log('🔧 To receive emails, add one of these to Secrets:');
+    console.log('   FORMSPREE_ID (from formspree.io - free)');
+    console.log('   EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID');
+    console.log('   WEBHOOK_URL (from zapier.com or similar)');
+    console.log('='.repeat(60));
     
-    // You can check your server logs in Replit to see all submissions
     return true;
 
   } catch (error) {
