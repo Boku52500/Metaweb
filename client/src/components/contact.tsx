@@ -42,8 +42,8 @@ export default function Contact() {
       // Track conversion
       trackContactFormSubmission();
 
-      // Submit form data to PHP script
-      const response = await fetch('/send-email.php', {
+      // Submit form data to server API (fallback to reliable email service)
+      const response = await fetch('/api/contact/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

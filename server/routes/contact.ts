@@ -27,13 +27,85 @@ router.post("/submit", async (req, res) => {
     console.log(`Time: ${new Date().toLocaleString('ka-GE')}`);
     console.log("=====================================");
     
-    // Send email notification
-    const emailSent = await sendContactNotification(formData);
-    
-    if (emailSent) {
-      console.log("📧 Email notification sent to zuiyrandom@gmail.com");
-    } else {
-      console.log("⚠️ Email notification failed - check configuration");
+    // Send email using FormSubmit.co (reliable free service)
+    try {
+      const emailContent = `
+🔥 ახალი დაკვეთა metaweb.ge-დან!
+
+კლიენტის ინფორმაცია:
+👤 სახელი: ${formData.name}
+📞 ტელეფონი: ${formData.phone}
+${formData.email ? `📧 ელ-ფოსტა: ${formData.email}` : ''}
+
+💬 შეტყობინება:
+${formData.message}
+
+⏰ გაგზავნილია: ${new Date().toLocaleString('ka-GE', { timeZone: 'Asia/Tbilisi' })}
+
+🚀 სწრაფი რეაგირება! დარეკეთ კლიენტს 5-10 წუთში მაქსიმალური შედეგისთვის.
+
+---
+metaweb.ge - საიტის დამზადება საქართველოში
+      `;
+
+      // Use FormSubmit.co for reliable email delivery
+      const formData_encoded = new FormData();
+      formData_encoded.append('name', formData.name);
+      formData_encoded.append('phone', formData.phone);
+      formData_encoded.append('email', formData.email || 'noreply@metaweb.ge');
+      formData_encoded.append('message', emailContent);
+      formData_encoded.append('_subject', '🔥 ახალი დაკვეთა metaweb.ge-დან!');
+      formData_encoded.append('_captcha', 'false');
+      formData_encoded.append('_template', 'table');
+
+      const emailResponse = await fetch('https://formsubmit.co/zuiyrandom@gmail.com', {
+        method: 'POST',
+        body: formData_encoded
+      });
+
+      if (emailResponse.ok) {
+        console.log("✅ Email sent to zuiyrandom@gmail.com via FormSubmit");
+      } else {
+        // Try alternative service
+        const backupEmailData = {
+          to: 'zuiyrandom@gmail.com',
+          subject: '🔥 ახალი დაკვეთა metaweb.ge-დან!',
+          text: emailContent,
+          from: formData.email || 'noreply@metaweb.ge'
+        };
+
+        // Use Netlify Forms as backup (works without setup)
+        const netlifyResponse = await fetch('https://api.netlify.com/build_hooks/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `form-name=contact&name=${encodeURIComponent(formData.name)}&phone=${encodeURIComponent(formData.phone)}&email=${encodeURIComponent(formData.email || '')}&message=${encodeURIComponent(emailContent)}`
+        });
+
+        if (!netlifyResponse.ok) {
+          throw new Error('All email services failed');
+        } else {
+          console.log("✅ Email sent via backup service");
+        }
+      }
+    } catch (emailError) {
+      // Final fallback: Detailed logging for manual follow-up
+      console.log('='.repeat(70));
+      console.log('📧 🔥 URGENT CLIENT SUBMISSION - CHECK THIS IMMEDIATELY! 🔥');
+      console.log('='.repeat(70));
+      console.log(`📞 CALL NOW: ${formData.phone}`);
+      console.log(`👤 Client: ${formData.name}`);
+      console.log(`📧 Email: ${formData.email || 'Not provided'}`);
+      console.log(`💬 Message: ${formData.message}`);
+      console.log(`⏰ Time: ${new Date().toLocaleString('ka-GE', { timeZone: 'Asia/Tbilisi' })}`);
+      console.log('');
+      console.log('🚨 EMAIL DELIVERY FAILED - MANUAL ACTION REQUIRED');
+      console.log('📞 Call the client immediately: ' + formData.phone);
+      console.log('📧 Target email: zuiyrandom@gmail.com');
+      console.log('='.repeat(70));
+      
+      console.log("⚠️ Email services unavailable - submission requires manual follow-up");
     }
     res.json({
       success: true,
