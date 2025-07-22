@@ -106,14 +106,14 @@ export default function Services() {
                 
                 {/* Title - Fixed Height */}
                 <div className="mb-4 sm:mb-6 h-12 sm:h-14 md:h-16 flex items-center justify-center">
-                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white font-georgian transition-all duration-300 text-center leading-tight">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white transition-all duration-300 text-center leading-tight">
                     {service.title}
                   </h3>
                 </div>
                 
                 {/* Description - Flexible Height */}
                 <div className="flex-grow flex items-start justify-center">
-                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-georgian group-hover:text-gray-200 transition-colors duration-300 text-center">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300 text-center">
                     {service.description}
                   </p>
                 </div>
@@ -125,14 +125,14 @@ export default function Services() {
         {/* CTA Section */}
         <div className={`text-center mt-12 sm:mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 font-georgian">მზად ხართ დასაწყებად?</h3>
-            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 font-georgian">მიიღეთ უფასო კონსულტაცია და იყავით კონკურენტებზე ერთი ნაბიჯით წინ</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Ready to Get Started?</h3>
+            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6">Get a free consultation and stay one step ahead of your competitors</p>
             <a
               href="tel:+995557915146"
-              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 font-georgian group"
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 group"
             >
               <span className="group-hover:animate-pulse mr-2 sm:mr-3">📞</span>
-              დარეკეთ ახლავე
+              Call Now
             </a>
           </div>
         </div>

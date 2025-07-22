@@ -142,11 +142,11 @@ export default function Portfolio() {
 
               {/* Content */}
               <div className="p-8">
-                <h4 className="text-2xl font-bold mb-3 text-gray-800 font-georgian group-hover:text-purple-600 transition-colors duration-300">
+                <h4 className="text-2xl font-bold mb-3 text-gray-800 group-hover:text-purple-600 transition-colors duration-300">
                   {project.name}
                 </h4>
                 
-                <p className="text-gray-600 mb-6 font-georgian leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -174,15 +174,15 @@ export default function Portfolio() {
         {/* Bottom CTA */}
         <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4 font-georgian">გაქვთ საინტერესო იდეა?</h3>
-            <p className="text-lg mb-6 font-georgian">ერთად განვიხილოთ 
-              საიტის სტრუქტურა, დიზაინი და ფუნქციონალი</p>
+            <h3 className="text-3xl font-bold mb-4">Have an Interesting Idea?</h3>
+            <p className="text-lg mb-6">Let's discuss together the 
+              website structure, design and functionality</p>
             <a
               href="tel:+995557915146"
-              className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
+              className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group"
             >
               <span className="group-hover:animate-bounce mr-3">💬</span>
-              გვესაუბრეთ პროექტზე
+              Talk About Project
             </a>
           </div>
         </div>

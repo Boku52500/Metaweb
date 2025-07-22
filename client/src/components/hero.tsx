@@ -177,7 +177,7 @@ export default function Hero() {
                     <div className="mb-1 sm:mb-2">
                       <Counter target={10} />
                     </div>
-                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">წლიანი გამოცდილება</div>
+                    <div className="text-white/80 text-xs sm:text-sm font-medium leading-tight">Years Experience</div>
                   </div>
                 </div>
                 <div className="text-center group relative h-full">
@@ -187,7 +187,7 @@ export default function Hero() {
                     <div className="mb-1 sm:mb-2">
                       <Counter target={500} />
                     </div>
-                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">კმაყოფილი კლიენტი</div>
+                    <div className="text-white/80 text-xs sm:text-sm font-medium leading-tight">Happy Clients</div>
                   </div>
                 </div>
                 <div className="text-center group relative h-full">
@@ -197,7 +197,7 @@ export default function Hero() {
                     <div className="mb-1 sm:mb-2">
                       <Counter target={850} />
                     </div>
-                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">წარმატებული პროექტი</div>
+                    <div className="text-white/80 text-xs sm:text-sm font-medium leading-tight">Successful Projects</div>
                   </div>
                 </div>
                 <div className="text-center group relative h-full">
@@ -207,7 +207,7 @@ export default function Hero() {
                     <div className="mb-1 sm:mb-2">
                       <Counter target={15} />
                     </div>
-                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">გუნდის წევრი</div>
+                    <div className="text-white/80 text-xs sm:text-sm font-medium leading-tight">Team Members</div>
                   </div>
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function Hero() {
                 {/* Digital Agency Team Photo */}
                 <img
                   src="/digital-agency-farnham_1753099696324.jpg"
-                  alt="Metaweb - საიტის დამზადება და ვებსაიტის დიზაინი"
+                  alt="Metaweb - Website Development and Web Design Services"
                   className="relative w-full h-auto rounded-2xl sm:rounded-3xl shadow-2xl group-hover:scale-105 transition-all duration-700"
                   style={{ filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.3))' }}
                 />
@@ -234,28 +234,28 @@ export default function Hero() {
                 <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl animate-float border border-purple-200/50">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-semibold text-gray-800 font-georgian">რეალურ დროში</span>
+                    <span className="text-sm font-semibold text-gray-800">Real Time</span>
                   </div>
                 </div>
                 
                 <div className="absolute top-16 right-8 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-delayed">
                   <div className="flex items-center space-x-2">
                     <span className="text-lg">⚡</span>
-                    <span className="text-sm font-medium font-georgian">სწრაფი</span>
+                    <span className="text-sm font-medium">Fast</span>
                   </div>
                 </div>
                 
                 <div className="absolute bottom-20 left-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl p-3 shadow-xl animate-float-slow">
                   <div className="flex items-center space-x-2">
                     <span className="text-lg">🎨</span>
-                    <span className="text-sm font-medium font-georgian">თანამედროვე</span>
+                    <span className="text-sm font-medium">Modern</span>
                   </div>
                 </div>
                 
                 <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl animate-float-reverse border border-cyan-200/50">
                   <div className="flex items-center space-x-2">
                     <span className="text-xl">🚀</span>
-                    <span className="text-sm font-semibold text-gray-800 font-georgian">მაღალი ხარისხი</span>
+                    <span className="text-sm font-semibold text-gray-800">High Quality</span>
                   </div>
                 </div>
                 
@@ -288,7 +288,7 @@ export default function Hero() {
                 <div className="mb-2">
                   <Counter target={10} />
                 </div>
-                <div className="text-white/80 font-georgian text-sm font-medium leading-tight">წლიანი გამოცდილება</div>
+                <div className="text-white/80 text-sm font-medium leading-tight">Years Experience</div>
               </div>
             </div>
             <div className="text-center group relative h-full">
@@ -298,7 +298,7 @@ export default function Hero() {
                 <div className="mb-2">
                   <Counter target={500} />
                 </div>
-                <div className="text-white/80 font-georgian text-sm font-medium leading-tight">კმაყოფილი კლიენტი</div>
+                <div className="text-white/80 text-sm font-medium leading-tight">Happy Clients</div>
               </div>
             </div>
             <div className="text-center group relative h-full">
@@ -308,7 +308,7 @@ export default function Hero() {
                 <div className="mb-2">
                   <Counter target={850} />
                 </div>
-                <div className="text-white/80 font-georgian text-sm font-medium leading-tight">წარმატებული პროექტი</div>
+                <div className="text-white/80 text-sm font-medium leading-tight">Successful Projects</div>
               </div>
             </div>
             <div className="text-center group relative h-full">
@@ -318,7 +318,7 @@ export default function Hero() {
                 <div className="mb-2">
                   <Counter target={15} />
                 </div>
-                <div className="text-white/80 font-georgian text-sm font-medium leading-tight">გუნდის წევრი</div>
+                <div className="text-white/80 text-sm font-medium leading-tight">Team Members</div>
               </div>
             </div>
           </div>
