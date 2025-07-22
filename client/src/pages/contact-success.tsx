@@ -1,12 +1,23 @@
 import { useEffect } from "react";
 import { CheckCircle, Phone, Mail, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackContactSuccess } from "@/lib/google-conversion";
+
+declare global {
+  interface Window {
+    gtag: (command: "config" | "event" | "js", targetId: string | Date, config?: Record<string, any>) => void;
+  }
+}
 
 export default function ContactSuccess() {
   useEffect(() => {
-    // Track the contact conversion when this page loads
-    trackContactSuccess();
+    // Google Ads conversion tracking - Page load conversion
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-17383063044/zHt5CJewhvYaEIT88eBA',
+        'value': 1.0,
+        'currency': 'USD'
+      });
+    }
   }, []);
 
   return (

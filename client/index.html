@@ -97,6 +97,24 @@
       gtag('js', new Date());
       gtag('config', 'AW-17383063044');
     </script>
+
+    <!-- Event snippet for Call conversion page - Click tracking -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17383063044/zHt5CJewhvYaEIT88eBA',
+          'value': 1.0,
+          'currency': 'USD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
     
     <!-- Georgian Web Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />

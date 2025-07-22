@@ -3,7 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { trackContactFormSubmission, trackPhoneClick } from "@/lib/google-conversion";
+// Google Ads conversion tracking
+declare global {
+  interface Window {
+    gtag_report_conversion: (url?: string) => boolean;
+  }
+}
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,8 +44,10 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Track conversion
-      trackContactFormSubmission();
+      // Track Google Ads conversion click
+      if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+        window.gtag_report_conversion();
+      }
 
       // Submit form data to server API (fallback to reliable email service)
       const response = await fetch('/api/contact/submit', {
@@ -133,7 +140,12 @@ export default function Contact() {
                       <p className="text-gray-400 font-georgian text-sm sm:text-base">ტელეფონი</p>
                       <a
                         href="tel:+995557915146"
-                        onClick={trackPhoneClick}
+                        onClick={() => {
+                          if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                            return window.gtag_report_conversion("tel:+995557915146");
+                          }
+                          return true;
+                        }}
                         className="text-lg sm:text-xl md:text-2xl font-bold text-white hover:text-yellow-300 transition-colors font-georgian group-hover:text-yellow-300"
                       >
                         557 91 51 46
@@ -253,7 +265,16 @@ export default function Contact() {
                 <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-white/5 rounded-xl sm:rounded-2xl border border-white/10">
                   <p className="text-gray-300 text-xs sm:text-sm font-georgian text-center">
                     📞 სწრაფი პასუხისთვის დარეკეთ: 
-                    <a href="tel:+995557915146" className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors ml-1">
+                    <a 
+                      href="tel:+995557915146" 
+                      onClick={() => {
+                        if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                          return window.gtag_report_conversion("tel:+995557915146");
+                        }
+                        return true;
+                      }}
+                      className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors ml-1"
+                    >
                       557 91 51 46
                     </a>
                   </p>
