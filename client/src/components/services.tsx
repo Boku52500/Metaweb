@@ -13,7 +13,7 @@ export default function Services() {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("სერვისები");
+    const element = document.getElementById("services");
     if (element) {
       observer.observe(element);
     }
@@ -24,36 +24,36 @@ export default function Services() {
   const services = [
     {
       icon: "fas fa-code",
-      title: "ვებ-გვერდის დამზადება",
-      description: "ჩვენ ვქმნით თანამედროვე, ფუნქციურ და მომხმარებელზე ორიენტირებულ ვებ-გვერდებს, რომელიც მოერგება თქვენი ბიზნესის საჭიროებებს.",
+      title: "Web Development",
+      description: "We create modern, functional and user-oriented websites that adapt to your business needs and requirements.",
       color: "from-purple-500 to-purple-700",
       emoji: "💻"
     },
     {
       icon: "fas fa-paint-brush",
-      title: "ვებსაიტის დიზაინი",
-      description: "უნიკალური და მომხიბვლელი დიზაინი, რომელიც ასახავს თქვენი ბრენდის იდენტობას და გხდით გამორჩეულს.",
+      title: "Website Design",
+      description: "Unique and attractive design that reflects your brand identity and makes you stand out from the competition.",
       color: "from-blue-500 to-blue-700",
       emoji: "🎨"
     },
     {
       icon: "fas fa-search",
-      title: "SEO ოპტიმიზაცია",
-      description: "SEO მომსახურება, რომელიც უზრუნველყოფს თქვენი ვებ-გვერდის უკეთეს ხილვადობას საძიებო სისტემებში და ზრდის ორგანულ ტრაფიკს.",
+      title: "SEO Optimization",
+      description: "SEO services that ensure better visibility of your website in search engines and increase organic traffic.",
       color: "from-green-500 to-green-700",
       emoji: "📈"
     },
     {
       icon: "fas fa-cogs",
-      title: "ზედამხედველობა",
-      description: "გთავაზობთ ვებ-გვერდის ზედამხედველობის სერვისს, რათა უზრუნველვყოთ მისი სტაბილური მუშაობა და უსაფრთხოება.",
+      title: "Maintenance",
+      description: "We offer website maintenance services to ensure stable operation, security updates and optimal performance.",
       color: "from-orange-500 to-orange-700",
       emoji: "🔧"
     },
   ];
 
   return (
-    <section id="სერვისები" className="py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden">
+    <section id="services" className="py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float"></div>
@@ -63,12 +63,12 @@ export default function Services() {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className={`text-center mb-16 sm:mb-20 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 font-georgian text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white">
             <span className="bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              ჩვენი სერვისები
+              Our Services
             </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-georgian mb-6 sm:mb-8">სრული სპექტრის ციფრული მომსახურება</p>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8">Full spectrum digital services</p>
           <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-yellow-400 to-cyan-400 mx-auto rounded-full"></div>
         </div>
 

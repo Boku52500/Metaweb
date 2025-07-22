@@ -10,7 +10,7 @@ export default function Hero() {
   }, []);
 
   const scrollToContact = () => {
-    const element = document.getElementById("კონტაქტი");
+    const element = document.getElementById("contact");
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -85,28 +85,28 @@ export default function Hero() {
               
 
               <div className="text-center lg:text-left">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 font-georgian leading-tight tracking-tight">
-                  <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.3s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'ALK Sanet, serif' }}>
-                    საიტის{' '}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight tracking-tight">
+                  <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.3s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)' }}>
+                    Web{' '}
                   </span>
-                  <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.5s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'ALK Sanet, serif' }}>
-                    დამზადება
+                  <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.5s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)' }}>
+                    Development
                   </span>
                 </h1>
                 
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-white/95 font-georgian animate-slide-up font-light" style={{ animationDelay: '0.7s' }}>
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-white/95 animate-slide-up font-light" style={{ animationDelay: '0.7s' }}>
                   <span className="bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-                    საუკეთესო ხარისხი ხელმისაწვდომ ფასად
+                    Best Quality at Affordable Prices
                   </span>
                 </h2>
                 
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/85 font-georgian leading-relaxed animate-slide-up" style={{ animationDelay: '0.9s' }}>
-                  ჩვენი გუნდი ეხმარება კომპანიებს იპოვონ თავიანთი ადგილი 
-                  <span className="text-cyan-300 font-semibold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent"> ციფრულ სამყაროში</span>
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/85 leading-relaxed animate-slide-up" style={{ animationDelay: '0.9s' }}>
+                  Our team helps companies find their place in the
+                  <span className="text-cyan-300 font-semibold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent"> digital world</span>
                 </p>
                 
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 text-yellow-400 font-bold animate-slide-up font-georgian animate-pulse" style={{ animationDelay: '1.1s' }}>
-                  გახადეთ თქვენი ბიზნესი წარმატებული დღესვე
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 text-yellow-400 font-bold animate-slide-up animate-pulse" style={{ animationDelay: '1.1s' }}>
+                  Make Your Business Successful Today
                 </p>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function Hero() {
               {/* Primary CTA Button */}
               <Button
                 onClick={scrollToContact}
-                className="relative group px-8 py-4 bg-gradient-to-br from-violet-600 via-purple-600 to-blue-600 text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-violet-500/40 transition-all duration-700 transform hover:scale-[1.02] font-georgian border border-violet-400/30 w-full sm:w-64"
+                className="relative group px-8 py-4 bg-gradient-to-br from-violet-600 via-purple-600 to-blue-600 text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-violet-500/40 transition-all duration-700 transform hover:scale-[1.02] border border-violet-400/30 w-full sm:w-64"
               >
                 {/* Animated background layers */}
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -132,7 +132,7 @@ export default function Hero() {
                     <div className="absolute inset-0 bg-yellow-400/30 rounded-full scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-50 transition-all duration-700 animate-ping"></div>
                   </div>
                   <span className="relative">
-                    სწრაფი შეკვეთა
+                    Quick Order
                     <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -skew-x-12 opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700"></div>
                   </span>
                 </div>
@@ -144,7 +144,7 @@ export default function Hero() {
               {/* Phone Button */}
               <Button
                 onClick={() => window.location.href = 'tel:+995557915146'}
-                className="relative group px-8 py-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-700 transform hover:scale-[1.02] font-georgian border border-cyan-400/40 hover:border-cyan-300/60 w-full sm:w-64"
+                className="relative group px-8 py-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-cyan-500/30 transition-all duration-700 transform hover:scale-[1.02] border border-cyan-400/40 hover:border-cyan-300/60 w-full sm:w-64"
               >
                 {/* Animated background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

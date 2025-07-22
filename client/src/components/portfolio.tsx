@@ -19,7 +19,7 @@ export default function Portfolio() {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("პორტფოლიო");
+    const element = document.getElementById("portfolio");
     if (element) {
       observer.observe(element);
     }
@@ -30,54 +30,54 @@ export default function Portfolio() {
   const projects = [
     {
       name: "GREEN IT SOLUTION",
-      description: "ტექნოლოგიური კომპანიის ვებსაიტი",
+      description: "Technology company website",
       image: techProject,
-      alt: "Green IT Solution - ტექნოლოგიური კომპანიის ვებსაიტი",
+      alt: "Green IT Solution - Technology company website",
       color: "from-green-500 to-green-700",
       tech: ["React", "Node.js", "PostgreSQL"],
       url: "https://www.greenit-solution.de/en/"
     },
     {
       name: "PHYSIQ APPAREL",
-      description: "სპორტული ბრენდის ვებსაიტი",
+      description: "Sports brand website",
       image: sportsProject,
-      alt: "Physiq Apparel - სპორტული ბრენდის ვებსაიტი",
+      alt: "Physiq Apparel - Sports brand website",
       color: "from-orange-500 to-red-600",
       tech: ["Vue.js", "FastAPI", "Redis"],
       url: "https://www.physiqapparel.com/"
     },
     {
       name: "CLARE FASHION",
-      description: "მოდის ბრენდის ვებსაიტი",
+      description: "Fashion brand website",
       image: fashionProject,
-      alt: "Clare Fashion - მოდის ბრენდის ვებსაიტი",
+      alt: "Clare Fashion - Fashion brand website",
       color: "from-gray-600 to-gray-800",
       tech: ["Next.js", "Prisma", "TypeScript"],
       url: "https://clare.pro/"
     },
     {
       name: "MANNING ELLIOTT",
-      description: "საკონსულტაციო ვებსაიტი",
+      description: "Consulting website",
       image: corporateProject,
-      alt: "Manning Elliott - კორპორაციული საკონსულტაციო ვებსაიტი",
+      alt: "Manning Elliott - Corporate consulting website",
       color: "from-blue-600 to-blue-800",
       tech: ["Svelte", "GraphQL", "Docker"],
       url: "https://manningelliott.com/"
     },
     {
       name: "PABCO GYPSUM",
-      description: "სამშენებლო კომპანიის ვებსაიტი",
+      description: "Construction company website",
       image: constructionProject,
-      alt: "Pabco Gypsum - მშენებლობითი კომპანიის ვებსაიტი",
+      alt: "Pabco Gypsum - Construction company website",
       color: "from-red-600 to-red-800",
       tech: ["Angular", "NestJS", "MongoDB"],
       url: "https://pabcogypsum.com/"
     },
     {
       name: "JACKY'S ELECTRONICS",
-      description: "ელექტრონული კომერციის ვებსაიტი",
+      description: "E-commerce website",
       image: ecommerceProject,
-      alt: "Jacky's Electronics - ელექტრონული კომერციის ვებსაიტი",
+      alt: "Jacky's Electronics - E-commerce website",
       color: "from-cyan-500 to-blue-600",
       tech: ["React", "Microservices", "Tailwind"],
       url: "https://www.jackyselectronics.com/"
@@ -85,7 +85,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <section id="პორტფოლიო" className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section id="portfolio" className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-white/30 to-gray-100/50"></div>
@@ -93,15 +93,15 @@ export default function Portfolio() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <h2 className="text-5xl lg:text-7xl font-bold mb-6 font-georgian">
+          <h2 className="text-5xl lg:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              პროექტები
+              Projects
             </span>
           </h2>
-          <h3 className="text-2xl lg:text-3xl text-gray-600 mb-8 font-georgian">ჩვენი ნამუშევრები</h3>
+          <h3 className="text-2xl lg:text-3xl text-gray-600 mb-8">Our Work</h3>
           <div className="w-32 h-1 bg-gradient-to-r from-purple-600 to-cyan-500 mx-auto rounded-full mb-8"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-georgian">
-            ყველა პროექტი უნიკალურია და შექმნილია მომხმარებლის სპეციფიკური საჭიროებების შესაბამისად
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Every project is unique and created according to the client's specific needs and requirements
           </p>
         </div>
 
@@ -134,8 +134,8 @@ export default function Portfolio() {
                 
                 {/* View Project Button */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 scale-0 group-hover:scale-100">
-                  <button className={`bg-gradient-to-r ${project.color} text-white px-6 py-3 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 font-georgian`}>
-                    🔎 ნახვა
+                  <button className={`bg-gradient-to-r ${project.color} text-white px-6 py-3 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300`}>
+                    🔎 View
                   </button>
                 </div>
               </div>

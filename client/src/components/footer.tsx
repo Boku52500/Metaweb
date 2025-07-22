@@ -11,18 +11,18 @@ export default function Footer() {
   };
 
   const services = [
-    "საიტის დამზადება",
-    "ვებსაიტის დიზაინი", 
-    "SEO მომსახურება",
-    "ზედამხედველობა",
+    "Website Development",
+    "Website Design", 
+    "SEO Services",
+    "Maintenance",
   ];
 
   const navItems = [
-    { label: "უპირატესობები", id: "უპირატესობები" },
-    { label: "პორტფოლიო", id: "პორტფოლიო" },
-    { label: "სერვისები", id: "სერვისები" },
-    { label: "ფასები", id: "ფასები" },
-    { label: "კონტაქტი", id: "კონტაქტი" },
+    { label: "Advantages", id: "advantages" },
+    { label: "Portfolio", id: "portfolio" },
+    { label: "Services", id: "services" },
+    { label: "Pricing", id: "pricing" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (
@@ -45,9 +45,9 @@ export default function Footer() {
               />
             </div>
             
-            <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed font-georgian">
-              ჩვენ ვქმნით ინოვაციურ ვებ-გვერდებს, ვეხმარებით
-              ბიზნესებს წარმატების მიღწევაში. თქვენი წარმატება - ჩვენი მიზანია.
+            <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
+              We create innovative websites and help
+              businesses achieve success. Your success is our goal.
             </p>
 
             {/* Contact Info */}
@@ -58,7 +58,7 @@ export default function Footer() {
                 </div>
                 <a
                   href="tel:+995557915146"
-                  className="text-gray-300 hover:text-white transition-colors font-georgian text-base sm:text-lg group-hover:text-yellow-300"
+                  className="text-gray-300 hover:text-white transition-colors text-base sm:text-lg group-hover:text-yellow-300"
                 >
                   557 91 51 46
                 </a>
@@ -70,7 +70,7 @@ export default function Footer() {
                 </div>
                 <a
                   href="mailto:info@metaweb.ge"
-                  className="text-gray-300 hover:text-white transition-colors font-georgian text-base sm:text-lg group-hover:text-yellow-300 break-all"
+                  className="text-gray-300 hover:text-white transition-colors text-base sm:text-lg group-hover:text-yellow-300 break-all"
                 >
                   info@metaweb.ge
                 </a>
@@ -102,15 +102,15 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 font-georgian bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              სერვისები
+            <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Services
             </h4>
             <div className="space-y-2 sm:space-y-3">
               {services.map((service, index) => (
                 <div key={index} className="relative">
                   <button
-                    onClick={() => scrollToSection("სერვისები")}
-                    className="text-gray-300 hover:text-white transition-all duration-300 font-georgian text-base sm:text-lg hover:translate-x-2 group w-full text-left"
+                    onClick={() => scrollToSection("services")}
+                    className="text-gray-300 hover:text-white transition-all duration-300 text-base sm:text-lg hover:translate-x-2 group w-full text-left"
                   >
                     {service}
                   </button>
@@ -122,15 +122,15 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 font-georgian bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              ნავიგაცია
+            <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Navigation
             </h4>
             <div className="space-y-2 sm:space-y-3">
               {navItems.map((item, index) => (
                 <div key={index} className="relative">
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="text-gray-300 hover:text-white transition-all duration-300 font-georgian text-base sm:text-lg hover:translate-x-2 group w-full text-left"
+                    className="text-gray-300 hover:text-white transition-all duration-300 text-base sm:text-lg hover:translate-x-2 group w-full text-left"
                   >
                     {item.label}
                   </button>
@@ -145,21 +145,21 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-12 sm:mt-16 pt-6 sm:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
-              <p className="text-gray-400 font-georgian text-base sm:text-lg">
-                &copy; 2024 Metaweb.ge - ყველა უფლება დაცულია
+              <p className="text-gray-400 text-base sm:text-lg">
+                &copy; 2024 Metaweb.ge - All Rights Reserved
               </p>
-              <p className="text-gray-500 font-georgian text-sm sm:text-base">
-                საიტის დამზადება, ვებსაიტის დიზაინი და SEO მომსახურება საქართველოში
+              <p className="text-gray-500 text-sm sm:text-base">
+                Website Development, Web Design and SEO Services
               </p>
             </div>
             
             <div className="flex items-center space-x-4 sm:space-x-6">
               <a
                 href="tel:+995557915146"
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 hover:scale-105 font-georgian group text-sm sm:text-base"
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 hover:scale-105 group text-sm sm:text-base"
               >
                 <span className="group-hover:animate-pulse mr-1 sm:mr-2">📞</span>
-                დარეკეთ ახლავე
+                Call Now
               </a>
             </div>
           </div>
