@@ -49,6 +49,11 @@ export default function Contact() {
       });
       setFormData({ name: "", phone: "", email: "", message: "" });
       setIsSubmitting(false);
+      
+      // Redirect to contact success page after 2 seconds
+      setTimeout(() => {
+        window.location.href = '/contact-success';
+      }, 2000);
     }, 1000);
   };
 

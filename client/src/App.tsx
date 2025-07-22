@@ -6,12 +6,14 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import SEODashboardPage from "@/pages/seo-dashboard";
+import ContactSuccess from "@/pages/contact-success";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/seo-dashboard" component={SEODashboardPage} />
+      <Route path="/contact-success" component={ContactSuccess} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -29,6 +29,15 @@ export const trackContactFormSubmission = () => {
   });
 };
 
+// Track contact success page conversion (main conversion for Google Ads)
+export const trackContactSuccess = () => {
+  trackConversion('contact_success', {
+    event_category: 'conversion',
+    event_label: 'contact_success_page',
+    value: 1
+  });
+};
+
 export const trackPhoneClick = () => {
   trackConversion('phone_click', {
     event_category: 'engagement', 
