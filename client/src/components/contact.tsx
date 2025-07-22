@@ -38,23 +38,48 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Track conversion
-    trackContactFormSubmission();
+    try {
+      // Track conversion
+      trackContactFormSubmission();
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "შეტყობინება გაგზავნილია! 🎉",
-        description: "ჩვენ დაგიკავშირდებით ამ ნომერზე: " + formData.phone,
+      // Submit form data to server
+      const response = await fetch('/api/contact/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      setFormData({ name: "", phone: "", email: "", message: "" });
+
+      if (response.ok) {
+        toast({
+          title: "შეტყობინება გაგზავნილია! 🎉",
+          description: "ჩვენ დაგიკავშირდებით ამ ნომერზე: " + formData.phone,
+        });
+        setFormData({ name: "", phone: "", email: "", message: "" });
+        
+        // Redirect to contact success page after 2 seconds
+        setTimeout(() => {
+          window.location.href = '/contact-success';
+        }, 2000);
+      } else {
+        const error = await response.json();
+        toast({
+          title: "შეცდომა ❌",
+          description: "შეტყობინება ვერ გაიგზავნა. გაიმეორეთ ცდა.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "შეცდომა ❌",
+        description: "შეტყობინება ვერ გაიგზავნა. გაიმეორეთ ცდა.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-      
-      // Redirect to contact success page after 2 seconds
-      setTimeout(() => {
-        window.location.href = '/contact-success';
-      }, 2000);
-    }, 1000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
