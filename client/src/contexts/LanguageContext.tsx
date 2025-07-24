@@ -49,7 +49,7 @@ const translations = {
     
     // Services Section
     'services.title': 'ჩვენი სერვისები',
-    'services.subtitle': 'სრული სპექტრის ვებ მომსახურებები',
+    'services.subtitle': 'სრული სპექტრის ვებ მომსახურება',
     'services.website.title': 'ვებსაიტის დამზადება',
     'services.website.desc': 'ნებისმიერი სირთულის კორპორაცული ვებსაიტები, ონლაინ მაღაზიები, ლენდინგ გვერდები',
     'services.design.title': 'ვებ დიზაინი',
@@ -134,7 +134,7 @@ const translations = {
     'pricing.premium.title': 'პრემიუმ',
     'pricing.premium.price': '2000₾',
     'pricing.premium.features': 'ასაწყობი გვერდები|რესპონსიული დიზაინი|SEO ოპტიმიზაცია|ონლაინ მაღაზია|გადახდის სისტემა|ადმინ პანელი|1 წელი ჰოსტინგი|24/7 მხარდაჭერა',
-    'pricing.cta': 'პაკეტის შერჩევა',
+    'pricing.cta': 'შეკვეთა',
     
     // Contact Section
     'contact.title': 'კონტაქტი',
@@ -190,7 +190,7 @@ const translations = {
     
     // Advantages Section
     'advantages.title': 'Why Choose Us?',
-    'advantages.subtitle': 'Our advantages that set us apart from others',
+    'advantages.subtitle': 'Our advantages',
     'advantages.speed.title': 'Fast Delivery',
     'advantages.speed.desc': 'Website ready in 3-7 days',
     'advantages.seo.title': 'SEO Optimization',
@@ -218,7 +218,7 @@ const translations = {
     
     // Portfolio Section
     'portfolio.title': 'Our Work',
-    'portfolio.subtitle': 'See what websites we have created for our clients',
+    'portfolio.subtitle': 'See the websites we have created for our clients',
     'portfolio.view': 'View',
     'portfolio.corp1.title': 'Corporate Website',
     'portfolio.corp1.desc': 'Modern corporate site with full functionality',
@@ -238,7 +238,7 @@ const translations = {
     'cta.ready.subtitle': 'Get free consultation and stay one step ahead of competitors',
     'cta.unique.projects': 'Every project is unique and created according to the specific needs of the client',
     'cta.call.title': 'Call Now',
-    'cta.call.subtitle': 'Do you have an interesting idea? Let\'s discuss the structure, design and functionality of the website together',
+    'cta.call.subtitle': 'Have an interesting idea? Let\'s discuss the structure, design and functionality of the website together',
     'cta.call.now': 'Call Now',
     'cta.chat.title': 'Talk About Project',
     
@@ -291,7 +291,7 @@ const translations = {
     'pricing.premium.title': 'Premium',
     'pricing.premium.price': '2000₾',
     'pricing.premium.features': 'Unlimited pages|Responsive design|SEO optimization|Online store|Payment system|Admin panel|1 year hosting|24/7 support',
-    'pricing.cta': 'Choose Package',
+    'pricing.cta': 'Order',
     
     // Contact Section
     'contact.title': 'Contact',

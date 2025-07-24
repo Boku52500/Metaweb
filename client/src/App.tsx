@@ -8,11 +8,13 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import SEODashboardPage from "@/pages/seo-dashboard";
 import ContactSuccess from "@/pages/contact-success";
+import Welcome from "@/pages/welcome";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/welcome" component={Welcome} />
       <Route path="/seo-dashboard" component={SEODashboardPage} />
       <Route path="/contact-success" component={ContactSuccess} />
       <Route component={NotFound} />
