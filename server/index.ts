@@ -1,4 +1,7 @@
 import express, { type Request, Response, NextFunction } from "express";
+import https from "https";
+import fs from "fs";
+import path from "path";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
@@ -58,6 +61,57 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
+  // SSL Configuration for subdomain support
+  function startSSLServer() {
+    try {
+      // Check if SSL certificates exist for subdomain
+      const keyPath = path.join(process.cwd(), 'ssl', 'online.metaweb.ge.key');
+      const certPath = path.join(process.cwd(), 'ssl', 'online.metaweb.ge.crt');
+      
+      if (fs.existsSync(keyPath) && fs.existsSync(certPath)) {
+        const sslOptions = {
+          key: fs.readFileSync(keyPath),
+          cert: fs.readFileSync(certPath)
+        };
+        
+        // Create HTTPS server for SSL
+        const httpsServer = https.createServer(sslOptions, app);
+        
+        // Start HTTPS server on port 443 (or 8443 for development)
+        const httpsPort = process.env.NODE_ENV === 'production' ? 443 : 8443;
+        httpsServer.listen(httpsPort, '0.0.0.0', () => {
+          log(`HTTPS server running on port ${httpsPort} with SSL support for online.metaweb.ge`);
+        });
+        
+        return true;
+      } else {
+        log('SSL certificates not found. HTTPS server not started.');
+        log('Place SSL certificates in ssl/ directory to enable HTTPS.');
+        return false;
+      }
+    } catch (error) {
+      log(`SSL setup failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      return false;
+    }
+  }
+
+  // Add HTTP to HTTPS redirect middleware for subdomain
+  app.use((req, res, next) => {
+    const host = req.get('host') || '';
+    const protocol = req.headers['x-forwarded-proto'] || req.protocol;
+    
+    // Redirect HTTP to HTTPS for subdomain if SSL is available
+    if (host.includes('online.metaweb.ge') && protocol === 'http') {
+      const sslPort = process.env.NODE_ENV === 'production' ? '' : ':8443';
+      return res.redirect(301, `https://${host}${sslPort}${req.url}`);
+    }
+    
+    next();
+  });
+
+  // Start SSL server if certificates are available
+  const sslStarted = startSSLServer();
+
   // ALWAYS serve the app on the port specified in the environment variable PORT
   // Other ports are firewalled. Default to 5000 if not specified.
   // this serves both the API and the client.
@@ -68,6 +122,11 @@ app.use((req, res, next) => {
     host: "0.0.0.0",
     reusePort: true,
   }, () => {
-    log(`serving on port ${port}`);
+    log(`HTTP server running on port ${port}`);
+    if (sslStarted) {
+      log(`SSL enabled - subdomain online.metaweb.ge available via HTTPS`);
+    } else {
+      log(`SSL not configured - see ssl/README.md for setup instructions`);
+    }
   });
 })();
