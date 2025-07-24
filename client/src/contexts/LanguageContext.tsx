@@ -55,7 +55,7 @@ const translations = {
     'services.design.title': 'ვებ დიზაინი',
     'services.design.desc': 'თანამედროვე და მიმზიდველი დიზაინი თქვენი ბრენდისთვის',
     'services.seo.title': 'SEO ოპტიმიზაცია',
-    'services.seo.desc': 'Google-ში ძიების შედეგებში მაღალი რანჟირება',
+    'services.seo.desc': 'SEO ოპტიმიზაცია, რომელიც უზრუნველყოფს თქვენი ვებ-გვერდის უკეთეს ხილვადობას საძიებო სისტემებში და ზრდის ორგანული ტრაფიკის მოცულობას.',
     'services.maintenance.title': 'ტექნიკური მხარდაჭერა',
     'services.maintenance.desc': 'საიტის განახლება, მოვლა და უსაფრთხოების უზრუნველყოფა',
     
