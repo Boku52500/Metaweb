@@ -64,23 +64,8 @@ export default function Pricing() {
       priceNote: t('pricing.unique.from'),
       description: t('pricing.unique.desc'),
       icon: "✨",
-      color: "from-yellow-500 to-yellow-700",
-      features: t('pricing.unique.features').split('|')
-    },
-    {
-      name: "უნიკალური საიტი",
-      price: "5000₾",
-      priceNote: "-დან",
-      description: "ინდივიდუალური დიზაინი და ფუნქციონალი",
-      icon: "✨",
       color: "from-orange-500 to-red-600",
-      features: [
-        "100% უნიკალური დიზაინი",
-        "ინდივიდუალური ფუნქციონალი",
-        "API ინტეგრაციები",
-        "ანალიტიკა",
-        "უვადო ტექნიკური მხარდაჭერა"
-      ]
+      features: t('pricing.unique.features').split('|')
     }
   ];
 
