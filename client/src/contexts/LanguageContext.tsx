@@ -82,6 +82,7 @@ const translations = {
     'cta.unique.projects': 'ყველა პროექტი უნიკალურია და შექმნილია მომხმარებლის სპეციფიკური საჭიროებების შესაბამისად',
     'cta.call.title': 'დარეკეთ ახლავე',
     'cta.call.subtitle': 'გაქვთ საინტერესო იდეა? ერთად განვიხილოთ საიტის სტრუქტურა, დიზაინი და ფუნქციონალი',
+    'cta.call.now': 'დარეკეთ ახლავე',
     'cta.chat.title': 'გვესაუბრეთ პროექტზე',
     
     // Pricing Section
@@ -238,6 +239,7 @@ const translations = {
     'cta.unique.projects': 'Every project is unique and created according to the specific needs of the client',
     'cta.call.title': 'Call Now',
     'cta.call.subtitle': 'Do you have an interesting idea? Let\'s discuss the structure, design and functionality of the website together',
+    'cta.call.now': 'Call Now',
     'cta.chat.title': 'Talk About Project',
     
     // Pricing Section

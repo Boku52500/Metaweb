@@ -127,14 +127,14 @@ export default function Services() {
         {/* CTA Section */}
         <div className={`text-center mt-12 sm:mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 font-georgian">მზად ხართ დასაწყებად?</h3>
-            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 font-georgian">მიიღეთ უფასო კონსულტაცია და იყავით კონკურენტებზე ერთი ნაბიჯით წინ</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 font-georgian">{t('cta.ready.title')}</h3>
+            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 font-georgian">{t('cta.ready.subtitle')}</p>
             <a
               href="tel:+995557915146"
               className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 font-georgian group"
             >
               <span className="group-hover:animate-pulse mr-2 sm:mr-3">📞</span>
-              დარეკეთ ახლავე
+              {t('cta.call.now')}
             </a>
           </div>
         </div>
