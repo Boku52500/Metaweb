@@ -32,7 +32,7 @@ const translations = {
     
     // Advantages Section
     'advantages.title': 'რატომ ჩვენ?',
-    'advantages.subtitle': 'ჩვენი უპირატესობები, რომლებიც გამოგვყოფს სხვებისგან',
+    'advantages.subtitle': 'ჩვენი უპირატესობები',
     'advantages.speed.title': 'სწრაფი მუშაობა',
     'advantages.speed.desc': 'საიტის დამზადება 3-7 დღეში',
     'advantages.seo.title': 'SEO ოპტიმიზაცია',
@@ -50,7 +50,7 @@ const translations = {
     'services.title': 'ჩვენი სერვისები',
     'services.subtitle': 'სრული სპექტრის ვებ მომსახურებები',
     'services.website.title': 'ვებსაიტის დამზადება',
-    'services.website.desc': 'კორპორაცული ვებსაიტები, ონლაინ მაღაზიები, ლენდინგ გვერდები',
+    'services.website.desc': 'ნებისმიერი სირთულის კორპორაცული ვებსაიტები, ონლაინ მაღაზიები, ლენდინგ გვერდები',
     'services.design.title': 'ვებ დიზაინი',
     'services.design.desc': 'თანამედროვე და მიმზიდველი დიზაინი თქვენი ბრენდისთვის',
     'services.seo.title': 'SEO ოპტიმიზაცია',
@@ -136,7 +136,7 @@ const translations = {
     
     // Advantages Section
     'advantages.title': 'Why Choose Us?',
-    'advantages.subtitle': 'Our advantages that set us apart from others',
+    'advantages.subtitle': 'Our advantages',
     'advantages.speed.title': 'Fast Delivery',
     'advantages.speed.desc': 'Website ready in 3-7 days',
     'advantages.seo.title': 'SEO Optimization',
@@ -243,9 +243,9 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     // Update document language and title
     document.documentElement.lang = lang;
     if (lang === 'en') {
-      document.title = 'Website Development in Georgia - Metaweb.ge | Web Design, SEO and Web Development';
+      document.title = 'Website Development - Metaweb.ge | Web Design, SEO and Web Development';
     } else {
-      document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO და saitis damzadeba';
+      document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO';
     }
   };
 
