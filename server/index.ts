@@ -11,9 +11,11 @@ app.use((req, res, next) => {
   const host = req.get('host') || '';
   
   // Check if request is from online.metaweb.ge subdomain
-  if (host.startsWith('online.')) {
-    // Redirect to the welcome page
-    return res.redirect('/welcome');
+  if (host.includes('online.metaweb.ge') || host.startsWith('online.')) {
+    // Only redirect if not already on welcome page to avoid redirect loops
+    if (req.path !== '/welcome' && !req.path.startsWith('/api')) {
+      return res.redirect('/welcome');
+    }
   }
   
   next();
