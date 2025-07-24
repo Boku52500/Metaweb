@@ -20,10 +20,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>Welcome to Metaweb - Digital Excellence</title>
-            <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23667eea;stop-opacity:1' /><stop offset='100%' style='stop-color:%23764ba2;stop-opacity:1' /></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad)'/><text x='50' y='65' font-family='Arial, sans-serif' font-size='45' font-weight='bold' text-anchor='middle' fill='white'>M</text></svg>" />
+            <link rel="icon" type="image/png" href="data:image/png;base64,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" />
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
             <style>
               :root {
                 --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -44,9 +44,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
               }
 
               body { 
-                font-family: 'Inter', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                font-family: 'Poppins', 'Inter', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
                 min-height: 100vh;
-                background: var(--primary-gradient);
+                background: 
+                  radial-gradient(ellipse at top, #667eea 0%, #764ba2 100%),
+                  linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+                background-size: 100% 100%, 200% 200%;
+                animation: gradientShift 15s ease infinite;
                 position: relative;
                 overflow-x: hidden;
                 display: flex;
@@ -55,7 +59,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
                 padding: 20px;
               }
 
-              /* Animated Background Effects */
+              @keyframes gradientShift {
+                0% { background-position: 0% 0%, 0% 50%; }
+                50% { background-position: 0% 0%, 100% 50%; }
+                100% { background-position: 0% 0%, 0% 50%; }
+              }
+
+              /* Multiple Layered Background Effects */
               body::before {
                 content: '';
                 position: absolute;
@@ -64,19 +74,41 @@ export async function registerRoutes(app: Express): Promise<Server> {
                 right: 0;
                 bottom: 0;
                 background: 
-                  radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
-                animation: backgroundPulse 8s ease-in-out infinite alternate;
+                  radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
+                  radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.2) 0%, transparent 60%),
+                  radial-gradient(circle at 40% 80%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 45%);
+                animation: backgroundPulse 12s ease-in-out infinite alternate;
                 z-index: 0;
               }
 
-              @keyframes backgroundPulse {
-                0% { opacity: 0.5; transform: scale(1); }
-                100% { opacity: 0.8; transform: scale(1.1); }
+              body::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: 
+                  conic-gradient(from 0deg at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 25%),
+                  conic-gradient(from 180deg at 75% 75%, rgba(251, 191, 36, 0.1) 0%, transparent 25%);
+                animation: backgroundRotate 20s linear infinite;
+                z-index: 1;
               }
 
-              /* Floating Particles */
+              @keyframes backgroundPulse {
+                0% { opacity: 0.4; transform: scale(1) rotate(0deg); }
+                50% { opacity: 0.7; transform: scale(1.1) rotate(2deg); }
+                100% { opacity: 0.5; transform: scale(0.95) rotate(-1deg); }
+              }
+
+              @keyframes backgroundRotate {
+                0% { transform: rotate(0deg) scale(1); }
+                50% { transform: rotate(180deg) scale(1.05); }
+                100% { transform: rotate(360deg) scale(1); }
+              }
+
+              /* Enhanced Floating Particles System */
               .particles {
                 position: absolute;
                 top: 0;
@@ -84,26 +116,100 @@ export async function registerRoutes(app: Express): Promise<Server> {
                 width: 100%;
                 height: 100%;
                 pointer-events: none;
-                z-index: 1;
+                z-index: 2;
               }
 
               .particle {
                 position: absolute;
-                background: rgba(255, 255, 255, 0.1);
                 border-radius: 50%;
-                animation: float 6s ease-in-out infinite;
+                filter: blur(0.5px);
               }
 
-              .particle:nth-child(1) { left: 10%; top: 20%; width: 4px; height: 4px; animation-delay: 0s; }
-              .particle:nth-child(2) { left: 20%; top: 80%; width: 6px; height: 6px; animation-delay: 1s; }
-              .particle:nth-child(3) { left: 60%; top: 10%; width: 8px; height: 8px; animation-delay: 2s; }
-              .particle:nth-child(4) { left: 80%; top: 60%; width: 5px; height: 5px; animation-delay: 3s; }
-              .particle:nth-child(5) { left: 70%; top: 30%; width: 3px; height: 3px; animation-delay: 4s; }
-              .particle:nth-child(6) { left: 30%; top: 70%; width: 7px; height: 7px; animation-delay: 5s; }
+              /* Large glowing particles */
+              .particle:nth-child(1) { 
+                left: 10%; top: 20%; width: 8px; height: 8px; 
+                background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
+                animation: float1 8s ease-in-out infinite;
+              }
+              .particle:nth-child(2) { 
+                left: 20%; top: 80%; width: 12px; height: 12px; 
+                background: radial-gradient(circle, rgba(251, 191, 36, 0.7) 0%, rgba(251, 191, 36, 0.1) 100%);
+                animation: float2 10s ease-in-out infinite;
+              }
+              .particle:nth-child(3) { 
+                left: 60%; top: 10%; width: 6px; height: 6px; 
+                background: radial-gradient(circle, rgba(6, 182, 212, 0.8) 0%, rgba(6, 182, 212, 0.1) 100%);
+                animation: float3 7s ease-in-out infinite;
+              }
+              .particle:nth-child(4) { 
+                left: 80%; top: 60%; width: 10px; height: 10px; 
+                background: radial-gradient(circle, rgba(168, 85, 247, 0.6) 0%, rgba(168, 85, 247, 0.1) 100%);
+                animation: float4 9s ease-in-out infinite;
+              }
+              .particle:nth-child(5) { 
+                left: 70%; top: 30%; width: 4px; height: 4px; 
+                background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 100%);
+                animation: float5 6s ease-in-out infinite;
+              }
+              .particle:nth-child(6) { 
+                left: 30%; top: 70%; width: 14px; height: 14px; 
+                background: radial-gradient(circle, rgba(251, 191, 36, 0.5) 0%, rgba(251, 191, 36, 0.05) 100%);
+                animation: float6 11s ease-in-out infinite;
+              }
+              .particle:nth-child(7) { 
+                left: 45%; top: 15%; width: 5px; height: 5px; 
+                background: radial-gradient(circle, rgba(6, 182, 212, 0.7) 0%, rgba(6, 182, 212, 0.1) 100%);
+                animation: float7 8.5s ease-in-out infinite;
+              }
+              .particle:nth-child(8) { 
+                left: 85%; top: 25%; width: 7px; height: 7px; 
+                background: radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, rgba(168, 85, 247, 0.1) 100%);
+                animation: float8 9.5s ease-in-out infinite;
+              }
 
-              @keyframes float {
-                0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
-                50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+              @keyframes float1 {
+                0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); opacity: 0.6; }
+                33% { transform: translateY(-25px) translateX(10px) rotate(120deg) scale(1.2); opacity: 1; }
+                66% { transform: translateY(-10px) translateX(-15px) rotate(240deg) scale(0.8); opacity: 0.8; }
+              }
+
+              @keyframes float2 {
+                0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); opacity: 0.5; }
+                50% { transform: translateY(-35px) translateX(20px) rotate(180deg) scale(1.4); opacity: 0.9; }
+              }
+
+              @keyframes float3 {
+                0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); opacity: 0.7; }
+                25% { transform: translateY(-15px) translateX(-10px) rotate(90deg) scale(1.1); opacity: 1; }
+                75% { transform: translateY(-30px) translateX(5px) rotate(270deg) scale(0.9); opacity: 0.6; }
+              }
+
+              @keyframes float4 {
+                0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); opacity: 0.4; }
+                40% { transform: translateY(-20px) translateX(-20px) rotate(144deg) scale(1.3); opacity: 0.8; }
+                80% { transform: translateY(-40px) translateX(10px) rotate(288deg) scale(1.1); opacity: 0.7; }
+              }
+
+              @keyframes float5 {
+                0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); opacity: 0.8; }
+                50% { transform: translateY(-45px) translateX(-25px) rotate(180deg) scale(1.5); opacity: 1; }
+              }
+
+              @keyframes float6 {
+                0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); opacity: 0.3; }
+                33% { transform: translateY(-30px) translateX(15px) rotate(120deg) scale(0.7); opacity: 0.6; }
+                66% { transform: translateY(-15px) translateX(-10px) rotate(240deg) scale(1.2); opacity: 0.5; }
+              }
+
+              @keyframes float7 {
+                0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); opacity: 0.6; }
+                50% { transform: translateY(-25px) translateX(30px) rotate(180deg) scale(1.3); opacity: 0.9; }
+              }
+
+              @keyframes float8 {
+                0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); opacity: 0.5; }
+                30% { transform: translateY(-20px) translateX(-15px) rotate(108deg) scale(1.1); opacity: 0.8; }
+                70% { transform: translateY(-35px) translateX(5px) rotate(252deg) scale(0.9); opacity: 0.7; }
               }
 
               /* Main Container */
@@ -180,17 +286,27 @@ export async function registerRoutes(app: Express): Promise<Server> {
               }
 
               h1 {
-                font-family: 'Space Grotesk', sans-serif;
-                font-size: 4.5rem;
-                font-weight: 800;
-                background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+                font-family: 'Orbitron', 'Space Grotesk', sans-serif;
+                font-size: 4.8rem;
+                font-weight: 900;
+                background: linear-gradient(135deg, #ffffff 0%, #fbbf24 25%, #06b6d4 50%, #a855f7 75%, #ffffff 100%);
+                background-size: 300% 300%;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 margin-bottom: 16px;
-                letter-spacing: -0.02em;
-                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                animation: titleGlow 4s ease-in-out infinite alternate;
+                letter-spacing: -0.03em;
+                text-shadow: 
+                  0 0 10px rgba(255, 255, 255, 0.3),
+                  0 0 20px rgba(251, 191, 36, 0.2),
+                  0 0 30px rgba(6, 182, 212, 0.1);
+                animation: titleGlow 6s ease-in-out infinite, gradientMove 8s ease-in-out infinite;
+                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+              }
+
+              @keyframes gradientMove {
+                0%, 100% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
               }
 
               @keyframes titleGlow {
@@ -372,6 +488,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           </head>
           <body>
             <div class="particles">
+              <div class="particle"></div>
+              <div class="particle"></div>
               <div class="particle"></div>
               <div class="particle"></div>
               <div class="particle"></div>
