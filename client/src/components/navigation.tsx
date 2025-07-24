@@ -109,7 +109,7 @@ export default function Navigation() {
             <span className="xl:hidden">557 91 51 46</span>
           </a>
 
-          {/* Phone Icon for Medium Screens */}
+          {/* Phone Icon for Medium Screens - Hidden when mobile menu is open */}
           <a
             href="tel:+995557915146"
             onClick={() => {
@@ -118,7 +118,9 @@ export default function Navigation() {
               }
               return true;
             }}
-            className={`lg:hidden md:flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 shadow-lg hover:scale-110 ${
+            className={`lg:hidden items-center justify-center w-10 h-10 rounded-full transition-all duration-300 shadow-lg hover:scale-110 ${
+              isMobileMenuOpen ? 'hidden' : 'md:flex'
+            } ${
               isScrolled 
                 ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
                 : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
@@ -128,24 +130,29 @@ export default function Navigation() {
             <i className="fas fa-phone text-sm animate-pulse"></i>
           </a>
 
-          {/* Language Selector */}
-          <LanguageSelector />
-
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden relative group"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <div className="w-8 h-8 flex items-center justify-center">
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6 transform rotate-180 transition-transform duration-300" />
-              ) : (
-                <Menu className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-              )}
+          {/* Right side container for mobile layout */}
+          <div className="flex items-center space-x-3">
+            {/* Language Selector - Centered when mobile menu is open on mobile */}
+            <div className={`${isMobileMenuOpen ? 'absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none' : ''}`}>
+              <LanguageSelector />
             </div>
-          </Button>
+
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              className="md:hidden relative group"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <div className="w-8 h-8 flex items-center justify-center">
+                {isMobileMenuOpen ? (
+                  <X className="h-6 w-6 transform rotate-180 transition-transform duration-300" />
+                ) : (
+                  <Menu className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+                )}
+              </div>
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
