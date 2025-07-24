@@ -12,10 +12,9 @@ app.use((req, res, next) => {
   
   // Check if request is from online.metaweb.ge subdomain
   if (host.includes('online.metaweb.ge') || host.startsWith('online.')) {
-    // Force redirect to main domain with welcome page for SSL
-    if (!host.includes('metaweb.ge') || host.startsWith('online.')) {
-      const protocol = req.get('x-forwarded-proto') || 'https';
-      return res.redirect(`${protocol}://metaweb.ge/welcome`);
+    // Serve welcome page content directly at subdomain root
+    if (req.path === '/' || req.path === '') {
+      req.url = '/welcome';
     }
   }
   
