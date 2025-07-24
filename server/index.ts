@@ -6,6 +6,19 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Subdomain handling middleware
+app.use((req, res, next) => {
+  const host = req.get('host') || '';
+  
+  // Check if request is from online.metaweb.ge subdomain
+  if (host.startsWith('online.')) {
+    // Redirect to the welcome page
+    return res.redirect('/welcome');
+  }
+  
+  next();
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
