@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import techProject from "@assets/475191028_1120932972825777_1989653129482698248_n_1753105789654.jpg";
 import sportsProject from "@assets/475319508_1121775632741511_937116748092196865_n_1753105789655.jpg";
 import fashionProject from "@assets/475408865_1121775396074868_2137528778553133634_n_1753105789656.jpg";
@@ -7,6 +8,7 @@ import constructionProject from "@assets/475110030_1120933002825774_330003107955
 import ecommerceProject from "@assets/475147006_1120932616159146_8440514715472393051_n_1753105789658.jpg";
 
 export default function Portfolio() {
+  const { t, language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -19,18 +21,18 @@ export default function Portfolio() {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("პორტფოლიო");
+    const element = document.getElementById(language === 'en' ? "portfolio" : "პორტფოლიო");
     if (element) {
       observer.observe(element);
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [language]);
 
   const projects = [
     {
       name: "GREEN IT SOLUTION",
-      description: "ტექნოლოგიური კომპანიის ვებსაიტი",
+      description: language === 'ka' ? "ტექნოლოგიური კომპანიის ვებსაიტი" : "Technology company website",
       image: techProject,
       alt: "Green IT Solution - ტექნოლოგიური კომპანიის ვებსაიტი",
       color: "from-green-500 to-green-700",
@@ -39,7 +41,7 @@ export default function Portfolio() {
     },
     {
       name: "PHYSIQ APPAREL",
-      description: "სპორტული ბრენდის ვებსაიტი",
+      description: language === 'ka' ? "სპორტული ბრენდის ვებსაიტი" : "Sports brand website",
       image: sportsProject,
       alt: "Physiq Apparel - სპორტული ბრენდის ვებსაიტი",
       color: "from-orange-500 to-red-600",
@@ -48,7 +50,7 @@ export default function Portfolio() {
     },
     {
       name: "CLARE FASHION",
-      description: "მოდის ბრენდის ვებსაიტი",
+      description: language === 'ka' ? "მოდის ბრენდის ვებსაიტი" : "Fashion brand website",
       image: fashionProject,
       alt: "Clare Fashion - მოდის ბრენდის ვებსაიტი",
       color: "from-gray-600 to-gray-800",
@@ -57,7 +59,7 @@ export default function Portfolio() {
     },
     {
       name: "MANNING ELLIOTT",
-      description: "საკონსულტაციო ვებსაიტი",
+      description: language === 'ka' ? "საკონსულტაციო ვებსაიტი" : "Consulting website",
       image: corporateProject,
       alt: "Manning Elliott - კორპორაციული საკონსულტაციო ვებსაიტი",
       color: "from-blue-600 to-blue-800",
@@ -66,7 +68,7 @@ export default function Portfolio() {
     },
     {
       name: "PABCO GYPSUM",
-      description: "სამშენებლო კომპანიის ვებსაიტი",
+      description: language === 'ka' ? "სამშენებლო კომპანიის ვებსაიტი" : "Construction company website",
       image: constructionProject,
       alt: "Pabco Gypsum - მშენებლობითი კომპანიის ვებსაიტი",
       color: "from-red-600 to-red-800",
@@ -75,7 +77,7 @@ export default function Portfolio() {
     },
     {
       name: "JACKY'S ELECTRONICS",
-      description: "ელექტრონული კომერციის ვებსაიტი",
+      description: language === 'ka' ? "ელექტრონული კომერციის ვებსაიტი" : "E-commerce website",
       image: ecommerceProject,
       alt: "Jacky's Electronics - ელექტრონული კომერციის ვებსაიტი",
       color: "from-cyan-500 to-blue-600",
@@ -85,7 +87,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <section id="პორტფოლიო" className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section id={language === 'en' ? "portfolio" : "პორტფოლიო"} className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-white/30 to-gray-100/50"></div>
@@ -95,10 +97,10 @@ export default function Portfolio() {
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <h2 className="text-5xl lg:text-7xl font-bold mb-6 font-georgian">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              პროექტები
+              {t('portfolio.title')}
             </span>
           </h2>
-          <h3 className="text-2xl lg:text-3xl text-gray-600 mb-8 font-georgian">ჩვენი ნამუშევრები</h3>
+          <h3 className="text-2xl lg:text-3xl text-gray-600 mb-8 font-georgian">{t('portfolio.subtitle')}</h3>
           <div className="w-32 h-1 bg-gradient-to-r from-purple-600 to-cyan-500 mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto font-georgian">
             ყველა პროექტი უნიკალურია და შექმნილია მომხმარებლის სპეციფიკური საჭიროებების შესაბამისად

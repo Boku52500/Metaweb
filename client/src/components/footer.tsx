@@ -1,4 +1,7 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function Footer() {
+  const { t, language } = useLanguage();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -10,19 +13,30 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const services = [
+  const services = language === 'ka' ? [
     "საიტის დამზადება",
     "ვებსაიტის დიზაინი", 
     "SEO მომსახურება",
     "ზედამხედველობა",
+  ] : [
+    "Website Development",
+    "Web Design", 
+    "SEO Services",
+    "Maintenance",
   ];
 
-  const navItems = [
+  const navItems = language === 'ka' ? [
     { label: "უპირატესობები", id: "უპირატესობები" },
     { label: "პორტფოლიო", id: "პორტფოლიო" },
     { label: "სერვისები", id: "სერვისები" },
     { label: "ფასები", id: "ფასები" },
     { label: "კონტაქტი", id: "კონტაქტი" },
+  ] : [
+    { label: "Advantages", id: "advantages" },
+    { label: "Portfolio", id: "portfolio" },
+    { label: "Services", id: "services" },
+    { label: "Pricing", id: "pricing" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (
@@ -46,8 +60,7 @@ export default function Footer() {
             </div>
             
             <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed font-georgian">
-              ჩვენ ვქმნით ინოვაციურ ვებ-გვერდებს, ვეხმარებით
-              ბიზნესებს წარმატების მიღწევაში. თქვენი წარმატება - ჩვენი მიზანია.
+              {language === 'ka' ? 'ჩვენ ვქმნით ინოვაციურ ვებ-გვერდებს, ვეხმარებით ბიზნესებს წარმატების მიღწევაში. თქვენი წარმატება - ჩვენი მიზანია.' : 'We create innovative web pages and help businesses achieve success. Your success is our goal.'}
             </p>
 
             {/* Contact Info */}
@@ -103,13 +116,13 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 font-georgian bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              სერვისები
+              {language === 'ka' ? 'სერვისები' : 'Services'}
             </h4>
             <div className="space-y-2 sm:space-y-3">
               {services.map((service, index) => (
                 <div key={index} className="relative">
                   <button
-                    onClick={() => scrollToSection("სერვისები")}
+                    onClick={() => scrollToSection(language === 'ka' ? "სერვისები" : "services")}
                     className="text-gray-300 hover:text-white transition-all duration-300 font-georgian text-base sm:text-lg hover:translate-x-2 group w-full text-left"
                   >
                     {service}
@@ -123,7 +136,7 @@ export default function Footer() {
           {/* Navigation */}
           <div>
             <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 font-georgian bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              ნავიგაცია
+              {language === 'ka' ? 'ნავიგაცია' : 'Navigation'}
             </h4>
             <div className="space-y-2 sm:space-y-3">
               {navItems.map((item, index) => (
@@ -146,10 +159,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400 font-georgian text-base sm:text-lg">
-                &copy; 2024 Metaweb.ge - ყველა უფლება დაცულია
+                &copy; 2024 Metaweb.ge - {language === 'ka' ? 'ყველა უფლება დაცულია' : 'All rights reserved'}
               </p>
               <p className="text-gray-500 font-georgian text-sm sm:text-base">
-                საიტის დამზადება, ვებსაიტის დიზაინი და SEO მომსახურება საქართველოში
+                {language === 'ka' ? 'საიტის დამზადება, ვებსაიტის დიზაინი და SEO მომსახურება საქართველოში' : 'Website development, web design and SEO services in Georgia'}
               </p>
             </div>
             
@@ -159,7 +172,7 @@ export default function Footer() {
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 hover:scale-105 font-georgian group text-sm sm:text-base"
               >
                 <span className="group-hover:animate-pulse mr-1 sm:mr-2">📞</span>
-                დარეკეთ ახლავე
+                {language === 'ka' ? 'დარეკეთ ახლავე' : 'Call now'}
               </a>
             </div>
           </div>

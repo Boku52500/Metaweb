@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSelector from "@/components/language-selector";
 // Google Ads conversion tracking
 declare global {
   interface Window {
@@ -9,6 +11,7 @@ declare global {
 }
 
 export default function Navigation() {
+  const { t, language } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -35,12 +38,11 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { label: "უპირატესობები", id: "უპირატესობები" },
-    { label: "სერვისები", id: "სერვისები" },
-    { label: "პორტფოლიო", id: "პორტფოლიო" },
-    { label: "ფასები", id: "ფასები" },
-    // { label: "შეკითხვები", id: "ხშირი-შეკითხვები" },
-    { label: "კონტაქტი", id: "კონტაქტი" },
+    { label: t('nav.advantages'), id: language === 'en' ? "advantages" : "უპირატესობები" },
+    { label: t('nav.services'), id: language === 'en' ? "services" : "სერვისები" },
+    { label: t('nav.portfolio'), id: language === 'en' ? "portfolio" : "პორტფოლიო" },
+    { label: t('nav.pricing'), id: language === 'en' ? "pricing" : "ფასები" },
+    { label: t('nav.contact'), id: language === 'en' ? "contact" : "კონტაქტი" },
   ];
 
   return (
@@ -102,8 +104,11 @@ export default function Navigation() {
                 : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
             }`}
           >
-            <i className="fas fa-phone mr-1 lg:mr-2 animate-pulse text-xs lg:text-sm"></i>557 91 51 46
+            <i className="fas fa-phone mr-1 lg:mr-2 animate-pulse text-xs lg:text-sm"></i>{t('hero.phone')}
           </a>
+
+          {/* Language Selector */}
+          <LanguageSelector />
 
           {/* Mobile Menu Button */}
           <Button

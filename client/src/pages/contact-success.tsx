@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { CheckCircle, Phone, Mail, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 declare global {
   interface Window {
@@ -9,6 +10,7 @@ declare global {
 }
 
 export default function ContactSuccess() {
+  const { t, language } = useLanguage();
   useEffect(() => {
     // Google Ads conversion tracking - Page load conversion
     if (typeof window !== 'undefined' && window.gtag) {
@@ -27,17 +29,17 @@ export default function ContactSuccess() {
           <div className="mb-8">
             <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
             <h1 className="text-3xl md:text-4xl font-bold text-white font-georgian mb-4">
-              გმადლობთ დაინტერესებისთვის! 🎉
+              {language === 'ka' ? 'გმადლობთ დაინტერესებისთვის! 🎉' : 'Thank you for your interest! 🎉'}
             </h1>
             <p className="text-xl text-gray-300 font-georgian mb-6">
-              თქვენი შეტყობინება წარმატებით გაიგზავნა
+              {language === 'ka' ? 'თქვენი შეტყობინება წარმატებით გაიგზავნა' : 'Your message was sent successfully'}
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-blue-400 mx-auto rounded-full"></div>
           </div>
 
           <div className="bg-white/5 rounded-2xl p-6 mb-8">
             <h2 className="text-2xl font-bold text-white font-georgian mb-4">
-              რას ელოდოთ შემდეგ?
+              {language === 'ka' ? 'რას ელოდოთ შემდეგ?' : 'What to expect next?'}
             </h2>
             <div className="space-y-4 text-left">
               <div className="flex items-start space-x-3">
@@ -45,7 +47,7 @@ export default function ContactSuccess() {
                   <span className="text-white font-bold text-sm">1</span>
                 </div>
                 <p className="text-gray-300 font-georgian">
-                  <strong className="text-white">5-10 წუთში</strong> - ჩვენი სპეციალისტი დაგიკავშირდებათ
+                  <strong className="text-white">{language === 'ka' ? '5-10 წუთში' : 'In 5-10 minutes'}</strong> - {language === 'ka' ? 'ჩვენი სპეციალისტი დაგიკავშირდებათ' : 'our specialist will contact you'}
                 </p>
               </div>
               <div className="flex items-start space-x-3">
@@ -53,7 +55,7 @@ export default function ContactSuccess() {
                   <span className="text-white font-bold text-sm">2</span>
                 </div>
                 <p className="text-gray-300 font-georgian">
-                  <strong className="text-white">უფასო კონსულტაცია</strong> - განვიხილავთ თქვენს მოთხოვნებს
+                  <strong className="text-white">{language === 'ka' ? 'უფასო კონსულტაცია' : 'Free consultation'}</strong> - {language === 'ka' ? 'განვიხილავთ თქვენს მოთხოვნებს' : 'we will discuss your requirements'}
                 </p>
               </div>
               <div className="flex items-start space-x-3">
@@ -61,7 +63,7 @@ export default function ContactSuccess() {
                   <span className="text-white font-bold text-sm">3</span>
                 </div>
                 <p className="text-gray-300 font-georgian">
-                  <strong className="text-white">24 საათში</strong> - მიიღებთ დეტალურ წინადადებას
+                  <strong className="text-white">{language === 'ka' ? '24 საათში' : 'Within 24 hours'}</strong> - {language === 'ka' ? 'მიიღებთ დეტალურ წინადადებას' : 'you will receive a detailed proposal'}
                 </p>
               </div>
             </div>
@@ -70,7 +72,7 @@ export default function ContactSuccess() {
           <div className="grid md:grid-cols-2 gap-4 mb-8">
             <div className="bg-white/5 rounded-xl p-4">
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-              <p className="text-gray-400 text-sm font-georgian mb-1">გადაუდებელი საკითხისთვის</p>
+              <p className="text-gray-400 text-sm font-georgian mb-1">{language === 'ka' ? 'გადაუდებელი საკითხისთვის' : 'For urgent matters'}</p>
               <a 
                 href="tel:+995557915146" 
                 className="text-white font-bold font-georgian hover:text-blue-400 transition-colors"
@@ -80,7 +82,7 @@ export default function ContactSuccess() {
             </div>
             <div className="bg-white/5 rounded-xl p-4">
               <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-              <p className="text-gray-400 text-sm font-georgian mb-1">ელ-ფოსტით</p>
+              <p className="text-gray-400 text-sm font-georgian mb-1">{language === 'ka' ? 'ელ-ფოსტით' : 'By email'}</p>
               <a 
                 href="mailto:info@metaweb.ge" 
                 className="text-white font-bold font-georgian hover:text-purple-400 transition-colors break-all"
@@ -96,11 +98,11 @@ export default function ContactSuccess() {
               className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-georgian text-lg py-3"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
-              მთავარ გვერდზე დაბრუნება
+              {language === 'ka' ? 'მთავარ გვერდზე დაბრუნება' : 'Back to main page'}
             </Button>
             
             <p className="text-gray-400 text-sm font-georgian">
-              საიტის დამზადება, ვებსაიტის დიზაინი და SEO ოპტიმიზაცია საქართველოში
+              {language === 'ka' ? 'საიტის დამზადება, ვებსაიტის დიზაინი და SEO ოპტიმიზაცია საქართველოში' : 'Website development, web design and SEO optimization in Georgia'}
             </p>
           </div>
         </div>

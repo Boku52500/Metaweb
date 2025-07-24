@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Advantages() {
+  const { t, language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -13,53 +15,53 @@ export default function Advantages() {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("უპირატესობები");
+    const element = document.getElementById(language === 'en' ? "advantages" : "უპირატესობები");
     if (element) {
       observer.observe(element);
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [language]);
 
   const advantages = [
     {
-      title: "პროფესიონალიზმი",
-      description: "10+ წლიანი გამოცდილება ვებსაიტების დამზადებაში",
+      title: language === 'ka' ? "პროფესიონალიზმი" : "Professionalism",
+      description: language === 'ka' ? "10+ წლიანი გამოცდილება ვებსაიტების დამზადებაში" : "10+ years of experience in website development",
       emoji: "🎯",
       gradient: "from-blue-500 to-indigo-600",
       shadow: "shadow-blue-500/25"
     },
     {
-      title: "პუნქტუალურობა", 
-      description: "ყველა პროექტი ბარდება დადგენილ ვადებში",
+      title: language === 'ka' ? "პუნქტუალურობა" : "Punctuality", 
+      description: language === 'ka' ? "ყველა პროექტი ბარდება დადგენილ ვადებში" : "All projects delivered on scheduled deadlines",
       emoji: "⚡",
       gradient: "from-amber-500 to-orange-600",
       shadow: "shadow-amber-500/25"
     },
     {
-      title: "კრეატიულობა",
-      description: "უნიკალური და ინოვაციური დიზაინი",
+      title: language === 'ka' ? "კრეატიულობა" : "Creativity",
+      description: language === 'ka' ? "უნიკალური და ინოვაციური დიზაინი" : "Unique and innovative design",
       emoji: "🎨",
       gradient: "from-purple-500 to-pink-600",
       shadow: "shadow-purple-500/25"
     },
     {
-      title: "ინოვაციურობა",
-      description: "უახლესი ტექნოლოგიები და ტრენდები",
+      title: language === 'ka' ? "ინოვაციურობა" : "Innovation",
+      description: language === 'ka' ? "უახლესი ტექნოლოგიები და ტრენდები" : "Latest technologies and trends",
       emoji: "🚀",
       gradient: "from-emerald-500 to-teal-600",
       shadow: "shadow-emerald-500/25"
     },
     {
-      title: "სანდოობა",
-      description: "500+ კმაყოფილი კლიენტი და გაგრძელებული თანამშრომლობა",
+      title: language === 'ka' ? "სანდოობა" : "Reliability",
+      description: language === 'ka' ? "500+ კმაყოფილი კლიენტი და გაგრძელებული თანამშრომლობა" : "500+ satisfied clients and continued collaboration",
       emoji: "🛡️",
       gradient: "from-red-500 to-rose-600",
       shadow: "shadow-red-500/25"
     },
     {
-      title: "ხარისხი",
-      description: "მაღალი ხარისხის სტანდარტები ყველა პროექტში",
+      title: language === 'ka' ? "ხარისხი" : "Quality",
+      description: language === 'ka' ? "მაღალი ხარისხის სტანდარტები ყველა პროექტში" : "High quality standards in every project",
       emoji: "💎",
       gradient: "from-cyan-500 to-blue-600",
       shadow: "shadow-cyan-500/25"
@@ -67,7 +69,7 @@ export default function Advantages() {
   ];
 
   return (
-    <section id="უპირატესობები" className="py-32 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50">
+    <section id={language === 'en' ? "advantages" : "უპირატესობები"} className="py-32 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50">
       {/* Advanced Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30"></div>
@@ -90,16 +92,16 @@ export default function Advantages() {
         <div className={`text-center mb-24 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="inline-block mb-6">
             <span className="px-6 py-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full text-sm font-medium text-gray-600 border border-gray-200/50 backdrop-blur-sm">
-              ჩვენი უპირატესობები
+              {t('advantages.subtitle')}
             </span>
           </div>
           <h2 className="text-6xl lg:text-7xl font-bold mb-8 font-georgian">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              რატომ ჩვენ?
+              {t('advantages.title')}
             </span>
           </h2>
           <p className="text-xl text-gray-600 font-georgian max-w-3xl mx-auto leading-relaxed">
-            ფაქტორები, რომლებიც განგვასხვავებენ და გვხდიან უნიკალურებს
+            {language === 'ka' ? 'ფაქტორები, რომლებიც განგვასხვავებენ და გვხდიან უნიკალურებს' : 'Factors that distinguish us and make us unique'}
           </p>
         </div>
 

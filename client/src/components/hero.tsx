@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import Counter from "./counter";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
+  const { t, language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -10,7 +12,7 @@ export default function Hero() {
   }, []);
 
   const scrollToContact = () => {
-    const element = document.getElementById("კონტაქტი");
+    const element = document.getElementById(language === 'en' ? "contact" : "კონტაქტი");
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -86,27 +88,49 @@ export default function Hero() {
 
               <div className="text-center lg:text-left">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 font-georgian leading-tight tracking-tight">
-                  <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.3s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'ALK Sanet, serif' }}>
-                    საიტის{' '}
-                  </span>
-                  <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.5s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'ALK Sanet, serif' }}>
-                    დამზადება
-                  </span>
+                  {language === 'ka' ? (
+                    <>
+                      <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.3s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'ALK Sanet, serif' }}>
+                        საიტის{' '}
+                      </span>
+                      <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.5s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'ALK Sanet, serif' }}>
+                        დამზადება
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.3s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'ALK Sanet, serif' }}>
+                        Website{' '}
+                      </span>
+                      <span className="block lg:inline animate-slide-up text-white font-black tracking-wider relative" style={{ animationDelay: '0.5s', textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)', fontFamily: 'ALK Sanet, serif' }}>
+                        Development
+                      </span>
+                    </>
+                  )}
                 </h1>
                 
                 <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-white/95 font-georgian animate-slide-up font-light" style={{ animationDelay: '0.7s' }}>
                   <span className="bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-                    საუკეთესო ხარისხი ხელმისაწვდომ ფასად
+                    {language === 'ka' ? 'საუკეთესო ხარისხი ხელმისაწვდომ ფასად' : 'Best Quality at Affordable Price'}
                   </span>
                 </h2>
                 
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/85 font-georgian leading-relaxed animate-slide-up" style={{ animationDelay: '0.9s' }}>
-                  ჩვენი გუნდი ეხმარება კომპანიებს იპოვონ თავიანთი ადგილი 
-                  <span className="text-cyan-300 font-semibold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent"> ციფრულ სამყაროში</span>
+                  {language === 'ka' ? (
+                    <>
+                      ჩვენი გუნდი ეხმარება კომპანიებს იპოვონ თავიანთი ადგილი 
+                      <span className="text-cyan-300 font-semibold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent"> ციფრულ სამყაროში</span>
+                    </>
+                  ) : (
+                    <>
+                      Our team helps companies find their place in the
+                      <span className="text-cyan-300 font-semibold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent"> digital world</span>
+                    </>
+                  )}
                 </p>
                 
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 text-yellow-400 font-bold animate-slide-up font-georgian animate-pulse" style={{ animationDelay: '1.1s' }}>
-                  გახადეთ თქვენი ბიზნესი წარმატებული დღესვე
+                  {language === 'ka' ? 'გახადეთ თქვენი ბიზნესი წარმატებული დღესვე' : 'Make Your Business Successful Today'}
                 </p>
               </div>
             </div>
@@ -132,7 +156,7 @@ export default function Hero() {
                     <div className="absolute inset-0 bg-yellow-400/30 rounded-full scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-50 transition-all duration-700 animate-ping"></div>
                   </div>
                   <span className="relative">
-                    სწრაფი შეკვეთა
+                    {language === 'ka' ? 'სწრაფი შეკვეთა' : 'Quick Order'}
                     <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -skew-x-12 opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700"></div>
                   </span>
                 </div>
@@ -177,7 +201,7 @@ export default function Hero() {
                     <div className="mb-1 sm:mb-2">
                       <Counter target={10} />
                     </div>
-                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">წლიანი გამოცდილება</div>
+                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">{language === 'ka' ? 'წლიანი გამოცდილება' : 'Years of Experience'}</div>
                   </div>
                 </div>
                 <div className="text-center group relative h-full">
@@ -187,7 +211,7 @@ export default function Hero() {
                     <div className="mb-1 sm:mb-2">
                       <Counter target={500} />
                     </div>
-                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">კმაყოფილი კლიენტი</div>
+                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">{language === 'ka' ? 'კმაყოფილი კლიენტი' : 'Satisfied Clients'}</div>
                   </div>
                 </div>
                 <div className="text-center group relative h-full">
@@ -197,7 +221,7 @@ export default function Hero() {
                     <div className="mb-1 sm:mb-2">
                       <Counter target={850} />
                     </div>
-                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">წარმატებული პროექტი</div>
+                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">{language === 'ka' ? 'წარმატებული პროექტი' : 'Successful Projects'}</div>
                   </div>
                 </div>
                 <div className="text-center group relative h-full">
@@ -207,7 +231,7 @@ export default function Hero() {
                     <div className="mb-1 sm:mb-2">
                       <Counter target={15} />
                     </div>
-                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">გუნდის წევრი</div>
+                    <div className="text-white/80 font-georgian text-xs sm:text-sm font-medium leading-tight">{language === 'ka' ? 'გუნდის წევრი' : 'Team Members'}</div>
                   </div>
                 </div>
               </div>
