@@ -98,13 +98,34 @@ export default function Navigation() {
               }
               return true;
             }}
-            className={`hidden md:flex items-center px-4 lg:px-6 py-2 lg:py-3 rounded-lg lg:rounded-xl transition-all duration-300 shadow-lg hover:scale-105 font-georgian text-sm lg:text-base ${
+            className={`hidden lg:flex items-center px-4 xl:px-6 py-2 xl:py-3 rounded-lg xl:rounded-xl transition-all duration-300 shadow-lg hover:scale-105 font-georgian text-sm xl:text-base ${
               isScrolled 
                 ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
                 : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
             }`}
           >
-            <i className="fas fa-phone mr-1 lg:mr-2 animate-pulse text-xs lg:text-sm"></i>{t('hero.phone')}
+            <i className="fas fa-phone mr-1 xl:mr-2 animate-pulse text-xs xl:text-sm"></i>
+            <span className="hidden xl:inline">{t('hero.phone')}</span>
+            <span className="xl:hidden">557 91 51 46</span>
+          </a>
+
+          {/* Phone Icon for Medium Screens */}
+          <a
+            href="tel:+995557915146"
+            onClick={() => {
+              if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                return window.gtag_report_conversion("tel:+995557915146");
+              }
+              return true;
+            }}
+            className={`lg:hidden md:flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 shadow-lg hover:scale-110 ${
+              isScrolled 
+                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
+                : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
+            }`}
+            title="557 91 51 46"
+          >
+            <i className="fas fa-phone text-sm animate-pulse"></i>
           </a>
 
           {/* Language Selector */}

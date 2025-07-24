@@ -1,78 +1,43 @@
-import { useState, useRef, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
-import { useLanguage, Language } from '@/contexts/LanguageContext';
-
-interface LanguageOption {
-  code: Language;
-  name: string;
-  flag: string;
-}
-
-const languages: LanguageOption[] = [
-  { code: 'ka', name: 'ქართული', flag: '🇬🇪' },
-  { code: 'en', name: 'English', flag: '🇺🇸' }
-];
+import { useLanguage } from '@/contexts/LanguageContext';
+import georgiaFlag from '@/assets/georgia-flag.png';
+import ukFlag from '@/assets/uk-flag.png';
 
 export default function LanguageSelector() {
   const { language, setLanguage } = useLanguage();
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const currentLanguage = languages.find(lang => lang.code === language) || languages[0];
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const handleLanguageChange = (langCode: Language) => {
-    setLanguage(langCode);
-    setIsOpen(false);
-  };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="flex items-center space-x-1">
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-sm font-medium"
-        aria-label="Select language"
+        onClick={() => setLanguage('ka')}
+        className={`relative overflow-hidden rounded-full transition-all duration-300 hover:scale-110 ${
+          language === 'ka'
+            ? 'ring-2 ring-blue-400 shadow-lg'
+            : 'opacity-70 hover:opacity-100'
+        }`}
+        title="ქართული"
       >
-        <span className="text-lg">{currentLanguage.flag}</span>
-        <span className="hidden sm:inline text-white/90">{currentLanguage.name}</span>
-        <ChevronDown 
-          className={`w-4 h-4 text-white/70 transition-transform duration-200 ${
-            isOpen ? 'rotate-180' : ''
-          }`} 
+        <img 
+          src={georgiaFlag} 
+          alt="Georgian Flag" 
+          className="w-8 h-8 object-cover rounded-full"
         />
       </button>
-
-      {isOpen && (
-        <div className="absolute top-full right-0 mt-2 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 overflow-hidden z-50">
-          {languages.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => handleLanguageChange(lang.code)}
-              className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-purple-50 transition-colors duration-200 ${
-                language === lang.code 
-                  ? 'bg-purple-100 text-purple-900' 
-                  : 'text-gray-700'
-              }`}
-            >
-              <span className="text-lg">{lang.flag}</span>
-              <span className="font-medium whitespace-nowrap">{lang.name}</span>
-              {language === lang.code && (
-                <div className="w-2 h-2 bg-purple-600 rounded-full ml-auto"></div>
-              )}
-            </button>
-          ))}
-        </div>
-      )}
+      
+      <button
+        onClick={() => setLanguage('en')}
+        className={`relative overflow-hidden rounded-full transition-all duration-300 hover:scale-110 ${
+          language === 'en'
+            ? 'ring-2 ring-blue-400 shadow-lg'
+            : 'opacity-70 hover:opacity-100'
+        }`}
+        title="English"
+      >
+        <img 
+          src={ukFlag} 
+          alt="UK Flag" 
+          className="w-8 h-8 object-cover rounded-full"
+        />
+      </button>
     </div>
   );
 }
