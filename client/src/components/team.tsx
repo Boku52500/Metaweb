@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-
-const scrollToContact = () => {
-  const element = document.getElementById("კონტაქტი");
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Pricing() {
+  const { t, language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
+
+  const scrollToContact = () => {
+    const element = document.getElementById(language === 'en' ? "contact" : "კონტაქტი");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,59 +22,50 @@ export default function Pricing() {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("ფასები");
+    const element = document.getElementById(language === 'en' ? "pricing" : "ფასები");
     if (element) {
       observer.observe(element);
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [language]);
 
   const pricingPlans = [
     {
-      name: "ერთგვერდიანი საიტი",
-      price: "699₾",
-      priceNote: "-დან",
-      description: "სწრაფი და ეფექტური ვებსაიტი",
+      name: t('pricing.single.title'),
+      price: t('pricing.single.price'),
+      priceNote: t('pricing.single.from'),
+      description: t('pricing.single.desc'),
       icon: "📄",
       color: "from-blue-500 to-blue-700",
-      features: [
-        "1 გვერდი",
-        "მობილური ოპტიმიზაცია",
-        "SEO ოპტიმიზაცია",
-        "კონტაქტის ფორმა",
-        "სოციალური მედიის ინტეგრაცია"
-      ]
+      features: t('pricing.single.features').split('|')
     },
     {
-      name: "მრავალგვერდიანი საიტი",
-      price: "999₾",
-      priceNote: "-დან",
-      description: "კომპლექსური ვებსაიტი ბიზნესისთვის",
+      name: t('pricing.multi.title'),
+      price: t('pricing.multi.price'),
+      priceNote: t('pricing.multi.from'),
+      description: t('pricing.multi.desc'),
       icon: "📚",
       color: "from-purple-500 to-purple-700",
-      features: [
-        "რამოდენიმე გვერდი",
-        "ადმინ პანელი",
-        "კონტენტის მართვა",
-        "ფოტო გალერეა",
-        "ბლოგი/სიახლეები"
-      ]
+      features: t('pricing.multi.features').split('|')
     },
     {
-      name: "ონლაინ მაღაზია",
-      price: "1799₾",
-      priceNote: "-დან",
-      description: "სრულფასოვანი ელექტრონული კომერცია",
+      name: t('pricing.store.title'),
+      price: t('pricing.store.price'),
+      priceNote: t('pricing.store.from'),
+      description: t('pricing.store.desc'),
       icon: "🛒",
       color: "from-green-500 to-green-700",
-      features: [
-        "კატალოგი",
-        "კალათა",
-        "ონლაინ გადახდა",
-        "მომხმარებლის ანგარიში",
-        "შეკვეთების მართვა"
-      ]
+      features: t('pricing.store.features').split('|')
+    },
+    {
+      name: t('pricing.unique.title'),
+      price: t('pricing.unique.price'),
+      priceNote: t('pricing.unique.from'),
+      description: t('pricing.unique.desc'),
+      icon: "✨",
+      color: "from-yellow-500 to-yellow-700",
+      features: t('pricing.unique.features').split('|')
     },
     {
       name: "უნიკალური საიტი",
@@ -92,7 +85,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="ფასები" className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section id={language === 'en' ? "pricing" : "ფასები"} className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-white/30 to-gray-100/50"></div>
@@ -102,13 +95,13 @@ export default function Pricing() {
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <h2 className="text-5xl lg:text-7xl font-bold mb-6 font-georgian">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              ფასები
+              {t('pricing.title')}
             </span>
           </h2>
-          <h3 className="text-2xl lg:text-3xl text-gray-600 mb-8 font-georgian">აირჩიეთ თქვენთვის შესაფერისი პაკეტი</h3>
+          <h3 className="text-2xl lg:text-3xl text-gray-600 mb-8 font-georgian">{t('pricing.subtitle')}</h3>
           <div className="w-32 h-1 bg-gradient-to-r from-purple-600 to-cyan-500 mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto font-georgian">
-            ყველა პაკეტი მოიცავს პროფესიონალურ დიზაინს, ტექნიკურ მხარდაჭერას და გარანტიას
+            {t('pricing.intro')}
           </p>
         </div>
 
@@ -185,7 +178,7 @@ export default function Pricing() {
                     onClick={scrollToContact}
                     className={`w-full bg-gradient-to-r ${plan.color} text-white py-3 rounded-2xl font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-georgian`}
                   >
-                    შეკვეთა
+                    {t('pricing.cta')}
                   </button>
                 </div>
               </div>
@@ -196,12 +189,12 @@ export default function Pricing() {
         {/* Bottom CTA Section */}
         <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4 font-georgian">ვერ იპოვეთ შესაფერისი პაკეტი?</h3>
-            <p className="text-lg mb-6 font-georgian">დაგვიკავშირდით ინდივიდუალური შეთავაზებისთვის თქვენი საჭიროებების მიხედვით</p>
+            <h3 className="text-3xl font-bold mb-4 font-georgian">{t('pricing.custom.title')}</h3>
+            <p className="text-lg mb-6 font-georgian">{t('pricing.custom.subtitle')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => {
-                  const element = document.getElementById("კონტაქტი");
+                  const element = document.getElementById(language === 'en' ? "contact" : "კონტაქტი");
                   if (element) {
                     element.scrollIntoView({ behavior: "smooth", block: "start" });
                   }
@@ -209,14 +202,14 @@ export default function Pricing() {
                 className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
               >
                 <span className="group-hover:animate-bounce mr-3">💬</span>
-                ინდივიდუალური კონსულტაცია
+                {t('pricing.custom.consultation')}
               </button>
               <a
                 href="mailto:info@metaweb.ge"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-georgian group"
               >
                 <span className="group-hover:animate-pulse mr-3">✉️</span>
-                მოგვწერეთ
+                {t('pricing.custom.write')}
               </a>
             </div>
           </div>

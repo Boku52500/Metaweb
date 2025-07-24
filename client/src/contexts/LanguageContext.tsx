@@ -29,6 +29,7 @@ const translations = {
     'hero.stats.projects': 'დასრულებული პროექტი',
     'hero.stats.clients': 'კმაყოფილი კლიენტი',
     'hero.stats.experience': 'წლიანი გამოცდილება',
+    'hero.stats.team': 'გუნდის წევრი',
     
     // Advantages Section
     'advantages.title': 'რატომ ჩვენ?',
@@ -48,7 +49,7 @@ const translations = {
     
     // Services Section
     'services.title': 'ჩვენი სერვისები',
-    'services.subtitle': 'სრული სპექტრის ვებ მომსახურება',
+    'services.subtitle': 'სრული სპექტრის ვებ მომსახურებები',
     'services.website.title': 'ვებსაიტის დამზადება',
     'services.website.desc': 'ნებისმიერი სირთულის კორპორაცული ვებსაიტები, ონლაინ მაღაზიები, ლენდინგ გვერდები',
     'services.design.title': 'ვებ დიზაინი',
@@ -69,9 +70,60 @@ const translations = {
     'portfolio.landing1.title': 'ლენდინგ გვერდი',
     'portfolio.landing1.desc': 'კონვერტაციის მაღალი განაკვეთით',
     
+    // Quality Features
+    'quality.high': 'მაღალი ხარისხი',
+    'quality.realtime': 'რეალურ დროში',
+    'quality.fast': 'სწრაფი',
+    'quality.modern': 'თანამედროვე',
+    
+    // Call to Action
+    'cta.ready.title': 'მზად ხართ დასაწყებად?',
+    'cta.ready.subtitle': 'მიიღეთ უფასო კონსულტაცია და იყავით კონკურენტებზე ერთი ნაბიჯით წინ',
+    'cta.unique.projects': 'ყველა პროექტი უნიკალურია და შექმნილია მომხმარებლის სპეციფიკური საჭიროებების შესაბამისად',
+    'cta.call.title': 'დარეკეთ ახლავე',
+    'cta.call.subtitle': 'გაქვთ საინტერესო იდეა? ერთად განვიხილოთ საიტის სტრუქტურა, დიზაინი და ფუნქციონალი',
+    'cta.chat.title': 'გვესაუბრეთ პროექტზე',
+    
     // Pricing Section
     'pricing.title': 'ფასები',
     'pricing.subtitle': 'აირჩიეთ თქვენთვის შესაფერისი პაკეტი',
+    'pricing.intro': 'ყველა პაკეტი მოიცავს პროფესიონალურ დიზაინს, ტექნიკურ მხარდაჭერას და გარანტიას',
+    
+    // Single Page Package
+    'pricing.single.title': 'ერთგვერდიანი საიტი',
+    'pricing.single.desc': 'სწრაფი და ეფექტური ვებსაიტი',
+    'pricing.single.price': '699₾',
+    'pricing.single.from': '-დან',
+    'pricing.single.features': '1 გვერდი|მობილური ოპტიმიზაცია|SEO ოპტიმიზაცია|კონტაქტის ფორმა|სოციალური მედიის ინტეგრაცია',
+    
+    // Multi Page Package
+    'pricing.multi.title': 'მრავალგვერდიანი საიტი',
+    'pricing.multi.desc': 'კომპლექსური ვებსაიტი ბიზნესისთვის',
+    'pricing.multi.price': '999₾',
+    'pricing.multi.from': '-დან',
+    'pricing.multi.features': 'რამოდენიმე გვერდი|ადმინ პანელი|კონტენტის მართვა|ფოტო გალერეა|ბლოგი/სიახლეები',
+    
+    // Online Store Package
+    'pricing.store.title': 'ონლაინ მაღაზია',
+    'pricing.store.desc': 'სრულფასოვანი ელექტრონული კომერცია',
+    'pricing.store.price': '1799₾',
+    'pricing.store.from': '-დან',
+    'pricing.store.features': 'კატალოგი|კალათა|ონლაინ გადახდა|მომხმარებლის ანგარიში|შეკვეთების მართვა',
+    
+    // Unique Website Package
+    'pricing.unique.title': 'უნიკალური საიტი',
+    'pricing.unique.desc': 'ინდივიდუალური დიზაინი და ფუნქციონალი',
+    'pricing.unique.price': '5000₾',
+    'pricing.unique.from': '-დან',
+    'pricing.unique.features': '100% უნიკალური დიზაინი|ინდივიდუალური ფუნქციონალი|API ინტეგრაციები|ანალიტიკა|უვადო ტექნიკური მხარდაჭერა',
+    
+    'pricing.order': 'შეკვეთა',
+    'pricing.custom.title': 'ვერ იპოვეთ შესაფერისი პაკეტი?',
+    'pricing.custom.subtitle': 'დაგვიკავშირდით ინდივიდუალური შეთავაზებისთვის თქვენი საჭიროებების მიხედვით',
+    'pricing.custom.consultation': 'ინდივიდუალური კონსულტაცია',
+    'pricing.custom.write': 'მოგვწერეთ',
+    
+    // Legacy pricing (keeping for backward compatibility)
     'pricing.basic.title': 'საბაზისო',
     'pricing.basic.price': '500₾',
     'pricing.basic.features': '5 გვერდი|რესპონსიული დიზაინი|SEO ოპტიმიზაცია|კონტაქტის ფორმა|1 წელი ჰოსტინგი',
@@ -133,10 +185,11 @@ const translations = {
     'hero.stats.projects': 'Completed Projects',
     'hero.stats.clients': 'Satisfied Clients',
     'hero.stats.experience': 'Years of Experience',
+    'hero.stats.team': 'Team Members',
     
     // Advantages Section
     'advantages.title': 'Why Choose Us?',
-    'advantages.subtitle': 'Our advantages',
+    'advantages.subtitle': 'Our advantages that set us apart from others',
     'advantages.speed.title': 'Fast Delivery',
     'advantages.speed.desc': 'Website ready in 3-7 days',
     'advantages.seo.title': 'SEO Optimization',
@@ -154,7 +207,7 @@ const translations = {
     'services.title': 'Our Services',
     'services.subtitle': 'Full spectrum web services',
     'services.website.title': 'Website Development',
-    'services.website.desc': 'Corporate websites, online stores, landing pages',
+    'services.website.desc': 'Corporate websites of any complexity, online stores, landing pages',
     'services.design.title': 'Web Design',
     'services.design.desc': 'Modern and attractive design for your brand',
     'services.seo.title': 'SEO Optimization',
