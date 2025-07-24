@@ -54,7 +54,8 @@ export default function Navigation() {
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center relative">
+          {/* Logo */}
           <div className="flex items-center group cursor-pointer" onClick={scrollToTop}>
             <img 
               src="/metaweb-logo-new.png"
@@ -89,51 +90,49 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Phone Button */}
-          <a
-            href="tel:+995557915146"
-            onClick={() => {
-              if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-                return window.gtag_report_conversion("tel:+995557915146");
-              }
-              return true;
-            }}
-            className={`hidden lg:flex items-center px-4 xl:px-6 py-2 xl:py-3 rounded-lg xl:rounded-xl transition-all duration-300 shadow-lg hover:scale-105 font-georgian text-sm xl:text-base ${
-              isScrolled 
-                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
-                : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
-            }`}
-          >
-            <i className="fas fa-phone mr-1 xl:mr-2 animate-pulse text-xs xl:text-sm"></i>
-            <span className="hidden xl:inline">{t('hero.phone')}</span>
-            <span className="xl:hidden">557 91 51 46</span>
-          </a>
-
-          {/* Phone Icon for Medium Screens - Hidden when mobile menu is open */}
-          <a
-            href="tel:+995557915146"
-            onClick={() => {
-              if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-                return window.gtag_report_conversion("tel:+995557915146");
-              }
-              return true;
-            }}
-            className={`lg:hidden items-center justify-center w-10 h-10 rounded-full transition-all duration-300 shadow-lg hover:scale-110 ${
-              isMobileMenuOpen ? 'hidden' : 'md:flex'
-            } ${
-              isScrolled 
-                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
-                : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
-            }`}
-            title="557 91 51 46"
-          >
-            <i className="fas fa-phone text-sm animate-pulse"></i>
-          </a>
-
-          {/* Right side container for mobile layout */}
+          {/* Right side - Desktop phone + Language + Mobile elements */}
           <div className="flex items-center space-x-3">
-            {/* Language Selector - Centered when mobile menu is open on mobile */}
-            <div className={`${isMobileMenuOpen ? 'absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none' : ''}`}>
+            {/* Full Phone Button - Large screens only */}
+            <a
+              href="tel:+995557915146"
+              onClick={() => {
+                if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                  return window.gtag_report_conversion("tel:+995557915146");
+                }
+                return true;
+              }}
+              className={`hidden lg:flex items-center px-4 xl:px-6 py-2 xl:py-3 rounded-lg xl:rounded-xl transition-all duration-300 shadow-lg hover:scale-105 font-georgian text-sm xl:text-base ${
+                isScrolled 
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
+                  : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
+              }`}
+            >
+              <i className="fas fa-phone mr-1 xl:mr-2 animate-pulse text-xs xl:text-sm"></i>
+              <span className="hidden xl:inline">{t('hero.phone')}</span>
+              <span className="xl:hidden">557 91 51 46</span>
+            </a>
+
+            {/* Phone Icon - Medium screens only */}
+            <a
+              href="tel:+995557915146"
+              onClick={() => {
+                if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                  return window.gtag_report_conversion("tel:+995557915146");
+                }
+                return true;
+              }}
+              className={`hidden md:flex lg:hidden items-center justify-center w-10 h-10 rounded-full transition-all duration-300 shadow-lg hover:scale-110 ${
+                isScrolled 
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
+                  : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 hover:shadow-purple-500/30'
+              }`}
+              title="557 91 51 46"
+            >
+              <i className="fas fa-phone text-sm animate-pulse"></i>
+            </a>
+
+            {/* Language Selector - Centered on mobile when menu open */}
+            <div className={`${isMobileMenuOpen ? 'md:hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20' : ''}`}>
               <LanguageSelector />
             </div>
 
