@@ -18,7 +18,7 @@ export default function FAQ() {
       { threshold: 0.1 }
     );
 
-    const section = document.getElementById("faq");
+    const section = document.getElementById("ხშირი-შეკითხვები");
     if (section) observer.observe(section);
 
     return () => observer.disconnect();
@@ -33,58 +33,58 @@ export default function FAQ() {
   const faqData: FAQItem[] = [
     {
       id: 1,
-      category: "Pricing",
-      question: "How much does website development cost?",
-      answer: "Website development costs depend on project complexity. A simple business website starts at $400, while complex online stores can cost $1000-3000. We have an individual approach for every case."
+      category: "ფასები",
+      question: "რამდენი ღირს საიტის დამზადება საქართველოში?",
+      answer: "საიტის დამზადების ღირებულება დამოკიდებულია პროექტის სირთულეზე. მარტივი ბიზნეს საიტი იწყება 800 ლარიდან, ხოლო რთული ონლაინ მაღაზია შეიძლება ღირდეს 2000-5000 ლარი. ყველა შემთხვევაში გვაქვს ინდივიდუალური მიდგომა."
     },
     {
       id: 2,
-      category: "Timeline",
-      question: "How long does it take to develop a website?",
-      answer: "Typically, a simple website takes 1-2 weeks, while complex projects require 1-2 months. Detailed timelines are determined according to the project's technical specifications."
+      category: "დრო",
+      question: "რამდენ დროში მზადდება ვებსაიტი?",
+      answer: "ჩვეულებრივ, მარტივი საიტის დამზადება 1-2 კვირას, ხოლო რთული პროექტები 1-2 თვეს მოითხოვს. დეტალური ვადები განისაზღვრება პროექტის ტექნიკური დავალების მიხედვით."
     },
     {
       id: 3,
-      category: "Services",
-      question: "Do you provide SEO optimization with website development?",
-      answer: "Yes, all websites we create are optimized for Google search engines. We provide basic SEO, which helps your website achieve good rankings."
+      category: "მომსახურება",
+      question: "ხდება თუ არა SEO ოპტიმიზაცია saitis damzadeba-ში?",
+      answer: "დიახ, ყველა ჩვენ მიერ შექმნილი ვებსაიტი ოპტიმიზირებულია Google-ის საძიებო სისტემისთვის. ვუზრუნველვყოფთ ძირითად SEO-ს, რაც ხელს უწყობს თქვენი საიტის კარგ რანჟირებას."
     },
     {
       id: 4,
-      category: "Technologies",
-      question: "What technologies do you use to build websites?",
-      answer: "We use modern technologies: React, TypeScript, WordPress, Laravel. All websites are mobile-adapted and load quickly."
+      category: "ტექნოლოგიები",
+      question: "რა ტექნოლოგიებით ამზადებთ ვებსაიტებს?",
+      answer: "ჩვენ ვიყენებთ თანამედროვე ტექნოლოგიებს: React, TypeScript, WordPress, Laravel. ყველა საიტი მობილურ მოწყობილობებზეა ადაპტირებული და სწრაფად იტვირთება."
     },
     {
       id: 5,
-      category: "Support",
-      question: "What services do you provide after website completion?",
-      answer: "We provide 3 months of free technical support, including bug fixes and minor updates. Afterwards, we offer annual support packages."
+      category: "მხარდაჭერა",
+      question: "ვებსაიტის ასწყობის შემდეგ რა მომსახურებას იღებ?",
+      answer: "ვაძლევთ 3 თვის უფასო ტექნიკურ მხარდაჭერას, რაც მოიცავს შეცდომების გასწორებას და მინორულ განახლებებს. შემდგომ ვთავაზობთ წლიურ მხარდაჭერის პაკეტებს."
     },
     {
       id: 6,
-      category: "E-commerce",
-      question: "Can you create an online store?",
-      answer: "Yes, we create complete online stores with payment systems (Stripe, PayPal), inventory management and admin panel. We have experience with all types of E-commerce projects."
+      category: "ონლაინ მაღაზია",
+      question: "შეგიძლიათ ონლაინ მაღაზიის გაკეთება?",
+      answer: "დიახ, ვქმნით სრულყოფილ ონლაინ მაღაზიებს გადახდის სისტემებით (BoG, TBC Pay), ინვენტარის მართვით და ადმინისტრაციულ პანელით. გვაქვს გამოცდილება ყველა ტიპის E-commerce პროექტზე."
     },
     {
       id: 7,
-      category: "Design",
-      question: "Do you consider my design requirements?",
-      answer: "Absolutely! We work with experienced UI/UX designers who will consider all your requirements and create a unique design suitable for your brand."
+      category: "დიზაინი",
+      question: "ითვალისწინებთ თუ არა ჩემს დიზაინის მოთხოვნებს?",
+      answer: "აბსოლუტურად! ჩვენ მუშაობს გამოცდილი UI/UX დიზაინერები, რომლებიც გაითვალისწინებენ თქვენს ყველა მოთხოვნას და შექმნიან უნიკალურ, თქვენი ბრენდისთვის შესაფერის დიზაინს."
     },
     {
       id: 8,
-      category: "Competition",
-      question: "How do you differentiate your service from competitors?",
-      answer: "We have the most experienced team, use the latest technologies, provide full warranty and affordable prices. All clients receive 24/7 support."
+      category: "კონკურენცია",
+      question: "როგორ გაარჩევ თქვენს სერვისს კონკურენტებისგან?",
+      answer: "ჩვენ გვქვს ყველაზე გამოცდილი გუნდი საქართველოში, ვიყენებთ უახლეს ტექნოლოგიებს, ვაძლევთ სრულ გარანტიას და ხელმისაწვდომ ფასებს. ყველა კლიენტი იღებს 24/7 მხარდაჭერას."
     }
   ];
 
   const categories = Array.from(new Set(faqData.map(item => item.category)));
 
   return (
-    <section id="faq" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section id="ხშირი-შეკითხვები" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-float"></div>
@@ -93,13 +93,13 @@ export default function FAQ() {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className={`text-center mb-16 sm:mb-20 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 font-georgian">
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-              Frequently Asked Questions
+              ხშირი შეკითხვები
             </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8">
-            Answers to the most common questions about website development
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 font-georgian mb-6 sm:mb-8">
+            საიტის დამზადების შესახებ ყველაზე ხშირი კითხვების პასუხები
           </p>
           <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>
@@ -123,7 +123,7 @@ export default function FAQ() {
                           {item.category}
                         </span>
                       </div>
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 font-georgian group-hover:text-blue-600 transition-colors duration-300">
                         {item.question}
                       </h3>
                     </div>
@@ -139,7 +139,7 @@ export default function FAQ() {
                   <div className={`overflow-hidden transition-all duration-500 ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <div className="px-6 sm:px-8 pb-6 sm:pb-8">
                       <div className="w-full h-px bg-gradient-to-r from-blue-100 to-purple-100 mb-4 sm:mb-6"></div>
-                      <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                      <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-georgian">
                         {item.answer}
                       </p>
                     </div>

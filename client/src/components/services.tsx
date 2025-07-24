@@ -13,7 +13,7 @@ export default function Services() {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById("services");
+    const element = document.getElementById("სერვისები");
     if (element) {
       observer.observe(element);
     }
@@ -24,36 +24,36 @@ export default function Services() {
   const services = [
     {
       icon: "fas fa-code",
-      title: "Web Development",
-      description: "We create modern, functional and user-oriented websites that adapt to your business needs and requirements.",
+      title: "ვებ-გვერდის დამზადება",
+      description: "ჩვენ ვქმნით თანამედროვე, ფუნქციურ და მომხმარებელზე ორიენტირებულ ვებ-გვერდებს, რომელიც მოერგება თქვენი ბიზნესის საჭიროებებს.",
       color: "from-purple-500 to-purple-700",
       emoji: "💻"
     },
     {
       icon: "fas fa-paint-brush",
-      title: "Website Design",
-      description: "Unique and attractive design that reflects your brand identity and makes you stand out from the competition.",
+      title: "ვებსაიტის დიზაინი",
+      description: "უნიკალური და მომხიბვლელი დიზაინი, რომელიც ასახავს თქვენი ბრენდის იდენტობას და გხდით გამორჩეულს.",
       color: "from-blue-500 to-blue-700",
       emoji: "🎨"
     },
     {
       icon: "fas fa-search",
-      title: "SEO Optimization",
-      description: "SEO services that ensure better visibility of your website in search engines and increase organic traffic.",
+      title: "SEO ოპტიმიზაცია",
+      description: "SEO მომსახურება, რომელიც უზრუნველყოფს თქვენი ვებ-გვერდის უკეთეს ხილვადობას საძიებო სისტემებში და ზრდის ორგანულ ტრაფიკს.",
       color: "from-green-500 to-green-700",
       emoji: "📈"
     },
     {
       icon: "fas fa-cogs",
-      title: "Maintenance",
-      description: "We offer website maintenance services to ensure stable operation, security updates and optimal performance.",
+      title: "ზედამხედველობა",
+      description: "გთავაზობთ ვებ-გვერდის ზედამხედველობის სერვისს, რათა უზრუნველვყოთ მისი სტაბილური მუშაობა და უსაფრთხოება.",
       color: "from-orange-500 to-orange-700",
       emoji: "🔧"
     },
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden">
+    <section id="სერვისები" className="py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float"></div>
@@ -63,12 +63,12 @@ export default function Services() {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className={`text-center mb-16 sm:mb-20 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 font-georgian text-white">
             <span className="bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              Our Services
+              ჩვენი სერვისები
             </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8">Full spectrum digital services</p>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-georgian mb-6 sm:mb-8">სრული სპექტრის ციფრული მომსახურება</p>
           <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-yellow-400 to-cyan-400 mx-auto rounded-full"></div>
         </div>
 
@@ -106,14 +106,14 @@ export default function Services() {
                 
                 {/* Title - Fixed Height */}
                 <div className="mb-4 sm:mb-6 h-12 sm:h-14 md:h-16 flex items-center justify-center">
-                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white transition-all duration-300 text-center leading-tight">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white font-georgian transition-all duration-300 text-center leading-tight">
                     {service.title}
                   </h3>
                 </div>
                 
                 {/* Description - Flexible Height */}
                 <div className="flex-grow flex items-start justify-center">
-                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300 text-center">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-georgian group-hover:text-gray-200 transition-colors duration-300 text-center">
                     {service.description}
                   </p>
                 </div>
@@ -125,14 +125,14 @@ export default function Services() {
         {/* CTA Section */}
         <div className={`text-center mt-12 sm:mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Ready to Get Started?</h3>
-            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6">Get a free consultation and stay one step ahead of your competitors</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 font-georgian">მზად ხართ დასაწყებად?</h3>
+            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 font-georgian">მიიღეთ უფასო კონსულტაცია და იყავით კონკურენტებზე ერთი ნაბიჯით წინ</p>
             <a
               href="tel:+995557915146"
-              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 group"
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 font-georgian group"
             >
               <span className="group-hover:animate-pulse mr-2 sm:mr-3">📞</span>
-              Call Now
+              დარეკეთ ახლავე
             </a>
           </div>
         </div>
