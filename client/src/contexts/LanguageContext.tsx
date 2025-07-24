@@ -48,7 +48,7 @@ const translations = {
     
     // Services Section
     'services.title': 'ჩვენი სერვისები',
-    'services.subtitle': 'სრული სპექტრის ვებ მომსახურებები',
+    'services.subtitle': 'სრული სპექტრის ვებ მომსახურება',
     'services.website.title': 'ვებსაიტის დამზადება',
     'services.website.desc': 'ნებისმიერი სირთულის კორპორაცული ვებსაიტები, ონლაინ მაღაზიები, ლენდინგ გვერდები',
     'services.design.title': 'ვებ დიზაინი',
@@ -173,9 +173,60 @@ const translations = {
     'portfolio.landing1.title': 'Landing Page',
     'portfolio.landing1.desc': 'With high conversion rate',
     
+    // Quality Features
+    'quality.high': 'High Quality',
+    'quality.realtime': 'Real Time',
+    'quality.fast': 'Fast',
+    'quality.modern': 'Modern',
+    
+    // Call to Action
+    'cta.ready.title': 'Ready to Get Started?',
+    'cta.ready.subtitle': 'Get free consultation and stay one step ahead of competitors',
+    'cta.unique.projects': 'Every project is unique and created according to the specific needs of the client',
+    'cta.call.title': 'Call Now',
+    'cta.call.subtitle': 'Do you have an interesting idea? Let\'s discuss the structure, design and functionality of the website together',
+    'cta.chat.title': 'Talk About Project',
+    
     // Pricing Section
     'pricing.title': 'Pricing',
     'pricing.subtitle': 'Choose the package that suits you',
+    'pricing.intro': 'All packages include professional design, technical support and warranty',
+    
+    // Single Page Package
+    'pricing.single.title': 'Single Page Website',
+    'pricing.single.desc': 'Fast and effective website',
+    'pricing.single.price': '699₾',
+    'pricing.single.from': 'from',
+    'pricing.single.features': '1 page|Mobile optimization|SEO optimization|Contact form|Social media integration',
+    
+    // Multi Page Package
+    'pricing.multi.title': 'Multi-Page Website',
+    'pricing.multi.desc': 'Complex website for business',
+    'pricing.multi.price': '999₾',
+    'pricing.multi.from': 'from',
+    'pricing.multi.features': 'Multiple pages|Admin panel|Content management|Photo gallery|Blog/News',
+    
+    // Online Store Package
+    'pricing.store.title': 'Online Store',
+    'pricing.store.desc': 'Full-featured e-commerce',
+    'pricing.store.price': '1799₾',
+    'pricing.store.from': 'from',
+    'pricing.store.features': 'Catalog|Cart|Online payment|User account|Order management',
+    
+    // Unique Website Package
+    'pricing.unique.title': 'Unique Website',
+    'pricing.unique.desc': 'Individual design and functionality',
+    'pricing.unique.price': '5000₾',
+    'pricing.unique.from': 'from',
+    'pricing.unique.features': '100% unique design|Individual functionality|API integrations|Analytics|Unlimited technical support',
+    
+    'pricing.order': 'Order',
+    'pricing.custom.title': 'Can\'t find a suitable package?',
+    'pricing.custom.subtitle': 'Contact us for individual offer according to your needs',
+    'pricing.custom.consultation': 'Individual Consultation',
+    'pricing.custom.write': 'Write to Us',
+    
+    // Legacy pricing (keeping for backward compatibility)
     'pricing.basic.title': 'Basic',
     'pricing.basic.price': '500₾',
     'pricing.basic.features': '5 pages|Responsive design|SEO optimization|Contact form|1 year hosting',
