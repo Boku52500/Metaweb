@@ -13,10 +13,19 @@ import Welcome from "@/pages/welcome";
 function Router() {
   return (
     <Switch>
+      {/* Georgian routes */}
       <Route path="/" component={Home} />
       <Route path="/welcome" component={Welcome} />
       <Route path="/seo-dashboard" component={SEODashboardPage} />
       <Route path="/contact-success" component={ContactSuccess} />
+      
+      {/* English routes */}
+      <Route path="/en" component={Home} />
+      <Route path="/en/" component={Home} />
+      <Route path="/en/welcome" component={Welcome} />
+      <Route path="/en/seo-dashboard" component={SEODashboardPage} />
+      <Route path="/en/contact-success" component={ContactSuccess} />
+      
       <Route component={NotFound} />
     </Switch>
   );

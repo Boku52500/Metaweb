@@ -332,8 +332,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     next();
   });
 
-  // English version route for main website
-  app.get('/en', (req, res, next) => {
+  // English version route for main website - handle /en and /en/*
+  app.get('/en*', (req, res, next) => {
     // Check if the request is for the subdomain - if so, redirect to subdomain
     const host = req.get('host') || '';
     if (host.includes('online.metaweb.ge') || host.includes('online-metaweb')) {
