@@ -333,7 +333,7 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('ka');
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') as Language;
