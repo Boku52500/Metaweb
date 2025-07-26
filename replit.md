@@ -4,7 +4,7 @@
 
 This is a full-stack web application for a Georgian web development company called Metaweb. The application is built as a marketing website showcasing web development services, portfolio, team, and contact information. It features a modern React frontend with a Node.js/Express backend, designed to attract potential clients for website development services in Georgia.
 
-**Current Status:** SEO optimization phase completed with comprehensive Georgian keyword targeting, schema markup, sitemap, and FAQ section for voice search optimization. Project is now optimized for achieving #1 ranking in Georgian search results for "საიტის დამზადება" and related terms. Added subdomain support for online.metaweb.ge with welcome page, full SSL/HTTPS support, and automatic HTTP to HTTPS redirects. SSL certificates configured and HTTPS server running on port 8443 for development.
+**Current Status:** SEO optimization phase completed with comprehensive Georgian keyword targeting, schema markup, sitemap, and FAQ section for voice search optimization. Project is now optimized for achieving #1 ranking in Georgian search results for "საიტის დამზადება" and related terms. Added subdomain support for online.metaweb.ge with welcome page, full SSL/HTTPS support, and automatic HTTP to HTTPS redirects. SSL certificates configured and HTTPS server running on port 8443 for development. **Default language changed from Georgian to English** (January 26, 2025) - English is now the primary language for metaweb.ge with Georgian available as secondary option.
 
 ## User Preferences
 
