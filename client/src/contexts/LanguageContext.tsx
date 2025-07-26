@@ -336,15 +336,34 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const [language, setLanguage] = useState<Language>('ka');
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && (savedLanguage === 'ka' || savedLanguage === 'en')) {
-      setLanguage(savedLanguage);
+    // Check if we're on the /en route
+    const isEnglishRoute = window.location.pathname.startsWith('/en');
+    
+    if (isEnglishRoute) {
+      setLanguage('en');
+      localStorage.setItem('language', 'en');
+    } else {
+      const savedLanguage = localStorage.getItem('language') as Language;
+      if (savedLanguage && (savedLanguage === 'ka' || savedLanguage === 'en')) {
+        setLanguage(savedLanguage);
+      }
     }
   }, []);
 
   const changeLanguage = (lang: Language) => {
     setLanguage(lang);
     localStorage.setItem('language', lang);
+    
+    // Update URL based on language
+    if (lang === 'en' && !window.location.pathname.startsWith('/en')) {
+      // Redirect to English version
+      const currentPath = window.location.pathname === '/' ? '' : window.location.pathname;
+      window.location.href = `/en${currentPath}`;
+    } else if (lang === 'ka' && window.location.pathname.startsWith('/en')) {
+      // Redirect to Georgian version (remove /en prefix)
+      const newPath = window.location.pathname.replace(/^\/en/, '') || '/';
+      window.location.href = newPath;
+    }
     
     // Update document language and title
     document.documentElement.lang = lang;

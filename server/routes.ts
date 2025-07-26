@@ -332,9 +332,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     next();
   });
 
-  // English version route
-  app.get('/en', (req, res) => {
-    // Check if the request is for the subdomain
+  // English version route for main website
+  app.get('/en', (req, res, next) => {
+    // Check if the request is for the subdomain - if so, redirect to subdomain
     const host = req.get('host') || '';
     if (host.includes('online.metaweb.ge') || host.includes('online-metaweb')) {
       res.send(`
@@ -647,7 +647,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return;
     }
     
-    // Continue to next middleware (Vite) for normal requests
+    // For main website, serve the React app with English language
+    // Set a header to indicate English version
+    res.setHeader('X-Language', 'en');
     next();
   });
 
