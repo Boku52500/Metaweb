@@ -342,10 +342,24 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     if (isEnglishRoute) {
       setLanguage('en');
       localStorage.setItem('language', 'en');
+      // Set English title and document language immediately
+      document.documentElement.lang = 'en';
+      document.title = 'Website Development - Metaweb.ge | Web Design, SEO and Web Development';
     } else {
       const savedLanguage = localStorage.getItem('language') as Language;
       if (savedLanguage && (savedLanguage === 'ka' || savedLanguage === 'en')) {
         setLanguage(savedLanguage);
+        // Set appropriate title based on saved language
+        document.documentElement.lang = savedLanguage;
+        if (savedLanguage === 'en') {
+          document.title = 'Website Development - Metaweb.ge | Web Design, SEO and Web Development';
+        } else {
+          document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO';
+        }
+      } else {
+        // Default to Georgian
+        document.documentElement.lang = 'ka';
+        document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO';
       }
     }
   }, []);
