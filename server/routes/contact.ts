@@ -1,19 +1,19 @@
 import { Router } from "express";
 import { z } from "zod";
-import { sendContactNotification } from "../lib/email.js";
+import { sendContactNotification } from "../lib/email";
 
 const router = Router();
 
-// Contact form submission schema
-const contactFormSchema = z.object({
+// Contact form submission schema (exported for reuse in serverless functions)
+export const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
   phone: z.string().min(1, "Phone is required"),
   email: z.string().email("Valid email is required").optional(),
   message: z.string().min(1, "Message is required"),
 });
 
-// Handle contact form submissions
-router.post("/submit", async (req, res) => {
+// Reusable handler for contact form submissions
+export const submitHandler = async (req: any, res: any) => {
   try {
     // Validate the form data
     const formData = contactFormSchema.parse(req.body);
@@ -129,15 +129,21 @@ metaweb.ge - საიტის დამზადება საქართ�
       error: "Internal server error"
     });
   }
-});
+};
+
+// Attach to Express router
+router.post("/submit", submitHandler);
 
 // Get contact submissions (for admin/dashboard use)
-router.get("/submissions", (req, res) => {
+export const submissionsHandler = (req: any, res: any) => {
   // In a real app, you'd fetch from database
   res.json({
     message: "Contact submissions would be listed here",
     note: "Currently logging to console - integrate with database or email service"
   });
-});
+};
+
+// Attach to Express router
+router.get("/submissions", submissionsHandler);
 
 export default router;

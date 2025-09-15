@@ -24,7 +24,11 @@ interface SEOReport {
 class SEOBot {
   private tasks: SEOTask[] = [];
   private reports: SEOReport[] = [];
-  private logFile = path.join(process.cwd(), 'seo-bot-logs.json');
+  // Use a writable path on serverless platforms like Vercel
+  // /tmp is writable in Vercel serverless functions, whereas process.cwd() is read-only
+  private logFile = process.env.VERCEL
+    ? path.join('/tmp', 'seo-bot-logs.json')
+    : path.join(process.cwd(), 'seo-bot-logs.json');
   
   constructor() {
     this.initializeTasks();
@@ -110,10 +114,22 @@ class SEOBot {
       reports: this.reports,
       lastUpdated: new Date().toISOString()
     };
-    await fs.writeFile(this.logFile, JSON.stringify(data, null, 2));
+    try {
+      await fs.writeFile(this.logFile, JSON.stringify(data, null, 2));
+    } catch (err) {
+      // On serverless read-only FS (except /tmp), ignore persistence errors
+      console.log('⚠️ Could not persist SEO bot data:', err instanceof Error ? err.message : err);
+    }
   }
 
   private startScheduler() {
+    // Skip persistent schedulers in serverless environments
+    if (process.env.VERCEL) {
+      console.log('🤖 SEO Bot running in serverless mode (no persistent scheduler)');
+      this.generateDailyReport();
+      return;
+    }
+
     console.log('🤖 SEO Bot started - scheduling tasks...');
     
     this.tasks.forEach(task => {

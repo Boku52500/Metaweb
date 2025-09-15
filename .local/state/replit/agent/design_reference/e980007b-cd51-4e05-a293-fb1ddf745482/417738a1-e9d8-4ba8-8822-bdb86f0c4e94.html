@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>საიტის დამზადება - Metaweb.ge | ვებსაიტის დიზაინი და SEO მომსახურება საქართველოში</title>
+    <meta name="description" content="Metaweb.ge - საიტის დამზადება, ვებსაიტის დიზაინი, SEO მომსახურება საქართველოში. პროფესიონალური saitis damzadeba და web gverdis awyoba. Website design Georgia სერვისები.">
+    <meta name="keywords" content="საიტის დამზადება, saitis damzadeba, web gverdis awyoba, ვებსაიტის დიზაინი, საიტის აწყობა, website design Georgia, seo მომსახურება, ვებ გვერდის დამზადება">
+    
+    <!-- Schema.org markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Metaweb",
+        "description": "საიტის დამზადება და ვებსაიტის დიზაინი საქართველოში",
+        "url": "https://metaweb.ge",
+        "telephone": "+995568694879",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GE",
+            "addressLocality": "თბილისი"
+        },
+        "sameAs": [
+            "https://www.facebook.com/metaweb.ge",
+            "https://www.instagram.com/metaweb.ge"
+        ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif'],
+                    'georgian': ['BPG Nino Elite', 'DejaVu Sans', 'Inter', 'sans-serif']
+                },
+                colors: {
+                    primary: '#6366F1',
+                    secondary: '#8B5CF6',
+                    accent: '#06B6D4'
+                }
+            }
+        }
+    };
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Noto Sans Georgian', 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #06B6D4 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .counter {
+            font-weight: 800;
+            font-size: 3rem;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .gradient-line {
+            height: 2px;
+            background: linear-gradient(90deg, #6366F1, #8B5CF6, #06B6D4);
+        }
+    </style>
+</head>
+
+<body class="font-georgian">
+    <!-- @COMPONENT: Header Navigation -->
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">M</span>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">Metaweb</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#უპირატესობები" class="text-gray-700 hover:text-primary transition-colors">უპირატესობები</a>
+                    <a href="#პორტფოლიო" class="text-gray-700 hover:text-primary transition-colors">პორტფოლიო</a>
+                    <a href="#სერვისები" class="text-gray-700 hover:text-primary transition-colors">სერვისები</a>
+                    <a href="#გუნდი" class="text-gray-700 hover:text-primary transition-colors">გუნდი</a>
+                    <a href="#კონტაქტი" class="text-gray-700 hover:text-primary transition-colors">კონტაქტი</a>
+                </div>
+                
+                <a href="tel:+995568694879" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                    <i class="fas fa-phone mr-2"></i>568 69 48 79
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: Header Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white animate-fade-in-up">
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6">საიტის დამზადება</h1>
+                    <h2 class="text-2xl lg:text-3xl mb-8 text-white/90">საუკეთესო ხარისხი ხელმისაწვდომ ფასად</h2>
+                    <p class="text-xl mb-8 text-white/80">ჩვენი გუნდი ეხმარება კომპანიებს იპოვონ თავიანთი ადგილი ციფრულ სამყაროში.</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <button class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-event="click:handleOrderForm">
+                            სწრაფი შეკვეთა
+                        </button>
+                        <a href="tel:+995568694879" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors text-center">
+                            <i class="fas fa-phone mr-2"></i>568 69 48 79
+                        </a>
+                    </div>
+                    
+                    <!-- @COMPONENT: Statistics Counter -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="text-center">
+                            <div class="counter text-4xl font-bold mb-2" data-target="7">0+</div>
+                            <div class="text-white/80">წლიანი გამოცდილება</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="counter text-4xl font-bold mb-2" data-target="150">0+</div>
+                            <div class="text-white/80">კმაყოფილი კლიენტი</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="counter text-4xl font-bold mb-2" data-target="350">0+</div>
+                            <div class="text-white/80">წარმატებული პროექტი</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="counter text-4xl font-bold mb-2" data-target="15">0+</div>
+                            <div class="text-white/80">გუნდის წევრი</div>
+                        </div>
+                    </div>
+                    <!-- @END_COMPONENT: Statistics Counter -->
+                </div>
+                
+                <div class="relative">
+                    <!-- Modern office workspace with computers and design mockups -->
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Metaweb - საიტის დამზადება და ვებსაიტის დიზაინი" class="rounded-2xl shadow-2xl w-full" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Advantages Section -->
+    <section id="უპირატესობები" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">რატომ ჩვენ?</h2>
+                <h3 class="text-2xl text-gray-600">ჩვენი უპირატესობები</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4">პროფესიონალიზმი</h4>
+                    <p class="text-gray-600">7 წლიანი გამოცდილება ვებსაიტების დამზადებაში</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4">პუნქტუალურობა</h4>
+                    <p class="text-gray-600">ყველა პროექტი ეწყობა დადგენილ ვადებში</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4">კრეატიულობა</h4>
+                    <p class="text-gray-600">უნიკალური და ინოვაციური დიზაინის გადაწყვეტილებები</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4">ინოვაციურობა</h4>
+                    <p class="text-gray-600">უახლესი ტექნოლოგიები და ტრენდები</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4">სანდოობა</h4>
+                    <p class="text-gray-600">150+ კმაყოფილი კლიენტი და გაგრძელებული თანამშრომლობა</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4">ხარისხი</h4>
+                    <p class="text-gray-600">მაღალი ხარისხის სტანდარტები ყველა პროექტში</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Advantages Section -->
+
+    <!-- @COMPONENT: Services Section -->
+    <section id="სერვისები" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">ჩვენი სერვისები</h2>
+                <p class="text-xl text-gray-600">სრული სპექტრის ციფრული გადაწყვეტილებები</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">ვებ-გვერდის დამზადება</h3>
+                    <p class="text-gray-600 mb-6">ჩვენ ვქმნით თანამედროვე, ფუნქციურ და მომხმარებელზე ორიენტირებულ ვებ-გვერდებს, რომლებიც მოერგება თქვენს ბიზნესის საჭიროებებს.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-paint-brush text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">ვებსაიტის დიზაინი</h3>
+                    <p class="text-gray-600 mb-6">უნიკალური და მომხიბვლელი დიზაინი, რომელიც ასახავს თქვენი ბრენდის იდენტობას და მაქსიმალურად აღიქმება მომხმარებლების მიერ.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-search text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">SEO ოპტიმიზაცია</h3>
+                    <p class="text-gray-600 mb-6">SEO მომსახურება, რომელიც უზრუნველყოფს თქვენი ვებ-გვერდის უკეთეს ხილვადობას საძიებო სისტემებში და ზრდის ორგანული ტრაფიკის მოცულობას.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-cogs text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">ზედამხედველობა</h3>
+                    <p class="text-gray-600 mb-6">გთავაზობთ ვებ-გვერდის ზედამხედველობის სერვისს, რათა უზრუნველვყოთ მისი სტაბილური მუშაობა და უსაფრთხოება.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Services Section -->
+
+    <!-- @COMPONENT: Portfolio Section -->
+    <section id="პორტფოლიო" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">პროექტები</h2>
+                <h3 class="text-2xl text-gray-600 mb-8">ჩვენი ნამუშევრები</h3>
+                <div class="gradient-line w-24 mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- @MAP: portfolioItems.map(item => ( -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <!-- Web design mockup screenshot showing modern ecommerce interface -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="METASHOP.GE - ელექტრონული კომერციის ვებსაიტი" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">METASHOP.GE</h4>
+                        <p class="text-gray-600">ელექტრონული კომერციის ვებსაიტი</p>
+                        <div class="gradient-line w-12 mt-4"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <!-- Corporate business website mockup with professional layout -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="BIZNESGROUP.GE - კორპორაციული ვებსაიტი" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">BIZNESGROUP.GE</h4>
+                        <p class="text-gray-600">კორპორაციული ვებსაიტი</p>
+                        <div class="gradient-line w-12 mt-4"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <!-- Restaurant website mockup with food gallery -->
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="RESTAURANT.GE - რესტორნის ვებსაიტი" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">RESTAURANT.GE</h4>
+                        <p class="text-gray-600">რესტორნის ვებსაიტი</p>
+                        <div class="gradient-line w-12 mt-4"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <!-- Travel agency website mockup with beautiful destinations -->
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="TRAVELGEORGIA.GE - ტურისტული სააგენტოს ვებსაიტი" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">TRAVELGEORGIA.GE</h4>
+                        <p class="text-gray-600">ტურისტული სააგენტო</p>
+                        <div class="gradient-line w-12 mt-4"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <!-- Real estate website mockup with property listings -->
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="REALESTATE.GE - უძრავი ქონების ვებსაიტი" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">REALESTATE.GE</h4>
+                        <p class="text-gray-600">უძრავი ქონების ვებსაიტი</p>
+                        <div class="gradient-line w-12 mt-4"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <!-- Education platform website mockup with online learning interface -->
+                    <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" alt="EDUCATION.GE - საგანმანათლებლო პლატფორმა" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">EDUCATION.GE</h4>
+                        <p class="text-gray-600">საგანმანათლებლო პლატფორმა</p>
+                        <div class="gradient-line w-12 mt-4"></div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Portfolio Section -->
+
+    <!-- @COMPONENT: Team Section -->
+    <section id="გუნდი" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">გუნდი</h2>
+                <h3 class="text-2xl text-gray-600">გაეცანით ჩვენი გუნდი</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- @MAP: teamMembers.map(member => ( -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover text-center">
+                    <!-- Professional headshot of male team leader with confident expression -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=400" alt="ნიკა მამარდაშვილი - დამფუძნებელი" class="w-full h-64 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">ნიკა მამარდაშვილი</h4>
+                        <div class="gradient-line w-12 mx-auto mb-4"></div>
+                        <p class="text-gray-600">დამფუძნებელი</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover text-center">
+                    <!-- Professional headshot of female web developer with friendly smile -->
+                    <img src="https://pixabay.com/get/gc705544cebee22df278ccf725043d70fec01db7f64a51be9c47431f87a18b1685ff1d41392acbf4b2489dcd8960ee7985e7f4457d07c4feae837ec804ef21ca4_1280.jpg" alt="ანა გოგნაძე - ვებ დეველოპერი" class="w-full h-64 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">ანა გოგნაძე</h4>
+                        <div class="gradient-line w-12 mx-auto mb-4"></div>
+                        <p class="text-gray-600">ვებ დეველოპერი</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover text-center">
+                    <!-- Professional headshot of male developer with modern glasses -->
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=400" alt="გიორგი კაცაძე - ვებ დეველოპერი" class="w-full h-64 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">გიორგი კაცაძე</h4>
+                        <div class="gradient-line w-12 mx-auto mb-4"></div>
+                        <p class="text-gray-600">ვებ დეველოპერი</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover text-center">
+                    <!-- Professional headshot of female SEO specialist with professional appearance -->
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=400" alt="ნინო ბერიძე - SEO სპეციალისტი" class="w-full h-64 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">ნინო ბერიძე</h4>
+                        <div class="gradient-line w-12 mx-auto mb-4"></div>
+                        <p class="text-gray-600">SEO სპეციალისტი</p>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Team Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="კონტაქტი" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">დაგვიკავშირდით</h2>
+                <p class="text-xl text-gray-300">მიიღეთ უფასო კონსულტაცია თქვენი ბიზნესის გასაძლიერებლად</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">საიტის დამზადება და ვებსაიტის დიზაინი</h3>
+                        <p class="text-gray-300 mb-8">ჩვენ ვიღებთ ვალდებულებას, რომ შევქმნათ ვებსაიტი, რომელიც აღემატება თქვენს მოლოდინს. დაგვიკავშირდით და მოგვითხარით თქვენი იდეა!</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">ტელეფონი</p>
+                                    <a href="tel:+995568694879" class="text-xl font-semibold hover:text-primary transition-colors">568 69 48 79</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">ელ-ფოსტა</p>
+                                    <a href="mailto:info@metaweb.ge" class="text-xl font-semibold hover:text-primary transition-colors">info@metaweb.ge</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">მისამართი</p>
+                                    <p class="text-xl font-semibold">თბილისი, საქართველო</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                        <h4 class="text-2xl font-semibold mb-6">სწრაფი კონტაქტი</h4>
+                        <form class="space-y-6" data-event="submit:handleContactForm">
+                            <div>
+                                <input type="text" placeholder="თქვენი სახელი" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-primary" required />
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="ტელეფონის ნომერი" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-primary" required />
+                            </div>
+                            <div>
+                                <input type="email" placeholder="ელ-ფოსტა" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-primary" required />
+                            </div>
+                            <div>
+                                <textarea placeholder="თქვენი შეტყობინება" rows="4" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-primary resize-none" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                შეტყობინების გაგზავნა
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">M</span>
+                        </div>
+                        <span class="text-2xl font-bold gradient-text">Metaweb</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">ჩვენ ვქმნით ინოვაციურ და ფუნქციონალურ გადაწყვეტილებებს, რომლებიც ეხმარება ბიზნესებს წარმატების მიღწევაში ციფრულ სამყაროში.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-6">სერვისები</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">საიტის დამზადება</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">ვებსაიტის დიზაინი</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">SEO მომსახურება</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">ზედამხედველობა</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-6">კონტაქტი</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="tel:+995568694879" class="hover:text-white transition-colors">568 69 48 79</a></li>
+                        <li><a href="mailto:info@metaweb.ge" class="hover:text-white transition-colors">info@metaweb.ge</a></li>
+                        <li>თბილისი, საქართველო</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Metaweb.ge - ყველა უფლება დაცულია | საიტის დამზადება, ვებსაიტის დიზაინი და SEO მომსახურება საქართველოში</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // TODO: Implement business logic, API calls, or state management
+        
+        (function() {
+            // Counter animation
+            function animateCounters() {
+                const counters = document.querySelectorAll('.counter');
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const increment = target / 100;
+                    let current = 0;
+                    
+                    const updateCounter = () => {
+                        if (current < target) {
+                            current += increment;
+                            counter.textContent = Math.ceil(current) + '+';
+                            setTimeout(updateCounter, 20);
+                        } else {
+                            counter.textContent = target + '+';
+                        }
+                    };
+                    
+                    updateCounter();
+                });
+            }
+            
+            // Smooth scrolling for navigation links
+            function initSmoothScrolling() {
+                const links = document.querySelectorAll('a[href^="#"]');
+                links.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            }
+            
+            // Initialize when DOM is loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                // Start counter animation after a short delay
+                setTimeout(animateCounters, 1000);
+                initSmoothScrolling();
+            });
+        })();
+    </script>
+</body>
+</html>
