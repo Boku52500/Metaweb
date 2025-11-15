@@ -333,18 +333,18 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>('ka');
+  const [language, setLanguage] = useState<Language>('en');
 
   useEffect(() => {
-    // Check if we're on the /en route
-    const isEnglishRoute = window.location.pathname.startsWith('/en');
-    
-    if (isEnglishRoute) {
-      setLanguage('en');
-      localStorage.setItem('language', 'en');
-      // Set English title and document language immediately
-      document.documentElement.lang = 'en';
-      document.title = 'Website Development - Metaweb.ge | Web Design, SEO and Web Development';
+    // Check if we're on the /ge route (Georgian)
+    const isGeorgianRoute = window.location.pathname.startsWith('/ge');
+
+    if (isGeorgianRoute) {
+      setLanguage('ka');
+      localStorage.setItem('language', 'ka');
+      // Set Georgian title and document language immediately
+      document.documentElement.lang = 'ka';
+      document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO';
     } else {
       const savedLanguage = localStorage.getItem('language') as Language;
       if (savedLanguage && (savedLanguage === 'ka' || savedLanguage === 'en')) {
@@ -357,9 +357,9 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
           document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO';
         }
       } else {
-        // Default to Georgian
-        document.documentElement.lang = 'ka';
-        document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO';
+        // Default to English
+        document.documentElement.lang = 'en';
+        document.title = 'Website Development - Metaweb.ge | Web Design, SEO and Web Development';
       }
     }
   }, []);
@@ -369,13 +369,13 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     localStorage.setItem('language', lang);
     
     // Update URL based on language
-    if (lang === 'en' && !window.location.pathname.startsWith('/en')) {
-      // Redirect to English version
+    if (lang === 'ka' && !window.location.pathname.startsWith('/ge')) {
+      // Redirect to Georgian version
       const currentPath = window.location.pathname === '/' ? '' : window.location.pathname;
-      window.location.href = `/en${currentPath}`;
-    } else if (lang === 'ka' && window.location.pathname.startsWith('/en')) {
-      // Redirect to Georgian version (remove /en prefix)
-      const newPath = window.location.pathname.replace(/^\/en/, '') || '/';
+      window.location.href = `/ge${currentPath}`;
+    } else if (lang === 'en' && window.location.pathname.startsWith('/ge')) {
+      // Redirect to English version (remove /ge prefix)
+      const newPath = window.location.pathname.replace(/^\/ge/, '') || '/';
       window.location.href = newPath;
     }
     
