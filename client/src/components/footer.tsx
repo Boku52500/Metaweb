@@ -182,9 +182,9 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="text-center">
             <p className="text-gray-500 text-sm font-georgian leading-relaxed">
-              საიტის დამზადება • saitis damzadeba • web gverdis awyoba • ვებსაიტის დიზაინი • 
-              საიტის აწყობა • website design Georgia • seo მომსახურება • ვებ გვერდის დამზადება • 
-              Metaweb.ge • თბილისი • საქართველო
+              {language === 'ka'
+                ? 'საიტის დამზადება • saitis damzadeba • web gverdis awyoba • ვებსაიტის დიზაინი • საიტის აწყობა • website design Georgia • seo მომსახურება • ვებ გვერდის დამზადება • Metaweb.ge • თბილისი • საქართველო'
+                : 'website development • web design • SEO services • website creation • website design in Georgia • SEO optimization • web development • Metaweb.ge • Tbilisi • Georgia'}
             </p>
           </div>
         </div>

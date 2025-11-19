@@ -13,18 +13,18 @@ import Welcome from "@/pages/welcome";
 function Router() {
   return (
     <Switch>
-      {/* English routes (default) */}
+      {/* Georgian routes (default at root) */}
       <Route path="/" component={Home} />
       <Route path="/welcome" component={Welcome} />
       <Route path="/seo-dashboard" component={SEODashboardPage} />
       <Route path="/contact-success" component={ContactSuccess} />
 
-      {/* Georgian routes under /ge */}
-      <Route path="/ge" component={Home} />
-      <Route path="/ge/" component={Home} />
-      <Route path="/ge/welcome" component={Welcome} />
-      <Route path="/ge/seo-dashboard" component={SEODashboardPage} />
-      <Route path="/ge/contact-success" component={ContactSuccess} />
+      {/* English routes under /en */}
+      <Route path="/en" component={Home} />
+      <Route path="/en/" component={Home} />
+      <Route path="/en/welcome" component={Welcome} />
+      <Route path="/en/seo-dashboard" component={SEODashboardPage} />
+      <Route path="/en/contact-success" component={ContactSuccess} />
       
       <Route component={NotFound} />
     </Switch>

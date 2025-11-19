@@ -333,53 +333,38 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('ka');
 
   useEffect(() => {
-    // Check if we're on the /ge route (Georgian)
-    const isGeorgianRoute = window.location.pathname.startsWith('/ge');
+    // Determine language purely from URL path: /en* -> English, otherwise Georgian
+    const isEnglishRoute = window.location.pathname.startsWith('/en');
+    const currentLanguage: Language = isEnglishRoute ? 'en' : 'ka';
 
-    if (isGeorgianRoute) {
-      setLanguage('ka');
-      localStorage.setItem('language', 'ka');
-      // Set Georgian title and document language immediately
-      document.documentElement.lang = 'ka';
-      document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO';
+    setLanguage(currentLanguage);
+    document.documentElement.lang = currentLanguage;
+
+    if (currentLanguage === 'en') {
+      document.title = 'Website Development - Metaweb.ge | Web Design, SEO and Web Development';
     } else {
-      const savedLanguage = localStorage.getItem('language') as Language;
-      if (savedLanguage && (savedLanguage === 'ka' || savedLanguage === 'en')) {
-        setLanguage(savedLanguage);
-        // Set appropriate title based on saved language
-        document.documentElement.lang = savedLanguage;
-        if (savedLanguage === 'en') {
-          document.title = 'Website Development - Metaweb.ge | Web Design, SEO and Web Development';
-        } else {
-          document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO';
-        }
-      } else {
-        // Default to English
-        document.documentElement.lang = 'en';
-        document.title = 'Website Development - Metaweb.ge | Web Design, SEO and Web Development';
-      }
+      document.title = 'საიტის დამზადება საქართველოში - Metaweb.ge | ვებსაიტის დიზაინი, SEO';
     }
   }, []);
 
   const changeLanguage = (lang: Language) => {
     setLanguage(lang);
-    localStorage.setItem('language', lang);
-    
-    // Update URL based on language
-    if (lang === 'ka' && !window.location.pathname.startsWith('/ge')) {
-      // Redirect to Georgian version
-      const currentPath = window.location.pathname === '/' ? '' : window.location.pathname;
-      window.location.href = `/ge${currentPath}`;
-    } else if (lang === 'en' && window.location.pathname.startsWith('/ge')) {
-      // Redirect to English version (remove /ge prefix)
-      const newPath = window.location.pathname.replace(/^\/ge/, '') || '/';
+
+    // Update URL based on language: Georgian at root, English under /en
+    const pathname = window.location.pathname;
+
+    if (lang === 'en' && !pathname.startsWith('/en')) {
+      const currentPath = pathname === '/' ? '' : pathname;
+      window.location.href = `/en${currentPath}`;
+    } else if (lang === 'ka' && pathname.startsWith('/en')) {
+      const newPath = pathname.replace(/^\/en/, '') || '/';
       window.location.href = newPath;
     }
-    
-    // Update document language and title
+
+    // Update document language and title immediately
     document.documentElement.lang = lang;
     if (lang === 'en') {
       document.title = 'Website Development - Metaweb.ge | Web Design, SEO and Web Development';
